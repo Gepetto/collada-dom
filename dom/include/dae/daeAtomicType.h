@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_ATOMIC_TYPE_H__
 #define __DAE_ATOMIC_TYPE_H__
@@ -17,7 +17,7 @@
 
 #ifndef _WIN32
 #include <stdint.h>
-#endif 
+#endif
 
 class DAE;
 class daeAtomicType;
@@ -57,13 +57,13 @@ public:
 	 * constructor
 	 */
 	daeAtomicType(DAE& dae);
-	
+
 public:
 	/**
 	 * Prints an atomic typed element into a destination string.
 	 * @param src Source of the raw data from which to get the typed items.
 	 * @param dst Destination to output the string version of the elements to.
-	 * @return Returns true if the operation was successful, false if not successful.  
+	 * @return Returns true if the operation was successful, false if not successful.
 	 */
 	virtual daeBool memoryToString(daeChar* src, std::ostringstream& dst) = 0;
 
@@ -116,7 +116,7 @@ public:
 	 * Performs a virtual comparison operation between two values of the same atomic type.
 	 * @param value1 Memory location of the first value.
 	 * @param value2 Memory location of the second value.
-	 * @return Returns a positive integer if value1 > value2, a negative integer if 
+	 * @return Returns a positive integer if value1 > value2, a negative integer if
 	 * value1 < value2, and 0 if value1 == value2.
 	 */
 	virtual daeInt compare(daeChar* value1, daeChar* value2);
@@ -125,7 +125,7 @@ public:
 	 * Array version of the compare function.
 	 * @param value1 First array to compare.
 	 * @param value2 Second array to compare.
-	 * @return Returns a positive integer if value1 > value2, a negative integer if 
+	 * @return Returns a positive integer if value1 > value2, a negative integer if
 	 * value1 < value2, and 0 if value1 == value2.
 	 */
 	virtual daeInt compareArray(daeArray& value1, daeArray& value2);
@@ -164,7 +164,7 @@ public:
 	daeInt				getSize() { return _size; }
 
 	/**
-	 * Gets the scanf format used for this type. 
+	 * Gets the scanf format used for this type.
 	 * @return Returns the scanf format.
 	 * @note
 	 * Warning - this field is only for convenience and may not always work.
@@ -201,7 +201,7 @@ public:
 	 * @param ptr Pointer to be aligned.
 	 * @return Returns the aligned pointer computed via
 	 * <tt> (ptr+alignment-1)&(~(alignment-1).	</tt>
-	 * 
+	 *
 	 */
 	daeChar*			align(daeChar* ptr) {
 		return (daeChar*)(((intptr_t)(ptr+_alignment-1))&(~(_alignment - 1))); }
@@ -219,7 +219,7 @@ public:
 	 * @param doc The new document.
 	 */
 	virtual void setDocument(daeArray& array, daeDocument* doc) { }
-	
+
 protected:
 	DAE* _dae;
 	daeInt _size;
@@ -229,7 +229,7 @@ protected:
 	daeStringRef _printFormat;
 	daeStringRef _scanFormat;
 	daeInt _maxStringLength;
-	
+
 public:
 	/**
 	 * An array of strings as name bindings for this type.
@@ -284,7 +284,7 @@ class DLLSPEC daeAtomicTypeList {
 public:
 	daeAtomicTypeList(DAE& dae);
 	~daeAtomicTypeList();
-	
+
 	/**
 	 * Appends a new type to the list.
 	 * @param t Type to append.
@@ -337,7 +337,7 @@ public:
 	daeBoolType(DAE& dae);
 public:
 	virtual daeBool memoryToString(daeChar* src, std::ostringstream& dst);
-	
+
 	virtual daeBool stringToMemory(daeChar* src, daeChar* dst);
 
 	virtual daeMemoryRef create();
@@ -553,10 +553,10 @@ public:
 	 * Constructor
 	 */
 	daeTokenType(DAE& dae);
-	
+
 public:
 	virtual daeBool stringToMemory(daeChar* src, daeChar* dst);
-	
+
 	virtual daeMemoryRef create();
 
 	virtual void destroy(daeMemoryRef obj);
@@ -610,7 +610,7 @@ public:
 	 * The array which contains the strings to associate with the values used in this enum.
 	 */
 	daeStringRefArray*	_strings;
-	
+
 public:
 	/**
 	 * Constructor
@@ -621,7 +621,7 @@ public:
 	 * Destructor
 	 */
 	~daeEnumType();
-	
+
 public:
 	virtual daeBool memoryToString(daeChar* src, std::ostringstream& dst);
 
@@ -643,11 +643,11 @@ public:
 class DLLSPEC daeRawRefType: public daeAtomicType
 {
 public:
-	/** 
+	/**
 	*  Constructor.
-	*/	
+	*/
 	daeRawRefType(DAE& dae);
-	
+
 public:
 	virtual daeBool memoryToString(daeChar* src, std::ostringstream& dst);
 
@@ -667,15 +667,15 @@ public:
 class DLLSPEC daeResolverType : public daeAtomicType
 {
 public:
-	/** 
+	/**
 	*  Constructor.
-	*/	
+	*/
 	daeResolverType(DAE& dae);
 public:
 	virtual daeBool memoryToString(daeChar* src, std::ostringstream& dst);
 
 	virtual daeBool stringToMemory(daeChar* src, daeChar* dst);
-	
+
 	virtual daeInt compare(daeChar* value1, daeChar* value2);
 
 	virtual daeMemoryRef create();
@@ -698,15 +698,15 @@ public:
 class DLLSPEC daeIDResolverType : public daeAtomicType
 {
 public:
-	/** 
+	/**
 	*  Constructor.
-	*/	
+	*/
 	daeIDResolverType(DAE& dae);
 public:
 	virtual daeBool memoryToString(daeChar* src, std::ostringstream& dst);
 
 	virtual daeBool stringToMemory(daeChar* src, daeChar* dst);
-	
+
 	virtual daeInt compare(daeChar* value1, daeChar* value2);
 
 	virtual daeMemoryRef create();

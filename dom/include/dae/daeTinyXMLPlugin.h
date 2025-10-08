@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_TINYXMLPLUGIN__
 #define __DAE_TINYXMLPLUGIN__
@@ -37,8 +37,8 @@ public:
 	/**
 	 * setOption allows you to set options for this IOPlugin. Which options a plugin supports is
 	 * dependent on the plugin itself. There is currently no list of options that plugins are
-	 * suggested to implement. daeLibXML2Plugin supports only one option, "saveRawBinary". Set to 
-	 * "true" to save float_array data as a .raw binary file. The daeRawResolver will convert the 
+	 * suggested to implement. daeLibXML2Plugin supports only one option, "saveRawBinary". Set to
+	 * "true" to save float_array data as a .raw binary file. The daeRawResolver will convert the
 	 * data back into COLLADA domFloat_array elements upon load.
 	 * @param option The option to set.
 	 * @param value The value to set the option.
@@ -53,7 +53,7 @@ public:
 	 * @return Returns the string value of the option or NULL if option is not valid.
 	 */
 	virtual DLLSPEC daeString getOption( daeString option );
-	
+
 private:
 	TiXmlDocument*  m_doc;
 	std::list<TiXmlElement*>  m_elements;
@@ -62,7 +62,7 @@ private:
 	virtual daeElementRef readFromMemory(daeString buffer, const daeURI& baseUri);
 	daeElementRef readElement(TiXmlElement* tinyXmlElement, daeElement* parentElement);
 
-	void writeElement( daeElement* element ); 
+	void writeElement( daeElement* element );
 	void writeAttribute( daeMetaAttribute* attr, daeElement* element );
 	void writeValue( daeElement* element );
 };

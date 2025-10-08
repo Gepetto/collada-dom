@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 // COMMAND LINE: bin/php.exe gen.php collada.xsd [minimal]
 // Note: must be run from home directory of code generator (i.e. where gen.php lives)
@@ -24,8 +24,8 @@ require_once( 'om/object-model.php' );
 require_once( 'tpl/template-engine.php' );
 
 // Returns either a capitalized or non-capitalized version of the name, thus helping us
-// avoid name clashes. For example, say we have an element called 'rgb' and an element 
-// called 'RGB'. They're both going to map to the name constant 'COLLADA_ELEMENT_RGB'. 
+// avoid name clashes. For example, say we have an element called 'rgb' and an element
+// called 'RGB'. They're both going to map to the name constant 'COLLADA_ELEMENT_RGB'.
 // Instead, use COLLADA_ELEMENT_rgb for the 'rgb' element.
 function getUniqueName($name, $array) {
 	$uniqueName = strtoupper($name);
@@ -36,11 +36,11 @@ function getUniqueName($name, $array) {
 }
 
 
-if ( preg_match( "/min/i", $argv[2] ) || preg_match( "/min/i", $argv[3] ) ) { 
-	$_globals['full_code'] = false; 
+if ( preg_match( "/min/i", $argv[2] ) || preg_match( "/min/i", $argv[3] ) ) {
+	$_globals['full_code'] = false;
 }
-if ( preg_match( "/cprt/i", $argv[2] ) || preg_match( "/cprt/i", $argv[3] ) ) { 
-	$_globals['copyright'] = true; 
+if ( preg_match( "/cprt/i", $argv[2] ) || preg_match( "/cprt/i", $argv[3] ) ) {
+	$_globals['copyright'] = true;
 }
 
 $_globals['accessorsAndMutators'] = true;

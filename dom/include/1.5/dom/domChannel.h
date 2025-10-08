@@ -22,13 +22,13 @@ protected:  // Attributes
 /**
  *  The source attribute indicates the location of the sampler using a URL
  * expression.  The sampler must be declared within the same document. Required
- * attribute. 
+ * attribute.
  */
 	domUrifragment attrSource;
 /**
  *  The target attribute indicates the location of the element bound to the
  * output of the sampler.  This text string is a path-name following a simple
- * syntax described in Address Syntax.  Required attribute. 
+ * syntax described in Address Syntax.  Required attribute.
  */
 	xsToken attrTarget;
 
@@ -78,7 +78,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

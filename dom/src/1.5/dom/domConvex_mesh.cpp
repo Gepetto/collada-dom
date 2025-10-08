@@ -101,7 +101,7 @@ domConvex_mesh::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3003 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domConvex_mesh,_contents));
 	meta->addContentsOrder(daeOffsetOf(domConvex_mesh,_contentsOrder));
@@ -114,7 +114,7 @@ domConvex_mesh::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsAnyURI"));
 		ma->setOffset( daeOffsetOf( domConvex_mesh , attrConvex_hull_of ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

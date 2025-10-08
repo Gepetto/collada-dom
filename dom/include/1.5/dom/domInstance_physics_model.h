@@ -28,13 +28,13 @@ protected:  // Attributes
  *  The url attribute refers to resource.  This may refer to a local resource
  * using a relative URL  fragment identifier that begins with the "#" character.
  * The url attribute may refer to an external  resource using an absolute
- * or relative URL. 
+ * or relative URL.
  */
 	xsAnyURI attrUrl;
 /**
  *  The sid attribute is a text string value containing the sub-identifier
  * of this element. This  value must be unique within the scope of the parent
- * element. Optional attribute. 
+ * element. Optional attribute.
  */
 	domSid attrSid;
 /**
@@ -45,7 +45,7 @@ protected:  // Attributes
  *  The parent attribute points to the id of a node in the visual scene. This
  * allows a physics model  to be instantiated under a specific transform node,
  * which will dictate the initial position and  orientation, and could be
- * animated to influence kinematic rigid bodies. 
+ * animated to influence kinematic rigid bodies.
  */
 	xsAnyURI attrParent;
 
@@ -197,7 +197,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

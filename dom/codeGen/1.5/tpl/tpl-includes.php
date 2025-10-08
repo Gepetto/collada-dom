@@ -15,22 +15,22 @@ global $includeList;
 for( $i=0; $i<count( $bag['ref_elements'] ); $i++ )
 {
 	if ( !in_array( $_globals['prefix'] . ucfirst( $bag['ref_elements'][$i] ), $includeList ) ) {
-		$inc[] = "#include <" . $_globals['prefix'] . "/" . $_globals['prefix'] . ucfirst( $bag['ref_elements'][$i] ) . ".h>"; 
+		$inc[] = "#include <" . $_globals['prefix'] . "/" . $_globals['prefix'] . ucfirst( $bag['ref_elements'][$i] ) . ".h>";
 		$includeList[] = $_globals['prefix'] . ucfirst( $bag['ref_elements'][$i] );
 	}
 }
 
 if($meta[$bag['content_type']]['isAComplexType']) {
 	if ( !in_array( $_globals['prefix'] . ucfirst( $bag['content_type'] ), $includeList ) ) {
-		$inc[] = "#include <" . $_globals['prefix'] . "/" . $_globals['prefix'] . ucfirst( $bag['content_type'] ) . ".h>"; 
+		$inc[] = "#include <" . $_globals['prefix'] . "/" . $_globals['prefix'] . ucfirst( $bag['content_type'] ) . ".h>";
 		$includeList[] = $_globals['prefix'] . ucfirst( $bag['content_type'] );
 	}
 }
-		
+
 if ( count( $inc ) ) { //only print if you have to include something
 	print implode( "\n", $inc ) . "\n";
 }
-  
+
 $keys = array_keys( $bag['inline_elements'] );
 if ( count( $keys ) > 0 )
 {

@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <modules/daeSTLDatabase.h>
 #include <dae/daeMetaElement.h>
@@ -45,7 +45,7 @@ daeUInt daeSTLDatabase::getTypeCount()
 daeString daeSTLDatabase::getTypeName(daeUInt index)
 {
 	daeUInt count = 0;
-	
+
 	map<string, vector< daeElement* > >::iterator iter = elements.begin();
 	map<string, vector< daeElement* > >::iterator end = elements.end();
 	while ( iter != end )
@@ -75,14 +75,14 @@ daeInt daeSTLDatabase::createDocument(const char *name, daeElement* dom, daeDocu
 			*document = NULL;
 		return DAE_ERR_COLLECTION_ALREADY_EXISTS;
 	}
-	
+
 	// Make a new document
 	daeDocument *newDocument = new daeDocument(dae, zaeRootDocument, extractedFileURI);
 	newDocument->getDocumentURI()->setURI(name);
 	newDocument->setDomRoot(dom);
 	// Push the connection into the database
 	documents.push_back(newDocument);
-	
+
 	if (document)
 		*document = newDocument;
 
@@ -116,7 +116,7 @@ daeInt daeSTLDatabase::createDocument(const char *name, daeDocument** document)
 	// If the user gave us a place to put the document, send it back to them.
 	if (document)
 		*document = newDocument;
-	
+
 	return DAE_OK;
 }
 
@@ -127,7 +127,7 @@ daeInt daeSTLDatabase::insertDocument( daeDocument *c ) {
 }
 
 daeInt daeSTLDatabase::removeDocument(daeDocument *document)
-{	
+{
 	vector< daeDocument* >::iterator iter = documents.begin();
 	while ( iter != documents.end() ) {
 		if ( (*iter) == document ) {
@@ -188,7 +188,7 @@ daeString daeSTLDatabase::getDocumentName(daeUInt index)
 daeInt daeSTLDatabase::insertElement(daeDocument* document,daeElement* element)
 {
 	insertChildren( document, element );
-	
+
 	map<string, vector< daeElement* > >::iterator iter = elements.find( string( element->getTypeName() ) );
 	if ( iter != elements.end() )
 	{
@@ -235,7 +235,7 @@ daeInt daeSTLDatabase::removeElement(daeDocument* document,daeElement* element)
 		return DAE_ERR_INVALID_CALL;
 	}
 	removeChildren( document, element );
-	
+
 	map<string, vector< daeElement* > >::iterator iter = elements.find( string( element->getTypeName() ) );
 	if ( iter != elements.end() )
 	{
@@ -285,7 +285,7 @@ daeInt daeSTLDatabase::removeElement(daeDocument* document,daeElement* element)
 // 	}
 
 	dae.getSidRefCache().clear();
-	
+
 	return DAE_OK;
 }
 
@@ -294,7 +294,7 @@ daeInt daeSTLDatabase::removeChildren( daeDocument *c, daeElement *element )
 	daeElementRefArray era;
 	element->getChildren( era );
 	for ( unsigned int i = 0; i < era.getCount(); i++ ) {
-		removeElement( c, era[i] );	
+		removeElement( c, era[i] );
 	}
 	return DAE_OK;
 }
@@ -370,9 +370,9 @@ daeInt daeSTLDatabase::clear()
 }
 
 daeUInt daeSTLDatabase::getElementCount(daeString name,daeString type,daeString file)
-{	
+{
 	// If none of the search keys was specified, return the total element count in the database
-	if ( !name && !type && !file ) 
+	if ( !name && !type && !file )
 	{
 		daeUInt count = 0;
 		map< string, vector< daeElement*> >::iterator iter = elements.begin();
@@ -385,12 +385,12 @@ daeUInt daeSTLDatabase::getElementCount(daeString name,daeString type,daeString 
 		return count;
 	}
 
-	if ( name ) 
-	{ 
+	if ( name )
+	{
 		// name specified
 		int count = 0;
-		if ( file ) 
-		{ 
+		if ( file )
+		{
 			// If a document URI was a search key (in file) resolve it to a text URI with no fragment
 			daeURI tempURI(dae, file,true);
 			daeDocument *col = getDocument( tempURI.getURI() );
@@ -411,15 +411,15 @@ daeUInt daeSTLDatabase::getElementCount(daeString name,daeString type,daeString 
 			}
 			return count;
 		}
-		else 
-		{ 
+		else
+		{
 			//no file specified - just name
 			return (daeUInt)elementsIDMap.count( string( name ) );
 		}
 	}
 
-	if ( type ) 
-	{ 
+	if ( type )
+	{
 		// type specified
 		map< string, vector< daeElement*> >::iterator iter = elements.find( string( type ) );
 		if ( iter == elements.end() )
@@ -428,8 +428,8 @@ daeUInt daeSTLDatabase::getElementCount(daeString name,daeString type,daeString 
 		}
 
 		int count = 0;
-		if ( file ) 
-		{ 
+		if ( file )
+		{
 			// If a document URI was a search key (in file) resolve it to a text URI with no fragment
 			daeURI tempURI(dae, file,true);
 			daeDocument *col = getDocument( tempURI.getURI() );
@@ -450,8 +450,8 @@ daeUInt daeSTLDatabase::getElementCount(daeString name,daeString type,daeString 
 			}
 			return count;
 		}
-		else 
-		{ 
+		else
+		{
 			//no file specified - just type
 			return (daeUInt)(*iter).second.size();
 		}
@@ -487,15 +487,15 @@ daeUInt daeSTLDatabase::getElementCount(daeString name,daeString type,daeString 
 }
 
 daeInt daeSTLDatabase::getElement(daeElement** pElement,daeInt index,daeString name,daeString type,daeString file)
-{	
+{
 	// If the index is out of range, there can be no match
-	if ( index < 0 ) 
+	if ( index < 0 )
 	{
 		return DAE_ERR_QUERY_NO_MATCH;
 	}
 
 	// If no name, type or file was specified we return the element at "index" - SLOW
-	if ( !name && !type && !file ) 
+	if ( !name && !type && !file )
 	{
 		daeUInt count = 0;
 		map< string, vector< daeElement*> >::iterator iter = elements.begin();
@@ -512,13 +512,13 @@ daeInt daeSTLDatabase::getElement(daeElement** pElement,daeInt index,daeString n
 		}
 		return DAE_ERR_QUERY_NO_MATCH;
 	}
-	
-	if ( name ) 
-	{ 
+
+	if ( name )
+	{
 		//name specified
 		int count = 0;
-		if ( file ) 
-		{ 
+		if ( file )
+		{
 			// If a document URI was a search key (in file) resolve it to a text URI with no fragment
 			daeURI tempURI(dae, file, true);
 			daeDocument *col = getDocument( tempURI.getURI() );
@@ -546,8 +546,8 @@ daeInt daeSTLDatabase::getElement(daeElement** pElement,daeInt index,daeString n
 			*pElement = NULL;
 			return DAE_ERR_QUERY_NO_MATCH;
 		}
-		else 
-		{ 
+		else
+		{
 			//no document specified
 			multimap< string, daeElement* >::iterator i = elementsIDMap.find( string( name ) );
 			if ( index > (daeInt)elementsIDMap.count( string( name ) ) || i == elementsIDMap.end() )
@@ -563,9 +563,9 @@ daeInt daeSTLDatabase::getElement(daeElement** pElement,daeInt index,daeString n
 			return DAE_OK;
 		}
 	}
-	
-	if ( type ) 
-	{ 
+
+	if ( type )
+	{
 		map< string, vector< daeElement*> >::iterator iter = elements.find( string( type ) );
 		if ( iter == elements.end() )
 		{
@@ -574,8 +574,8 @@ daeInt daeSTLDatabase::getElement(daeElement** pElement,daeInt index,daeString n
 		}
 		//type specified
 		int count = 0;
-		if ( file ) 
-		{ 
+		if ( file )
+		{
 			// If a document URI was a search key (in file) resolve it to a text URI with no fragment
 			daeURI tempURI(dae, file, true);
 			daeDocument *col = getDocument( tempURI.getURI() );
@@ -602,8 +602,8 @@ daeInt daeSTLDatabase::getElement(daeElement** pElement,daeInt index,daeString n
 			}
 			return DAE_ERR_QUERY_NO_MATCH;
 		}
-		else 
-		{ 
+		else
+		{
 			//no document specified
 			if ( index >= (daeInt)(*iter).second.size() )
 			{
@@ -632,9 +632,9 @@ daeInt daeSTLDatabase::getElement(daeElement** pElement,daeInt index,daeString n
 		vector< daeElement* >::iterator end2 = vec.end();
 		while( i != end2 )
 		{
-			if( col == (*i)->getDocument() ) 
+			if( col == (*i)->getDocument() )
 			{
-				if( count == index ) 
+				if( count == index )
 				{
 					*pElement = (*i);
 					return DAE_OK;

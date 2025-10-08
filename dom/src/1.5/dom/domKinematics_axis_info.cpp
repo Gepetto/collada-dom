@@ -82,7 +82,7 @@ domKinematics_axis_info::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 3005 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domKinematics_axis_info,_contents));
 	meta->addContentsOrder(daeOffsetOf(domKinematics_axis_info,_contentsOrder));
@@ -95,7 +95,7 @@ domKinematics_axis_info::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domKinematics_axis_info , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -106,7 +106,7 @@ domKinematics_axis_info::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domKinematics_axis_info , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -118,7 +118,7 @@ domKinematics_axis_info::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domKinematics_axis_info , attrAxis ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

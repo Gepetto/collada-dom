@@ -197,7 +197,7 @@ domFx_setparam::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFx_setparam,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFx_setparam,_contentsOrder));
@@ -1140,7 +1140,7 @@ domFx_setparam::domSampler_states::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domFx_setparam::domSampler_states));
 	meta->validate();

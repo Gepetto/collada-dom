@@ -52,7 +52,7 @@ domEdges::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -62,7 +62,7 @@ domEdges::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domEdges , attrId ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -73,7 +73,7 @@ domEdges::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domEdges , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -85,7 +85,7 @@ domEdges::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domEdges , attrCount ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

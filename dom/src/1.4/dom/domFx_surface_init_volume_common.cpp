@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -54,7 +54,7 @@ domFx_surface_init_volume_common::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFx_surface_init_volume_common,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFx_surface_init_volume_common,_contentsOrder));
@@ -95,7 +95,7 @@ domFx_surface_init_volume_common::domAll::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_surface_init_volume_common::domAll , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -134,7 +134,7 @@ domFx_surface_init_volume_common::domPrimary::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_surface_init_volume_common::domPrimary , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

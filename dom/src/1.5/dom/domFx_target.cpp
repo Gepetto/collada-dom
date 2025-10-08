@@ -40,7 +40,7 @@ domFx_target::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: platform
 	{
@@ -50,7 +50,7 @@ domFx_target::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_target , attrPlatform ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -62,7 +62,7 @@ domFx_target::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_target , attrTarget ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -74,7 +74,7 @@ domFx_target::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_target , attrOptions ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -121,7 +121,7 @@ domFx_target::domBinary::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFx_target::domBinary,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFx_target::domBinary,_contentsOrder));
@@ -207,7 +207,7 @@ domFx_target::domBinary::domHex::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domFx_target::domBinary::domHex , attrFormat ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

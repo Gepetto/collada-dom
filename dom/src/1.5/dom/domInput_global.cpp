@@ -39,7 +39,7 @@ domInput_global::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInput_global , attrSemantic ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -51,7 +51,7 @@ domInput_global::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInput_global , attrSource ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

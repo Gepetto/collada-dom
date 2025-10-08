@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -60,7 +60,7 @@ domMorph::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: method
 	{
@@ -70,7 +70,7 @@ domMorph::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domMorph , attrMethod ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "NORMALIZED");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -82,7 +82,7 @@ domMorph::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domMorph , attrSource ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -129,7 +129,7 @@ domMorph::domTargets::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domMorph::domTargets));
 	meta->validate();

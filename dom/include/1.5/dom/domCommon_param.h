@@ -31,7 +31,7 @@ public:	//Accessors and Mutators
 
 protected:  // Value
 	/**
-	 * The xsToken value of the text data of this element. 
+	 * The xsToken value of the text data of this element.
 	 */
 	xsToken _value;
 protected:
@@ -56,7 +56,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

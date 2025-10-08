@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -46,7 +46,7 @@ domFx_include_common::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_include_common , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -58,7 +58,7 @@ domFx_include_common::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_include_common , attrUrl ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

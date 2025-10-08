@@ -100,7 +100,7 @@ domMesh::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3003 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domMesh,_contents));
 	meta->addContentsOrder(daeOffsetOf(domMesh,_contentsOrder));

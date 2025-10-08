@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_META_ELEMENT_ATTRIBUTE_H__
 #define __DAE_META_ELEMENT_ATTRIBUTE_H__
@@ -31,7 +31,7 @@ public:
 	 * Constructor.
 	 * @param container The daeMetaElement that this policy object belongs to.
 	 * @param parent The daeMetaCMPolicy parent of this policy object.
-	 * @param odinal The ordinal value offset of this specific policy object. Used for maintaining the 
+	 * @param odinal The ordinal value offset of this specific policy object. Used for maintaining the
 	 * correct order of child elements.
 	 * @param minO The minimum number of times this CMPolicy object must appear. This value comes from the COLLADA schema.
 	 * @param maxO The maximum number of times this CMPolicy object may appear. This value comes from the COLLADA schema.
@@ -64,7 +64,7 @@ public:
 	 * @return Returns the @c daeMetaElement representing the type.
 	 */
 	daeMetaElement* getElementType() { return _elementType; }
-	
+
 	/**
 	 * Sets the database document associated with this element.
 	 * @param parent The daeElement to set the document.
@@ -76,15 +76,15 @@ public:
 	}
 
 	/**
-	 * Gets the number of elements associated with this attribute in instance <tt><i>e.</i></tt> 
+	 * Gets the number of elements associated with this attribute in instance <tt><i>e.</i></tt>
 	 * @param e Containing element to run the operation on.
 	 * @return Returns the number of elements associated with this attribute
-	 * in instance <tt><i>e.</i></tt> 
+	 * in instance <tt><i>e.</i></tt>
 	 */
 	virtual daeInt getCount(daeElement* e);
 
 	/**
-	 * Gets an element from containing element <tt><i>e</i></tt> based on <tt><i>index.</i></tt> 
+	 * Gets an element from containing element <tt><i>e</i></tt> based on <tt><i>index.</i></tt>
 	 * @param e Containing element from which to get the element.
 	 * @param index Index of the element to retrieve if indeed
 	 * there is an array of elements rather than a singleton.
@@ -117,7 +117,7 @@ typedef daeTArray<daeMetaElementAttributeRef> daeMetaElementAttributeArray;
 
 
 /**
- * The @c daeMetaElementArrayAttribute class is similar to daeMetaElementAttribute 
+ * The @c daeMetaElementArrayAttribute class is similar to daeMetaElementAttribute
  * except that this meta attribute describes an array of elements rather than a singleton.
  */
 class daeMetaElementArrayAttribute : public daeMetaElementAttribute
@@ -127,7 +127,7 @@ public:
 	 * Constructor.
 	 * @param container The daeMetaElement that this policy object belongs to.
 	 * @param parent The daeMetaCMPolicy parent of this policy object.
-	 * @param odinal The ordinal value offset of this specific policy object. Used for maintaining the 
+	 * @param odinal The ordinal value offset of this specific policy object. Used for maintaining the
 	 * correct order of child elements.
 	 * @param minO The minimum number of times this CMPolicy object must appear. This value comes from the COLLADA schema.
 	 * @param maxO The maximum number of times this CMPolicy object may appear. This value comes from the COLLADA schema.
@@ -153,7 +153,7 @@ public:
 	 * Defines the override version of this method from @c daeMetaElement.
 	 * @param e Containing element to run the operation on.
 	 * @return Returns the number of particles associated with this attribute
-	 * in instance <tt><i>e.</i></tt> 
+	 * in instance <tt><i>e.</i></tt>
 	 */
 	virtual daeInt getCount(daeElement* e);
 	/**

@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE__ERROR__
 #define __DAE__ERROR__
@@ -12,7 +12,7 @@
 #include <dae/daePlatform.h>
 
 /** Success */
-#define DAE_OK 0 
+#define DAE_OK 0
 /** Fatal Error, should never be returned unless there is a bug in the library. */
 #define DAE_ERR_FATAL -1
 /** Call invalid, the combination of parameters given is invalid. */
@@ -35,9 +35,9 @@
 #define DAE_ERR_COLLECTION_DOES_NOT_EXIST -203
 /** Function is not implemented. */
 #define DAE_ERR_NOT_IMPLEMENTED -1000
-		
 
-/** Gets the ASCII error string.  
+
+/** Gets the ASCII error string.
 * @param errorCode Error code returned by a function of the API.
 * @return Returns an English string describing the error.
 */

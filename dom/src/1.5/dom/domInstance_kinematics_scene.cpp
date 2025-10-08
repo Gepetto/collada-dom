@@ -71,7 +71,7 @@ domInstance_kinematics_scene::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 5 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: url
 	{
@@ -81,7 +81,7 @@ domInstance_kinematics_scene::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_kinematics_scene , attrUrl ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -92,7 +92,7 @@ domInstance_kinematics_scene::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domInstance_kinematics_scene , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -103,7 +103,7 @@ domInstance_kinematics_scene::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domInstance_kinematics_scene , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

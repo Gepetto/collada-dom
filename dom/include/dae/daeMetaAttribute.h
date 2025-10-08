@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_META_ATTRIBUTE_H__
 #define __DAE_META_ATTRIBUTE_H__
@@ -60,7 +60,7 @@ public:
 	 */
 	virtual ~daeMetaAttribute();
 public:
-	/** 
+	/**
 	 * Determines if the schema indicates that this is a required attribute.
 	 * @return Returns true if this is a required attribute, false if not.
 	 */
@@ -84,14 +84,14 @@ public:
 	 * @return Returns the integer byte offset from @c this pointer for this attribute.
 	 */
 	daeInt getOffset() { return _offset; }
-	 
+
 	/**
 	 * Sets the name of the attribute.
 	 * @param name @c daeString that is directly stored as a pointer
 	 * without being copied.
 	 */
 	void setName(daeString name) { _name = name; }
-	
+
 	/**
 	 * Gets the name of this attribute.
 	 * @return Returnsthe name of this attribute.
@@ -104,7 +104,7 @@ public:
 	 * attribute in a containing @c daeElement.
 	 */
 	void setType(daeAtomicType* type) { _type = type; }
-	
+
 	/**
 	 * Gets the @c daeAtomicType used by this attribute.
 	 * @return Returns the @c daeAtomicType that this attribute uses for its
@@ -152,7 +152,7 @@ public:
 	 * Notifies an attribute when the containing document changes.
 	 */
 	virtual void setDocument(daeElement* e, daeDocument* doc);
-	  
+
 	/**
 	 * Converts an element's attribute value to a string.
 	 */
@@ -175,7 +175,7 @@ public:
 	 * @return Returns true if this attribute is an array type.
 	 */
 	virtual daeBool isArrayAttribute()		{ return false; }
-	  
+
 public:
 	/**
 	 * Gets the number of bytes for this attribute.
@@ -207,7 +207,7 @@ public:
 	 * Compares the value of this attribute in the given elements.
 	 * @param elt1 The first element whose attribute value should be compared.
 	 * @param elt2 The second element whose attribute value should be compared.
-	 * @return Returns a positive integer if value1 > value2, a negative integer if 
+	 * @return Returns a positive integer if value1 > value2, a negative integer if
 	 * value1 < value2, and 0 if value1 == value2.
 	 */
 	virtual daeInt compare(daeElement* elt1, daeElement* elt2);
@@ -216,11 +216,11 @@ public:
 	 * Compares the value of this attribute from the given element to the default value
 	 * of this attribute (if one exists).
 	 * @param e The element whose value should be compared to the default value.
-	 * @return Returns a positive integer if value > default, a negative integer if 
+	 * @return Returns a positive integer if value > default, a negative integer if
 	 * value < default, and 0 if value == default.
 	 */
 	virtual daeInt compareToDefault(daeElement* e);
-	
+
 public:
 	// These methods are deprecated.
 	virtual daeChar* getWritableMemory(daeElement* e);  // Use get instead.
@@ -257,7 +257,7 @@ public:
 	 * Compares the value of this attribute in the given elements.
 	 * @param elt1 The first element whose attribute value should be compared.
 	 * @param elt2 The second element whose attribute value should be compared.
-	 * @return Returns a positive integer if value1 > value2, a negative integer if 
+	 * @return Returns a positive integer if value1 > value2, a negative integer if
 	 * value1 < value2, and 0 if value1 == value2.
 	 */
 	virtual daeInt compare(daeElement* elt1, daeElement* elt2);
@@ -266,7 +266,7 @@ public:
 	 * Compares the value of this attribute from the given element to the default value
 	 * of this attribute (if one exists).
 	 * @param e The element whose value should be compared to the default value.
-	 * @return Returns a positive integer if value > default, a negative integer if 
+	 * @return Returns a positive integer if value > default, a negative integer if
 	 * value < default, and 0 if value == default.
 	 */
 	virtual daeInt compareToDefault(daeElement* e);

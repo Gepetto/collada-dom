@@ -100,7 +100,7 @@ domAsset::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 10 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domAsset));
 	meta->validate();
@@ -175,7 +175,7 @@ domAsset::domContributor::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 6 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domAsset::domContributor));
 	meta->validate();
@@ -468,7 +468,7 @@ domAsset::domCoverage::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domAsset::domCoverage));
 	meta->validate();
@@ -519,7 +519,7 @@ domAsset::domCoverage::domGeographic_location::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domAsset::domCoverage::domGeographic_location));
 	meta->validate();
@@ -637,7 +637,7 @@ domAsset::domCoverage::domGeographic_location::domAltitude::registerElement(DAE&
 		ma->setOffset( daeOffsetOf( domAsset::domCoverage::domGeographic_location::domAltitude , attrMode ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "relativeToGround");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -892,7 +892,7 @@ domAsset::domUnit::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domAsset::domUnit , attrMeter ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "1.0");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -904,7 +904,7 @@ domAsset::domUnit::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domAsset::domUnit , attrName ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "meter");
-	
+
 		meta->appendAttribute(ma);
 	}
 

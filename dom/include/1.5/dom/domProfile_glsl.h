@@ -113,7 +113,7 @@ public:
 				static DLLSPEC daeElementRef create(DAE& dae);
 				/**
 				 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-				 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+				 * If a daeMetaElement already exists it will return that instead of creating a new one.
 				 * @return A daeMetaElement describing this COLLADA element.
 				 */
 				static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -158,7 +158,7 @@ public:
 
 				protected:  // Value
 					/**
-					 * The domFx_draw value of the text data of this element. 
+					 * The domFx_draw value of the text data of this element.
 					 */
 					domFx_draw _value;
 				protected:
@@ -183,7 +183,7 @@ public:
 					static DLLSPEC daeElementRef create(DAE& dae);
 					/**
 					 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-					 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+					 * If a daeMetaElement already exists it will return that instead of creating a new one.
 					 * @return A daeMetaElement describing this COLLADA element.
 					 */
 					static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -288,7 +288,7 @@ public:
 				static DLLSPEC daeElementRef create(DAE& dae);
 				/**
 				 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-				 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+				 * If a daeMetaElement already exists it will return that instead of creating a new one.
 				 * @return A daeMetaElement describing this COLLADA element.
 				 */
 				static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -299,7 +299,7 @@ public:
 /**
  *  The sid attribute is a text string value containing the sub-identifier
  * of this element.  This value must be unique within the scope of the parent
- * element. Optional attribute. 
+ * element. Optional attribute.
  */
 			domSid attrSid;
 
@@ -379,7 +379,7 @@ public:
 			static DLLSPEC daeElementRef create(DAE& dae);
 			/**
 			 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-			 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+			 * If a daeMetaElement already exists it will return that instead of creating a new one.
 			 * @return A daeMetaElement describing this COLLADA element.
 			 */
 			static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -390,13 +390,13 @@ public:
 /**
  *  The id attribute is a text string containing the unique identifier of
  * this element.  This value must be unique within the instance document.
- * Optional attribute. 
+ * Optional attribute.
  */
 		xsID attrId;
 /**
  *  The sid attribute is a text string value containing the sub-identifier
  * of this element.  This value must be unique within the scope of the parent
- * element. Optional attribute. 
+ * element. Optional attribute.
  */
 		domSid attrSid;
 
@@ -420,7 +420,7 @@ public:
 		 * Sets the id attribute.
 		 * @param atId The new value for the id attribute.
 		 */
-		void setId( xsID atId ) { *(daeStringRef*)&attrId = atId; _validAttributeArray[0] = true; 
+		void setId( xsID atId ) { *(daeStringRef*)&attrId = atId; _validAttributeArray[0] = true;
 			if( _document != NULL ) _document->changeElementID( this, attrId );
 		}
 
@@ -492,7 +492,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -503,12 +503,12 @@ protected:  // Attributes
 /**
  *  The id attribute is a text string containing the unique identifier of
  * this element.  This value must be unique within the instance document.
- * Optional attribute. 
+ * Optional attribute.
  */
 	xsID attrId;
 /**
  *  The type of platform. This is a vendor-defined character string that indicates
- * the platform or capability target for the technique. Optional 
+ * the platform or capability target for the technique. Optional
  */
 	xsNCName attrPlatform;
 
@@ -651,7 +651,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

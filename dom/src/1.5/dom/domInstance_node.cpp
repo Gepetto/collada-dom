@@ -47,7 +47,7 @@ domInstance_node::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: url
 	{
@@ -57,7 +57,7 @@ domInstance_node::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_node , attrUrl ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -68,7 +68,7 @@ domInstance_node::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domInstance_node , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -79,7 +79,7 @@ domInstance_node::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domInstance_node , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -90,7 +90,7 @@ domInstance_node::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsAnyURI"));
 		ma->setOffset( daeOffsetOf( domInstance_node , attrProxy ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

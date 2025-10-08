@@ -53,7 +53,7 @@ domInstance_material::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: symbol
 	{
@@ -63,7 +63,7 @@ domInstance_material::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_material , attrSymbol ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -75,7 +75,7 @@ domInstance_material::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_material , attrTarget ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -86,7 +86,7 @@ domInstance_material::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domInstance_material , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -97,7 +97,7 @@ domInstance_material::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domInstance_material , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -136,7 +136,7 @@ domInstance_material::domBind::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_material::domBind , attrSemantic ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -148,7 +148,7 @@ domInstance_material::domBind::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_material::domBind , attrTarget ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -187,7 +187,7 @@ domInstance_material::domBind_vertex_input::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_material::domBind_vertex_input , attrSemantic ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -199,7 +199,7 @@ domInstance_material::domBind_vertex_input::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_material::domBind_vertex_input , attrInput_semantic ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -210,7 +210,7 @@ domInstance_material::domBind_vertex_input::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Uint"));
 		ma->setOffset( daeOffsetOf( domInstance_material::domBind_vertex_input , attrInput_set ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

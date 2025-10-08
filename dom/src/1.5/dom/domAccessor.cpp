@@ -41,7 +41,7 @@ domAccessor::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: count
 	{
@@ -51,7 +51,7 @@ domAccessor::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domAccessor , attrCount ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -63,7 +63,7 @@ domAccessor::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domAccessor , attrOffset ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -75,7 +75,7 @@ domAccessor::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domAccessor , attrSource ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -87,7 +87,7 @@ domAccessor::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domAccessor , attrStride ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "1");
-	
+
 		meta->appendAttribute(ma);
 	}
 

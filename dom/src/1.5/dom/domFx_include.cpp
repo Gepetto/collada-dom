@@ -39,7 +39,7 @@ domFx_include::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_include , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -51,7 +51,7 @@ domFx_include::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_include , attrUrl ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

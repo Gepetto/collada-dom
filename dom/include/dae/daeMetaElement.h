@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_META_ELEMENT_H__
 #define __DAE_META_ELEMENT_H__
@@ -46,7 +46,7 @@ protected:
 
 	daeElementConstructFunctionPtr _createFunc;
 	daeInt _elementSize;
-	
+
 	daeMetaAttributeRefArray _metaAttributes;
 	daeMetaAttributeRef _metaValue;
 	daeMetaElementArrayAttribute* _metaContents;
@@ -61,8 +61,8 @@ protected:
 	daeBool _isAbstract;
 	daeBool _allowsAny;
 	daeBool _innerClass;
-	
-	daeMetaCMPolicy* _contentModel;	
+
+	daeMetaCMPolicy* _contentModel;
 	daeMetaArrayAttribute* _metaCMData;
 	daeUInt _numMetaChoices;
 
@@ -86,7 +86,7 @@ public: // public accessors
 	 * @return Returns the owning DAE.
 	 */
 	DAE* getDAE();
-	
+
 	/**
 	 * Determines if elements of this type is an inner class.
 	 * @return Returns true if this element type is an inner class.
@@ -128,13 +128,13 @@ public: // public accessors
 	/**
 	 * Sets whether elements of this type should be tracked
 	 * for @c daeDatabase queries.
-	 * @param trackable Indicates whether this element should be tracked.  
+	 * @param trackable Indicates whether this element should be tracked.
 	 * A value of true indicates this element type should be tracked and be available for
 	 * database queries.
 	 */
 	void setIsTrackableForQueries(daeBool trackable) {
 		_isTrackableForQueries = trackable; }
-		
+
 	/**
 	 * Determines if elements of this type allow for any element as a child.
 	 * @return Returns true if this element can have any child element, false otherwise.
@@ -166,7 +166,7 @@ public: // public accessors
 	 * Gets the name of this element type.
 	 * @return Returns the name of this element type.
 	 */
-	daeStringRef getName() { return _name; } 
+	daeStringRef getName() { return _name; }
 
 	/**
 	 * Sets the name of this element type.
@@ -184,7 +184,7 @@ public: // public accessors
 		return _metaAttributes; }
 
 	/**
-	 * Gets the attribute which has a name as provided by the <tt><i>s</i></tt> parameter. 
+	 * Gets the attribute which has a name as provided by the <tt><i>s</i></tt> parameter.
 	 * @param s String containing the  desired attribute's name.
 	 * @return Returns the corresponding @c daeMetaAttribute, or NULL if none found.
 	 */
@@ -203,8 +203,8 @@ public: // public accessors
 	 * @return Returns the number of bytes for each C++ element instance.
 	 */
 	daeInt getElementSize() { return _elementSize;}
-	
-public: 
+
+public:
 	/**
 	 * Registers with the reflective object system that the dom class described by this @c daeMetaElement
 	 * contains a <tt><i>_contents</i></tt> array. This method is @em only for @c daeMetaElement contstuction, and
@@ -213,16 +213,16 @@ public:
 	 */
 	DLLSPEC void addContents(daeInt offset);
 	/**
-	 * Registers with the reflective object system the array that stores the _contents ordering. This method is @em 
-	 * only for @c daeMetaElement contstuction, and should only be called by the system as it sets up the Reflective 
+	 * Registers with the reflective object system the array that stores the _contents ordering. This method is @em
+	 * only for @c daeMetaElement contstuction, and should only be called by the system as it sets up the Reflective
 	 * Object System.
 	 * @param offset Byte offset for the contents order array in the C++ element class.
 	 */
 	DLLSPEC void addContentsOrder( daeInt offset );
 	/**
 	 * Registers with the reflective object system that the dom class described by this @c daeMetaElement
-	 * contains at least one choice group in the content model for this element. This method is @em only 
-	 * for @c daeMetaElement contstuction, and should only be called by the system as it sets up the 
+	 * contains at least one choice group in the content model for this element. This method is @em only
+	 * for @c daeMetaElement contstuction, and should only be called by the system as it sets up the
 	 * Reflective Object System.
 	 * @param offset Byte offset for the contents field in the C++ element class.
 	 * @param numChoices The number of choice content model blocks there are for this element type.
@@ -269,7 +269,7 @@ public:
 	 * including factory creation.
 	 */
 	DLLSPEC void validate();
-	
+
 	/**
 	 * Places a child element into the <tt><i>parent</i></tt> element where the
 	 * calling object is the @c daeMetaElement for the parent element.
@@ -323,7 +323,7 @@ public:
 	DLLSPEC void getChildren( daeElement* parent, daeElementRefArray &array );
 
 	/**
-	 * Invokes the factory element creation routine set by @c registerConstructor() 
+	 * Invokes the factory element creation routine set by @c registerConstructor()
 	 * to return a C++ COLLADA Object Model instance of this element type.
 	 * @return Returns a created @c daeElement of appropriate type via the
 	 * object creation function and the <tt> daeElement::setup() </tt> function.
@@ -332,7 +332,7 @@ public:
 
 	/**
 	 * Looks through the list of potential child elements
-	 * for this element type finding the corresponding element type; if a corresponding element type 
+	 * for this element type finding the corresponding element type; if a corresponding element type
 	 * is found, use that type as a factory and return an instance of that
 	 * child type.  Typically @c place() is called after @c create(childelementname)
 	 * @param childElementTypeName Type name to create.

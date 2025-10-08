@@ -58,7 +58,7 @@ domCamera::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -67,7 +67,7 @@ domCamera::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domCamera , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -78,7 +78,7 @@ domCamera::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domCamera , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -131,7 +131,7 @@ domCamera::domOptics::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domCamera::domOptics));
 	meta->validate();
@@ -176,7 +176,7 @@ domCamera::domOptics::domTechnique_common::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCamera::domOptics::domTechnique_common,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCamera::domOptics::domTechnique_common,_contentsOrder));
@@ -279,7 +279,7 @@ domCamera::domOptics::domTechnique_common::domOrthographic::registerElement(DAE&
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCamera::domOptics::domTechnique_common::domOrthographic,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCamera::domOptics::domTechnique_common::domOrthographic,_contentsOrder));
@@ -382,7 +382,7 @@ domCamera::domOptics::domTechnique_common::domPerspective::registerElement(DAE& 
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCamera::domOptics::domTechnique_common::domPerspective,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCamera::domOptics::domTechnique_common::domPerspective,_contentsOrder));
@@ -431,7 +431,7 @@ domCamera::domImager::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domCamera::domImager));
 	meta->validate();

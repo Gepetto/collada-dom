@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -54,7 +54,7 @@ domCommon_float_or_param_type::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCommon_float_or_param_type,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCommon_float_or_param_type,_contentsOrder));
@@ -103,7 +103,7 @@ domCommon_float_or_param_type::domFloat::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domCommon_float_or_param_type::domFloat , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -142,7 +142,7 @@ domCommon_float_or_param_type::domParam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCommon_float_or_param_type::domParam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

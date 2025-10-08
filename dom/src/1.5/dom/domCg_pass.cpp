@@ -64,7 +64,7 @@ domCg_pass::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 4 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: sid
 	{
@@ -74,7 +74,7 @@ domCg_pass::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCg_pass , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -115,7 +115,7 @@ domCg_pass::domStates::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 0, 0, -1 ) );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domCg_pass::domStates));
 	meta->validate();
@@ -154,7 +154,7 @@ domCg_pass::domProgram::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domCg_pass::domProgram));
 	meta->validate();
@@ -205,7 +205,7 @@ domCg_pass::domProgram::domShader::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: stage
 	{
@@ -215,7 +215,7 @@ domCg_pass::domProgram::domShader::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCg_pass::domProgram::domShader , attrStage ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -274,7 +274,7 @@ domCg_pass::domProgram::domShader::domSources::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 3000 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCg_pass::domProgram::domShader::domSources,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCg_pass::domProgram::domShader::domSources,_contentsOrder));
@@ -288,7 +288,7 @@ domCg_pass::domProgram::domShader::domSources::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCg_pass::domProgram::domShader::domSources , attrEntry ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -335,7 +335,7 @@ domCg_pass::domProgram::domShader::domBind_uniform::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 0, 1, 1 ) );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCg_pass::domProgram::domShader::domBind_uniform,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCg_pass::domProgram::domShader::domBind_uniform,_contentsOrder));
@@ -349,7 +349,7 @@ domCg_pass::domProgram::domShader::domBind_uniform::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCg_pass::domProgram::domShader::domBind_uniform , attrSymbol ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -388,7 +388,7 @@ domCg_pass::domProgram::domShader::domBind_uniform::domParam::registerElement(DA
 		ma->setOffset( daeOffsetOf( domCg_pass::domProgram::domShader::domBind_uniform::domParam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -465,7 +465,7 @@ domCg_pass::domEvaluate::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 6 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domCg_pass::domEvaluate));
 	meta->validate();

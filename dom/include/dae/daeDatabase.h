@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_DATABASE__
 #define __DAE_DATABASE__
@@ -28,7 +28,7 @@ public:
 	 * Constructor
 	 */
 	daeDatabase(DAE& dae);
-	
+
 	/**
 	 * Destructor
 	 */
@@ -39,12 +39,12 @@ public:
 	 * @return The associated DAE object.
 	 */
 	virtual DAE* getDAE();
-	
+
 	/**
 	* Creates a new document, defining its root as the <tt><i>dom</i></tt> object; returns an error if the document name already exists.
 	* @param name Name of the new document, must be a valid URI.
 	* @param dom Existing @c domCOLLADA root element of the document
-	* @param document Pointer to a @c daeDocument pointer that receives the document created 
+	* @param document Pointer to a @c daeDocument pointer that receives the document created
     * @param zaeRootDocument Indicates if the new document is the root document of a ZAE archive.
     * @param extractedFileURI URI to extracted dae file.
 	* @return Returns @c DAE_OK if the document was created successfully, otherwise returns a negative value as defined in daeError.h.
@@ -55,7 +55,7 @@ public:
 	/**
 	* Creates a new @c domCOLLADA root element and a new document; returns an error if the document name already exists.
 	* @param name Name of the new document, must be a valid URI.
-	* @param document Pointer to a @c daeDocument pointer that receives the document created 
+	* @param document Pointer to a @c daeDocument pointer that receives the document created
 	* @return Returns DAE_OK if the document was created successfully, otherwise returns a negative value as defined in daeError.h.
 	* @deprecated This function will be removed in future versions. Please use createDocument.
 	*/
@@ -64,7 +64,7 @@ public:
 	* Creates a new document, defining its root as the <tt><i>dom</i></tt> object; returns an error if the document name already exists.
 	* @param name Name of the new document, must be a valid URI.
 	* @param dom Existing @c domCOLLADA root element of the document
-	* @param document Pointer to a @c daeDocument pointer that receives the document created 
+	* @param document Pointer to a @c daeDocument pointer that receives the document created
     * @param zaeRootDocument Indicates if the new document is the root document of a ZAE archive.
     * @param extractedFileURI URI to extracted dae file.
 	* @return Returns @c DAE_OK if the document was created successfully, otherwise returns a negative value as defined in daeError.h.
@@ -74,7 +74,7 @@ public:
 	/**
 	* Creates a new @c domCOLLADA root element and a new document; returns an error if the document name already exists.
 	* @param name Name of the new document, must be a valid URI.
-	* @param document Pointer to a @c daeDocument pointer that receives the document created 
+	* @param document Pointer to a @c daeDocument pointer that receives the document created
 	* @return Returns DAE_OK if the document was created successfully, otherwise returns a negative value as defined in daeError.h.
 	*/
 	virtual daeInt createDocument(daeString name, daeDocument** document = NULL) = 0;
@@ -89,7 +89,7 @@ public:
 	/**
 	* Removes a document from the database.
 	* @param document Document to remove from the database
-	* @return Returns DAE_OK if the document was successfully removed, otherwise returns a negative value as defined in daeError.h. 
+	* @return Returns DAE_OK if the document was successfully removed, otherwise returns a negative value as defined in daeError.h.
 	*/
 	virtual daeInt removeDocument(daeDocument* document) = 0;
 	/**
@@ -100,13 +100,13 @@ public:
 	/**
 	* Gets a document based on the document index.
 	* @param index Index of the document to get.
-	* @return Returns a pointer on the document, or NULL if not found. 
+	* @return Returns a pointer on the document, or NULL if not found.
 	*/
 	virtual daeDocument* getDocument(daeUInt index) = 0;
 	/**
 	* Gets a document based on the document index.
 	* @param index Index of the document to get.
-	* @return Returns a pointer on the document, or NULL if not found. 
+	* @return Returns a pointer on the document, or NULL if not found.
 	*/
 	daeDocument* getDoc(daeUInt index);
 	/**
@@ -114,14 +114,14 @@ public:
 	* @param name The name of the document as a URI.
 	* @param skipUriNormalization Use the document name as is; don't normalize it first.
 	*   This is mostly for improved performance.
-	* @return Returns a pointer to the document, or NULL if not found. 
+	* @return Returns a pointer to the document, or NULL if not found.
 	* @note If the URI contains a fragment, the fragment is stripped off.
 	*/
 	virtual daeDocument* getDocument(daeString name, bool skipUriNormalization = false) = 0;
 	/**
 	* Gets a document name.
 	* @param index Index of the document to get.
-	* @return Returns the name of the document at the given index. 
+	* @return Returns the name of the document at the given index.
 	*/
 	virtual daeString getDocumentName(daeUInt index) = 0;
 	/**
@@ -131,7 +131,7 @@ public:
 	* @note If the URI contains a fragment, the fragment is stripped off.
 	*/
 	virtual daeBool isDocumentLoaded(daeString name) = 0;
-	
+
 	/**
 	* Inserts a @c daeElement into the runtime database.
 	* @param document Document in which the @c daeElement lives.
@@ -242,7 +242,7 @@ public:
 		for (size_t i = 0; i < elts.size(); i++)
 			matchingElements.push_back((T*)elts[i]);
 	}
-		
+
 	/**
 	 * Lookup elements by sid.
 	 * @param sid The sid to match on.
@@ -264,10 +264,10 @@ public:
 	                       std::vector<daeElement*>& matchingElements,
 	                       daeDocument* doc = NULL) = 0;
 
-	/** 
+	/**
 	* Sets the top meta object.
 	* Called by @c dae::setDatabase() when the database changes. It passes to this function the
-	* top meta object, which is the root of a 
+	* top meta object, which is the root of a
     * hierarchy of @c daeMetaElement objects. This top meta object is capable of creating
 	* any of the root objects in the DOM tree.
 	* @param _topMeta Top meta object to use to create objects to fill the database.

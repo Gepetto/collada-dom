@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 #ifndef domTest_h
 #define domTest_h
 
@@ -20,7 +20,7 @@
 //
 // Disable the warnings we get from Boost
 // warning C4180: qualifier applied to function type has no meaning; ignored
-// warning C4245: 'argument' : conversion from 'int' to 'boost::filesystem::system_error_type', 
+// warning C4245: 'argument' : conversion from 'int' to 'boost::filesystem::system_error_type',
 //   signed/unsigned mismatch
 #ifdef _MSC_VER
 #pragma warning(push)

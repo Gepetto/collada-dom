@@ -82,7 +82,7 @@ domImage::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domImage,_contents));
 	meta->addContentsOrder(daeOffsetOf(domImage,_contentsOrder));
@@ -95,7 +95,7 @@ domImage::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domImage , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -106,7 +106,7 @@ domImage::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domImage , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -117,7 +117,7 @@ domImage::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domImage , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -156,7 +156,7 @@ domImage::domRenderable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domRenderable , attrShare ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -209,7 +209,7 @@ domImage::domInit_from::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domImage::domInit_from,_contents));
 	meta->addContentsOrder(daeOffsetOf(domImage::domInit_from,_contentsOrder));
@@ -224,7 +224,7 @@ domImage::domInit_from::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "true");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -313,7 +313,7 @@ domImage::domCreate_2d::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 4 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domImage::domCreate_2d,_contents));
 	meta->addContentsOrder(daeOffsetOf(domImage::domCreate_2d,_contentsOrder));
@@ -354,7 +354,7 @@ domImage::domCreate_2d::domSize_exact::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_2d::domSize_exact , attrWidth ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -366,7 +366,7 @@ domImage::domCreate_2d::domSize_exact::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_2d::domSize_exact , attrHeight ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -405,7 +405,7 @@ domImage::domCreate_2d::domSize_ratio::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_2d::domSize_ratio , attrWidth ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -417,7 +417,7 @@ domImage::domCreate_2d::domSize_ratio::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_2d::domSize_ratio , attrHeight ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -483,7 +483,7 @@ domImage::domCreate_2d::domArray::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_2d::domArray , attrLength ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -530,7 +530,7 @@ domImage::domCreate_2d::domFormat::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domImage::domCreate_2d::domFormat));
 	meta->validate();
@@ -567,7 +567,7 @@ domImage::domCreate_2d::domFormat::domHint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_2d::domFormat::domHint , attrChannels ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -579,7 +579,7 @@ domImage::domCreate_2d::domFormat::domHint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_2d::domFormat::domHint , attrRange ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -591,7 +591,7 @@ domImage::domCreate_2d::domFormat::domHint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_2d::domFormat::domHint , attrPrecision ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "DEFAULT");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -602,7 +602,7 @@ domImage::domCreate_2d::domFormat::domHint::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domImage::domCreate_2d::domFormat::domHint , attrSpace ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -691,7 +691,7 @@ domImage::domCreate_2d::domInit_from::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domImage::domCreate_2d::domInit_from,_contents));
 	meta->addContentsOrder(daeOffsetOf(domImage::domCreate_2d::domInit_from,_contentsOrder));
@@ -705,7 +705,7 @@ domImage::domCreate_2d::domInit_from::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_2d::domInit_from , attrMip_index ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -718,7 +718,7 @@ domImage::domCreate_2d::domInit_from::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -783,7 +783,7 @@ domImage::domCreate_3d::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 4 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domImage::domCreate_3d));
 	meta->validate();
@@ -820,7 +820,7 @@ domImage::domCreate_3d::domSize::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_3d::domSize , attrWidth ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -832,7 +832,7 @@ domImage::domCreate_3d::domSize::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_3d::domSize , attrHeight ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -844,7 +844,7 @@ domImage::domCreate_3d::domSize::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_3d::domSize , attrDepth ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -883,7 +883,7 @@ domImage::domCreate_3d::domArray::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_3d::domArray , attrLength ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -930,7 +930,7 @@ domImage::domCreate_3d::domFormat::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domImage::domCreate_3d::domFormat));
 	meta->validate();
@@ -967,7 +967,7 @@ domImage::domCreate_3d::domFormat::domHint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_3d::domFormat::domHint , attrChannels ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -979,7 +979,7 @@ domImage::domCreate_3d::domFormat::domHint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_3d::domFormat::domHint , attrRange ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -991,7 +991,7 @@ domImage::domCreate_3d::domFormat::domHint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_3d::domFormat::domHint , attrPrecision ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "DEFAULT");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1002,7 +1002,7 @@ domImage::domCreate_3d::domFormat::domHint::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domImage::domCreate_3d::domFormat::domHint , attrSpace ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1091,7 +1091,7 @@ domImage::domCreate_3d::domInit_from::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domImage::domCreate_3d::domInit_from,_contents));
 	meta->addContentsOrder(daeOffsetOf(domImage::domCreate_3d::domInit_from,_contentsOrder));
@@ -1105,7 +1105,7 @@ domImage::domCreate_3d::domInit_from::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_3d::domInit_from , attrDepth ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1117,7 +1117,7 @@ domImage::domCreate_3d::domInit_from::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_3d::domInit_from , attrMip_index ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1130,7 +1130,7 @@ domImage::domCreate_3d::domInit_from::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1195,7 +1195,7 @@ domImage::domCreate_cube::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 4 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domImage::domCreate_cube));
 	meta->validate();
@@ -1232,7 +1232,7 @@ domImage::domCreate_cube::domSize::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_cube::domSize , attrWidth ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1271,7 +1271,7 @@ domImage::domCreate_cube::domArray::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_cube::domArray , attrLength ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1318,7 +1318,7 @@ domImage::domCreate_cube::domFormat::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domImage::domCreate_cube::domFormat));
 	meta->validate();
@@ -1355,7 +1355,7 @@ domImage::domCreate_cube::domFormat::domHint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_cube::domFormat::domHint , attrChannels ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1367,7 +1367,7 @@ domImage::domCreate_cube::domFormat::domHint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_cube::domFormat::domHint , attrRange ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1379,7 +1379,7 @@ domImage::domCreate_cube::domFormat::domHint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_cube::domFormat::domHint , attrPrecision ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "DEFAULT");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1390,7 +1390,7 @@ domImage::domCreate_cube::domFormat::domHint::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domImage::domCreate_cube::domFormat::domHint , attrSpace ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1479,7 +1479,7 @@ domImage::domCreate_cube::domInit_from::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domImage::domCreate_cube::domInit_from,_contents));
 	meta->addContentsOrder(daeOffsetOf(domImage::domCreate_cube::domInit_from,_contentsOrder));
@@ -1493,7 +1493,7 @@ domImage::domCreate_cube::domInit_from::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_cube::domInit_from , attrFace ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1505,7 +1505,7 @@ domImage::domCreate_cube::domInit_from::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage::domCreate_cube::domInit_from , attrMip_index ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1518,7 +1518,7 @@ domImage::domCreate_cube::domInit_from::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

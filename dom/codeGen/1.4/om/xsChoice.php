@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 class xsChoice extends _elementSet
 {
@@ -17,7 +17,7 @@ class xsChoice extends _elementSet
     $this->_addElement( 'xsSequence', array( 'minOccurs' => '0', 'maxOccurs' => 'unbounded' ) );
     $this->_addElement( 'xsGroup', array( 'minOccurs' => '0', 'maxOccurs' => 'unbounded' ) );
     $this->_addElement( 'xsAnnotation', array( 'minOccurs' => '0', 'maxOccurs' => 'unbounded' ) );
-    
+
     $this->type[] = "xsChoice";
     parent::_elementSet();
   }
@@ -25,7 +25,7 @@ class xsChoice extends _elementSet
   function addChoiceElement( & $e )
   {
     $this->addElement( $e );
-  }  
+  }
 }
 
 ?>

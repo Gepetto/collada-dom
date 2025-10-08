@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -55,7 +55,7 @@ domFx_surface_init_from_common::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_surface_init_from_common , attrMip ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -67,7 +67,7 @@ domFx_surface_init_from_common::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_surface_init_from_common , attrSlice ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -79,7 +79,7 @@ domFx_surface_init_from_common::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_surface_init_from_common , attrFace ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "POSITIVE_X");
-	
+
 		meta->appendAttribute(ma);
 	}
 

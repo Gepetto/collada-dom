@@ -23,7 +23,7 @@ protected:  // Attributes
 /**
  *  The id attribute is a text string containing the unique identifier of
  * this element.  This value must be unique within the instance document.
- * Optional attribute. 
+ * Optional attribute.
  */
 	xsID attrId;
 /**
@@ -32,7 +32,7 @@ protected:  // Attributes
 	xsToken attrName;
 /**
  *  The count attribute indicates the number of values in the array. Required
- * attribute. 
+ * attribute.
  */
 	domUint attrCount;
 
@@ -86,7 +86,7 @@ public:	//Accessors and Mutators
 
 protected:  // Value
 	/**
-	 * The domList_of_bools value of the text data of this element. 
+	 * The domList_of_bools value of the text data of this element.
 	 */
 	domList_of_bools _value;
 protected:
@@ -111,7 +111,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

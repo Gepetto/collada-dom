@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __dom141Float_array_h__
 #define __dom141Float_array_h__
@@ -31,7 +31,7 @@ protected:  // Attributes
 /**
  *  The id attribute is a text string containing the unique identifier of
  * this element. This value  must be unique within the instance document.
- * Optional attribute. 
+ * Optional attribute.
  */
 	xsID attrId;
 /**
@@ -40,25 +40,25 @@ protected:  // Attributes
 	xsNCName attrName;
 /**
  *  The count attribute indicates the number of values in the array. Required
- * attribute. 
+ * attribute.
  */
 	domUint attrCount;
 /**
  *  The digits attribute indicates the number of significant decimal digits
  * of the float values that  can be contained in the array. The default value
- * is 6. Optional attribute. 
+ * is 6. Optional attribute.
  */
 	xsShort attrDigits;
 /**
  *  The magnitude attribute indicates the largest exponent of the float values
  * that can be contained  in the array. The default value is 38. Optional
- * attribute. 
+ * attribute.
  */
 	xsShort attrMagnitude;
 
 protected:  // Value
 	/**
-	 * The domListOfFloats value of the text data of this element. 
+	 * The domListOfFloats value of the text data of this element.
 	 */
 	domListOfFloats _value;
 
@@ -72,7 +72,7 @@ public:	//Accessors and Mutators
 	 * Sets the id attribute.
 	 * @param atId The new value for the id attribute.
 	 */
-	void setId( xsID atId ) { *(daeStringRef*)&attrId = atId; _validAttributeArray[0] = true; 
+	void setId( xsID atId ) { *(daeStringRef*)&attrId = atId; _validAttributeArray[0] = true;
 		if( _document != NULL ) _document->changeElementID( this, attrId );
 	}
 
@@ -158,7 +158,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

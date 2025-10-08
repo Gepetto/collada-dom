@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __dom141Fx_surface_format_hint_common_h__
 #define __dom141Fx_surface_format_hint_common_h__
@@ -23,7 +23,7 @@ namespace ColladaDOM141 {
  * will describe the important features of the format so that the application
  * may select a compatable or close format
  */
-class domFx_surface_format_hint_common_complexType 
+class domFx_surface_format_hint_common_complexType
 {
 public:
 	class domChannels;
@@ -45,7 +45,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domFx_surface_format_hint_channels_enum value of the text data of this element. 
+		 * The domFx_surface_format_hint_channels_enum value of the text data of this element.
 		 */
 		domFx_surface_format_hint_channels_enum _value;
 
@@ -83,7 +83,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -108,7 +108,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domFx_surface_format_hint_range_enum value of the text data of this element. 
+		 * The domFx_surface_format_hint_range_enum value of the text data of this element.
 		 */
 		domFx_surface_format_hint_range_enum _value;
 
@@ -146,7 +146,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -172,7 +172,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domFx_surface_format_hint_precision_enum value of the text data of this element. 
+		 * The domFx_surface_format_hint_precision_enum value of the text data of this element.
 		 */
 		domFx_surface_format_hint_precision_enum _value;
 
@@ -210,7 +210,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -234,7 +234,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domFx_surface_format_hint_option_enum value of the text data of this element. 
+		 * The domFx_surface_format_hint_option_enum value of the text data of this element.
 		 */
 		domFx_surface_format_hint_option_enum _value;
 
@@ -272,7 +272,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -389,7 +389,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

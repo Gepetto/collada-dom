@@ -58,7 +58,7 @@ domAnimation_clip::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -67,7 +67,7 @@ domAnimation_clip::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domAnimation_clip , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -78,7 +78,7 @@ domAnimation_clip::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domAnimation_clip , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -90,7 +90,7 @@ domAnimation_clip::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domAnimation_clip , attrStart ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "0.0");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -101,7 +101,7 @@ domAnimation_clip::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Float"));
 		ma->setOffset( daeOffsetOf( domAnimation_clip , attrEnd ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

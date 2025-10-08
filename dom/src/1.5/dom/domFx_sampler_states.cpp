@@ -107,7 +107,7 @@ domFx_sampler_states::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 11 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domFx_sampler_states));
 	meta->validate();

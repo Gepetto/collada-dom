@@ -58,7 +58,7 @@ domSolids::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -68,7 +68,7 @@ domSolids::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domSolids , attrId ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -79,7 +79,7 @@ domSolids::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domSolids , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -91,7 +91,7 @@ domSolids::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domSolids , attrCount ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

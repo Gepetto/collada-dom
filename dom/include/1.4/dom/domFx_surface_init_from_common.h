@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __dom141Fx_surface_init_from_common_h__
 #define __dom141Fx_surface_init_from_common_h__
@@ -21,7 +21,7 @@ namespace ColladaDOM141 {
  * This element is an IDREF which specifies the image to use to initialize
  * a specific mip of a 1D or 2D surface, 3D slice, or Cube face.
  */
-class domFx_surface_init_from_common_complexType 
+class domFx_surface_init_from_common_complexType
 {
 protected:  // Attributes
 	xsUnsignedInt attrMip;
@@ -30,7 +30,7 @@ protected:  // Attributes
 
 protected:  // Value
 	/**
-	 * The xsIDREF value of the text data of this element. 
+	 * The xsIDREF value of the text data of this element.
 	 */
 	xsIDREF _value;
 
@@ -165,7 +165,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

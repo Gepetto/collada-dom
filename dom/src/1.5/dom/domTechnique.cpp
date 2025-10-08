@@ -39,7 +39,7 @@ domTechnique::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	meta->setAllowsAny( true );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domTechnique,_contents));
@@ -54,7 +54,7 @@ domTechnique::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domTechnique , attrProfile ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

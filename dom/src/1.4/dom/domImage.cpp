@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -72,7 +72,7 @@ domImage::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domImage,_contents));
 	meta->addContentsOrder(daeOffsetOf(domImage,_contentsOrder));
@@ -85,7 +85,7 @@ domImage::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domImage , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -96,7 +96,7 @@ domImage::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domImage , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -107,7 +107,7 @@ domImage::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domImage , attrFormat ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -118,7 +118,7 @@ domImage::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Uint"));
 		ma->setOffset( daeOffsetOf( domImage , attrHeight ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -129,7 +129,7 @@ domImage::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Uint"));
 		ma->setOffset( daeOffsetOf( domImage , attrWidth ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -141,7 +141,7 @@ domImage::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage , attrDepth ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "1");
-	
+
 		meta->appendAttribute(ma);
 	}
 

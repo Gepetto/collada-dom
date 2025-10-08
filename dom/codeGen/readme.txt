@@ -7,7 +7,7 @@ schema: File name of the COLLADA schema document
 cprt:   Generate the files with an SCEA shared source copyright notice
 
 You'll need to download PHP for your platform. php 5.2.5 on Windows
-is known to work while version 5.2.6 is known to cause problems. If you 
+is known to work while version 5.2.6 is known to cause problems. If you
 get a ton of errors when you run the code generator on
 Windows, try deleting C:\Program Files\PHP\php.ini if it's present.
 

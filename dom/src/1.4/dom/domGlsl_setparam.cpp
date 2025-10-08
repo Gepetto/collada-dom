@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -66,7 +66,7 @@ domGlsl_setparam::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGlsl_setparam,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGlsl_setparam,_contentsOrder));
@@ -80,7 +80,7 @@ domGlsl_setparam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGlsl_setparam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -91,7 +91,7 @@ domGlsl_setparam::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domGlsl_setparam , attrProgram ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

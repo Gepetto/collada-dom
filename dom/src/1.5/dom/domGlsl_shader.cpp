@@ -46,7 +46,7 @@ domGlsl_shader::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: stage
 	{
@@ -56,7 +56,7 @@ domGlsl_shader::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGlsl_shader , attrStage ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

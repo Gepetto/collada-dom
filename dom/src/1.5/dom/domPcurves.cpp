@@ -58,7 +58,7 @@ domPcurves::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -68,7 +68,7 @@ domPcurves::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domPcurves , attrId ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -80,7 +80,7 @@ domPcurves::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domPcurves , attrName ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -92,7 +92,7 @@ domPcurves::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domPcurves , attrCount ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

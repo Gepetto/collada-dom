@@ -27,7 +27,7 @@ protected:  // Attributes
 /**
  *  The id attribute is a text string containing the unique identifier of
  * this element.  This value must be unique within the instance document.
- * Optional attribute. 
+ * Optional attribute.
  */
 	xsID attrId;
 /**
@@ -40,14 +40,14 @@ protected:  // Attributes
  * determine which set of  key-frames will be included in the clip.  The start
  * time does not specify when the clip  will be played.  If the time falls
  * between two keyframes of a referenced animation, an  interpolated value
- * should be used.  The default value is 0.0.  Optional attribute. 
+ * should be used.  The default value is 0.0.  Optional attribute.
  */
 	domFloat attrStart;
 /**
  *  The end attribute is the time in seconds of the end of the clip.  This
  * is used in the  same way as the start time.  If end is not specified, the
  * value is taken to be the end  time of the longest animation.  Optional
- * attribute. 
+ * attribute.
  */
 	domFloat attrEnd;
 
@@ -170,7 +170,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -60,7 +60,7 @@ domAnimation_clip::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -69,7 +69,7 @@ domAnimation_clip::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domAnimation_clip , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -80,7 +80,7 @@ domAnimation_clip::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domAnimation_clip , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -92,7 +92,7 @@ domAnimation_clip::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domAnimation_clip , attrStart ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "0.0");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -103,7 +103,7 @@ domAnimation_clip::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsDouble"));
 		ma->setOffset( daeOffsetOf( domAnimation_clip , attrEnd ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

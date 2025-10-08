@@ -46,7 +46,7 @@ domExtra::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -55,7 +55,7 @@ domExtra::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domExtra , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -66,7 +66,7 @@ domExtra::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domExtra , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -77,7 +77,7 @@ domExtra::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNMTOKEN"));
 		ma->setOffset( daeOffsetOf( domExtra , attrType ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

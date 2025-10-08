@@ -39,7 +39,7 @@ domChannel::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domChannel , attrSource ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -51,7 +51,7 @@ domChannel::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domChannel , attrTarget ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

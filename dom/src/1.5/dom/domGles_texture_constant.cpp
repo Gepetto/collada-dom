@@ -38,7 +38,7 @@ domGles_texture_constant::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles_texture_constant , attrValue ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -50,7 +50,7 @@ domGles_texture_constant::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles_texture_constant , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

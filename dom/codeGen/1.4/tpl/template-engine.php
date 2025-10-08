@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 $_globals = array();
 // FLAG: Full Code - set true to output verbose mode, minimal otherwise (does not include//                   inline elements in minimal)
@@ -72,7 +72,7 @@ $_globals['templates'] = array(
 function applyTemplate( $template, & $bag )
 {
   global $_globals;
-  
+
   $_result = '';
   if ( array_key_exists( $template, $_globals['templates'] ) )
   {
@@ -150,7 +150,7 @@ function printAllSubChildren( & $elem, $prefix, $suffix ) {
 	for ( $i = 0; $i < count( $elem['elements'] ); $i++ ) {
 		if ( isset( $meta[$elem['elements'][$i]] ) ) {
 			if ( $meta[$elem['elements'][$i]]['isAGroup'] ) {
-				
+
 				printAllSubChildren( $meta[$elem['elements'][$i]], $prefix, $suffix );
 			}
 			else if ( !$meta[$elem['elements'][$i]]['abstract'] ) {
@@ -214,7 +214,7 @@ function printConstructors( $elemName, & $bag, $baseClasses, $indent ) {
 		beginConstructorInitializer($initializerListStarted);
 		print "attrXmlns(dae, " . $eltVar . ")";
 	}
-	
+
 	// Constructor initialization of attributes
 	if (count($bag['attributes']) > 0) {
 		foreach( $bag['attributes'] as $attr_name => & $a_list ) {
@@ -232,7 +232,7 @@ function printConstructors( $elemName, & $bag, $baseClasses, $indent ) {
 			print ")";
 		}
 	}
-	
+
 	// Constructor initialization of elements
 	for( $i=0; $i<count( $bag['elements'] ); $i++ ) {
 		$maxOccurs = $bag['element_attrs'][ $bag['elements'][$i] ]['maxOccurs'];
@@ -251,9 +251,9 @@ function printConstructors( $elemName, & $bag, $baseClasses, $indent ) {
 			print "_value(new xsIDREF(" . $eltVar . "))";
 		else
 			print "_value()";
-	}	
+	}
 	print " {}\n";
-	
+
 	print $indent ."\t/**\n". $indent ."\t * Destructor\n". $indent ."\t */\n";
 	print $indent ."\tvirtual ~". $elemName ."() {";
 	if ( $bag['hasChoice'] ) {
@@ -285,20 +285,20 @@ function printAttributes( & $bag, & $typemeta, & $indent, $vaa ) {
 		//comment
 		print $indent ."\t/**\n". $indent ."\t * Sets the xmlns attribute.\n";
 		print $indent ."\t * @param xmlns The new value for the xmlns attribute.\n";
-		print $indent ."\t */\n";	
+		print $indent ."\t */\n";
 		//code
 		print $indent ."\tvoid setXmlns( const xsAnyURI &xmlns ) { attrXmlns = xmlns;";
 		if ( $vaa ) {
 			print $indent ."\n\t _validAttributeArray[". $attrCnt ."] = true;";
 		}
 		print " }\n\n";
-		
+
 		$attrCnt++;
 	}
-	
+
 	foreach( $bag['attributes'] as $attr_name => & $a_list ) {
 		$type = $a_list['type'];
-		if ( preg_match( "/xs\:/", $type ) ) { 
+		if ( preg_match( "/xs\:/", $type ) ) {
 			$type = substr( $type, 3 );
 			$pre = "xs";
 		}
@@ -315,7 +315,7 @@ function printAttributes( & $bag, & $typemeta, & $indent, $vaa ) {
 			$typeInfo = $typemeta[$type];
 			while ( $typeInfo['base'] != '' && isset( $typemeta[$typeInfo['base']] ) ) {
 				$typeInfo = $typemeta[$typeInfo['base']];
-				if ( preg_match( "/xs\:/", $typeInfo['type'] ) ) { 
+				if ( preg_match( "/xs\:/", $typeInfo['type'] ) ) {
 					$baseType = "xs" . ucfirst( substr( $typeInfo['type'], 3 ) );
 				}
 				else {
@@ -323,7 +323,7 @@ function printAttributes( & $bag, & $typemeta, & $indent, $vaa ) {
 				}
 			}
 		}
-		
+
 		if ( (isset( $typemeta[$type] ) && $typemeta[$type]['isArray']) || $type == 'IDREFS' ) {
 			//comment
 			print $indent ."\t/**\n". $indent ."\t * Gets the ". $attr_name ." array attribute.\n";
@@ -439,7 +439,7 @@ function printAttributes( & $bag, & $typemeta, & $indent, $vaa ) {
 			{
 				print "\n". $indent ."\t\tif( _document != NULL ) _document->changeElementID( this, attrId );\n". $indent ."\t";
 			}
-			
+
 			print "}\n\n";
 		}
 		else {

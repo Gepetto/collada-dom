@@ -25,15 +25,15 @@ protected:  // Attributes
 /**
  *  The id attribute is a text string containing the unique identifier of
  * this element. This value  must be unique within the instance document.
- * Optional attribute. 
+ * Optional attribute.
  */
 	xsID attrId;
 /**
- *  Indicates what the sampled value should be before the first key. 
+ *  Indicates what the sampled value should be before the first key.
  */
 	domSampler_behavior attrPre_behavior;
 /**
- *  Indicates what the sampled value should be after the last key. 
+ *  Indicates what the sampled value should be after the last key.
  */
 	domSampler_behavior attrPost_behavior;
 
@@ -112,7 +112,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

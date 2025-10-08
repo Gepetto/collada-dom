@@ -120,7 +120,7 @@
 				<!-- Each line has the sid to resolve and the ID of the element it's expected
 				     to resolve to -->
 				<!-- This first test is for breadth-first vs depth-first search -->
-				myNode2/subNode2 myNode5 
+				myNode2/subNode2 myNode5
 				myNode2/subNode1/subNode2 myNode4
 				myNode2/blah failed
 			</nodeSidRefExtra2>

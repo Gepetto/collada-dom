@@ -46,7 +46,7 @@ domParam::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domParam , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -57,7 +57,7 @@ domParam::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domParam , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -68,7 +68,7 @@ domParam::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNMTOKEN"));
 		ma->setOffset( daeOffsetOf( domParam , attrSemantic ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -80,7 +80,7 @@ domParam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domParam , attrType ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

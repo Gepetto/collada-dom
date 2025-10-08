@@ -46,7 +46,7 @@ domInt_array::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domInt_array , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -57,7 +57,7 @@ domInt_array::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domInt_array , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -69,7 +69,7 @@ domInt_array::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInt_array , attrCount ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -81,7 +81,7 @@ domInt_array::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInt_array , attrMinInclusive ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "-2147483648");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -93,7 +93,7 @@ domInt_array::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInt_array , attrMaxInclusive ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "2147483647");
-	
+
 		meta->appendAttribute(ma);
 	}
 

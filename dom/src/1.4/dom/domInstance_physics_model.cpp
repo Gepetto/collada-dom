@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -66,7 +66,7 @@ domInstance_physics_model::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: url
 	{
@@ -76,7 +76,7 @@ domInstance_physics_model::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_physics_model , attrUrl ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -87,7 +87,7 @@ domInstance_physics_model::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domInstance_physics_model , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -98,7 +98,7 @@ domInstance_physics_model::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domInstance_physics_model , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -109,7 +109,7 @@ domInstance_physics_model::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsAnyURI"));
 		ma->setOffset( daeOffsetOf( domInstance_physics_model , attrParent ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

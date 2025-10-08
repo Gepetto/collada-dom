@@ -40,7 +40,7 @@ domCg_setparam::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 0, 1, 1 ) );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: ref
 	{
@@ -50,7 +50,7 @@ domCg_setparam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCg_setparam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -90,7 +90,7 @@ domCommon_newparam_type::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCommon_newparam_type,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCommon_newparam_type,_contentsOrder));
@@ -104,7 +104,7 @@ domCommon_newparam_type::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCommon_newparam_type , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

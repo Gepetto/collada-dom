@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 require_once( 'src/TypeMeta.php' );
 
@@ -17,7 +17,7 @@ class xsSimpleType extends _elementSet
     $this->_addElement( 'xsExtension', array( 'minOccurs' => '1', 'maxOccurs' => '1' ) );
     $this->_addElement( 'xsList', array( 'minOccurs' => '1', 'maxOccurs' => '1' ) );
     $this->_addElement( 'xsUnion', array( 'minOccurs' => '1', 'maxOccurs' => '1' ) );
-    
+
     $this->_addElement( 'xsAnnotation', array( 'minOccurs' => '1', 'maxOccurs' => '1' ) );
 
     $this->_addAttribute( 'name', array( 'type' => 'xs:string' ) );
@@ -25,15 +25,15 @@ class xsSimpleType extends _elementSet
     $this->type[] = 'xsSimpleType';
     parent::_elementSet();
   }
-  
+
   function & generate()
   {
     $vars = array();
     $e = $this->getElements();
     $generator = new TypeMeta();
-    
+
     $generator->setType( $this->getAttribute( 'name' ) );
-    
+
     $a = $this->getElementsByType( 'xsAnnotation' );
     if ( count( $a ) > 0 )
     {
@@ -50,7 +50,7 @@ class xsSimpleType extends _elementSet
 	  	$generator->setAppInfo( $ap[0]->get() );
 	  }
     }
-    
+
     $idx = 0;
     if ( $e[$idx]->getType() == 'xsAnnotation' ) {
 		$idx = 1;
@@ -58,10 +58,10 @@ class xsSimpleType extends _elementSet
     if ( $e[$idx]->getType() == 'xsRestriction' || $e[$idx]->getType() == 'xsExtension' )
     {
       $generator->setIsExtension( $e[$idx]->getType() == 'xsExtension' );
-    
+
       // Set base class
       $generator->setBase( $e[$idx]->getAttribute( 'base' ) );
-      
+
       // Look for enums
       $enums = $e[$idx]->getElementsByType( 'xsEnumeration' );
       for( $i=0; $i<count( $enums ); $i++ )
@@ -80,7 +80,7 @@ class xsSimpleType extends _elementSet
 			}
         }
       }
-      
+
       // Look for max/mins
       $array_limits = array();
       $min = $e[$idx]->getElementsByType( 'xsMinLength' );
@@ -89,32 +89,32 @@ class xsSimpleType extends _elementSet
       $maxIn = $e[$idx]->getElementsByType( 'xsMaxInclusive' );
       $minEx = $e[$idx]->getElementsByType( 'xsMinExclusive' );
       $maxEx = $e[$idx]->getElementsByType( 'xsMaxExclusive' );
-      
+
       if ( count( $min ) > 0 )
       {
         $generator->setRestriction( 'minLength', $min[0]->getAttribute( 'value' ) );
       }
-      
+
       if ( count( $max ) > 0 )
       {
         $generator->setRestriction( 'maxLength', $max[0]->getAttribute( 'value' ) );
       }
-      
+
       if ( count( $minIn ) > 0 )
       {
         $generator->setRestriction( 'minInclusive', $minIn[0]->getAttribute( 'value' ) );
       }
-      
+
       if ( count( $maxIn ) > 0 )
       {
         $generator->setRestriction( 'maxInclusive', $maxIn[0]->getAttribute( 'value' ) );
       }
-      
+
       if ( count( $minEx ) > 0 )
       {
         $generator->setRestriction( 'minExclusive', $minEx[0]->getAttribute( 'value' ) );
       }
-      
+
       if ( count( $maxEx ) > 0 )
       {
         $generator->setRestriction( 'maxExclusive', $maxEx[0]->getAttribute( 'value' ) );
@@ -125,7 +125,7 @@ class xsSimpleType extends _elementSet
       $itemType = $e[$idx]->getAttribute( 'itemType' );
       $generator->setListType( $itemType );
       $generator->bag['isArray'] = true;
-    } 
+    }
     else if ( $e[$idx]->getType() == 'xsUnion' ) {
 		$generator->setUnionMembers( $e[$idx]->getAttribute( 'memberTypes' ) );
     }

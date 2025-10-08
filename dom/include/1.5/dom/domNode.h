@@ -36,7 +36,7 @@ protected:  // Attributes
 /**
  *  The id attribute is a text string containing the unique identifier of
  * this element.  This value must be unique within the instance document.
- * Optional attribute. 
+ * Optional attribute.
  */
 	xsID attrId;
 /**
@@ -46,12 +46,12 @@ protected:  // Attributes
 /**
  *  The sid attribute is a text string value containing the sub-identifier
  * of this element.  This value must be unique within the scope of the parent
- * element. Optional attribute. 
+ * element. Optional attribute.
  */
 	domSid attrSid;
 /**
  *  The type attribute indicates the type of the node element. The default
- * value is "NODE".  Optional attribute. 
+ * value is "NODE".  Optional attribute.
  */
 	domNode_enum attrType;
 /**
@@ -59,7 +59,7 @@ protected:  // Attributes
  * belongs.  For example,  a value of "foreground glowing" indicates that
  * this node belongs to both the 'foreground' layer  and the 'glowing' layer.
  * The default value is empty, indicating that the node doesn't belong to
- * any layer.  Optional attribute. 
+ * any layer.  Optional attribute.
  */
 	domList_of_names attrLayer;
 
@@ -363,7 +363,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

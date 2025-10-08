@@ -52,7 +52,7 @@ domGles2_shader::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: stage
 	{
@@ -62,7 +62,7 @@ domGles2_shader::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles2_shader , attrStage ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -121,7 +121,7 @@ domGles2_shader::domSources::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 3000 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGles2_shader::domSources,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGles2_shader::domSources,_contentsOrder));
@@ -135,7 +135,7 @@ domGles2_shader::domSources::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles2_shader::domSources , attrEntry ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "main");
-	
+
 		meta->appendAttribute(ma);
 	}
 

@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -96,7 +96,7 @@ domProfile_GLSL::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 6004 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_GLSL,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_GLSL,_contentsOrder));
@@ -110,7 +110,7 @@ domProfile_GLSL::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_GLSL , attrId ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -205,7 +205,7 @@ domProfile_GLSL::domTechnique::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 6004 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_GLSL::domTechnique,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_GLSL::domTechnique,_contentsOrder));
@@ -218,7 +218,7 @@ domProfile_GLSL::domTechnique::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domProfile_GLSL::domTechnique , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -230,7 +230,7 @@ domProfile_GLSL::domTechnique::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_GLSL::domTechnique , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -337,7 +337,7 @@ domProfile_GLSL::domTechnique::domPass::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3009 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_GLSL::domTechnique::domPass,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_GLSL::domTechnique::domPass,_contentsOrder));
@@ -351,7 +351,7 @@ domProfile_GLSL::domTechnique::domPass::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_GLSL::domTechnique::domPass , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -458,7 +458,7 @@ domProfile_GLSL::domTechnique::domPass::domShader::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 4 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: stage
 	{
@@ -467,7 +467,7 @@ domProfile_GLSL::domTechnique::domPass::domShader::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Glsl_pipeline_stage"));
 		ma->setOffset( daeOffsetOf( domProfile_GLSL::domTechnique::domPass::domShader , attrStage ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -587,7 +587,7 @@ domProfile_GLSL::domTechnique::domPass::domShader::domName::registerElement(DAE&
 		ma->setOffset( daeOffsetOf( domProfile_GLSL::domTechnique::domPass::domShader::domName , attrSource ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -634,7 +634,7 @@ domProfile_GLSL::domTechnique::domPass::domShader::domBind::registerElement(DAE&
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_GLSL::domTechnique::domPass::domShader::domBind,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_GLSL::domTechnique::domPass::domShader::domBind,_contentsOrder));
@@ -648,7 +648,7 @@ domProfile_GLSL::domTechnique::domPass::domShader::domBind::registerElement(DAE&
 		ma->setOffset( daeOffsetOf( domProfile_GLSL::domTechnique::domPass::domShader::domBind , attrSymbol ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -687,7 +687,7 @@ domProfile_GLSL::domTechnique::domPass::domShader::domBind::domParam::registerEl
 		ma->setOffset( daeOffsetOf( domProfile_GLSL::domTechnique::domPass::domShader::domBind::domParam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

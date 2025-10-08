@@ -173,7 +173,7 @@ domGlsl_value::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGlsl_value,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGlsl_value,_contentsOrder));

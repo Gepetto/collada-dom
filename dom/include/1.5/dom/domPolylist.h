@@ -58,7 +58,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domList_of_uints value of the text data of this element. 
+		 * The domList_of_uints value of the text data of this element.
 		 */
 		domList_of_uints _value;
 	protected:
@@ -83,7 +83,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -97,14 +97,14 @@ protected:  // Attributes
 	xsToken attrName;
 /**
  *  The count attribute indicates the number of polygon primitives. Required
- * attribute. 
+ * attribute.
  */
 	domUint attrCount;
 /**
  *  The material attribute declares a symbol for a material. This symbol is
  * bound to a material at  the time of instantiation. If the material attribute
  * is not specified then the lighting and  shading results are application
- * defined. Optional attribute. 
+ * defined. Optional attribute.
  */
 	xsNCName attrMaterial;
 
@@ -215,7 +215,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

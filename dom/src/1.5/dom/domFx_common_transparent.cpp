@@ -58,7 +58,7 @@ domFx_common_transparent::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFx_common_transparent,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFx_common_transparent,_contentsOrder));
@@ -72,7 +72,7 @@ domFx_common_transparent::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_common_transparent , attrOpaque ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "A_ONE");
-	
+
 		meta->appendAttribute(ma);
 	}
 

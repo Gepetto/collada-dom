@@ -4,12 +4,12 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae/daeMetaSequence.h>
 
 daeMetaSequence::daeMetaSequence( daeMetaElement *container, daeMetaCMPolicy *parent, daeUInt ordinal,
-									daeInt minO, daeInt maxO) : 
+									daeInt minO, daeInt maxO) :
 									daeMetaCMPolicy( container, parent, ordinal, minO, maxO )
 {}
 

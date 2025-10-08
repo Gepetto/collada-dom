@@ -76,7 +76,7 @@ domSwept_surface::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domSwept_surface,_contents));
 	meta->addContentsOrder(daeOffsetOf(domSwept_surface,_contentsOrder));

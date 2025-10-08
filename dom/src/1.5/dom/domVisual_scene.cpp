@@ -58,7 +58,7 @@ domVisual_scene::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -68,7 +68,7 @@ domVisual_scene::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domVisual_scene , attrId ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -79,7 +79,7 @@ domVisual_scene::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domVisual_scene , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -132,7 +132,7 @@ domVisual_scene::domEvaluate_scene::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -141,7 +141,7 @@ domVisual_scene::domEvaluate_scene::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domVisual_scene::domEvaluate_scene , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -152,7 +152,7 @@ domVisual_scene::domEvaluate_scene::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domVisual_scene::domEvaluate_scene , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -163,7 +163,7 @@ domVisual_scene::domEvaluate_scene::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domVisual_scene::domEvaluate_scene , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -175,7 +175,7 @@ domVisual_scene::domEvaluate_scene::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domVisual_scene::domEvaluate_scene , attrEnable ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "true");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -229,7 +229,7 @@ domVisual_scene::domEvaluate_scene::domRender::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: sid
 	{
@@ -238,7 +238,7 @@ domVisual_scene::domEvaluate_scene::domRender::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domVisual_scene::domEvaluate_scene::domRender , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -249,7 +249,7 @@ domVisual_scene::domEvaluate_scene::domRender::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domVisual_scene::domEvaluate_scene::domRender , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -261,7 +261,7 @@ domVisual_scene::domEvaluate_scene::domRender::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domVisual_scene::domEvaluate_scene::domRender , attrCamera_node ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -351,7 +351,7 @@ domVisual_scene::domEvaluate_scene::domRender::domInstance_material::registerEle
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: url
 	{
@@ -361,7 +361,7 @@ domVisual_scene::domEvaluate_scene::domRender::domInstance_material::registerEle
 		ma->setOffset( daeOffsetOf( domVisual_scene::domEvaluate_scene::domRender::domInstance_material , attrUrl ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -400,7 +400,7 @@ domVisual_scene::domEvaluate_scene::domRender::domInstance_material::domTechniqu
 		ma->setOffset( daeOffsetOf( domVisual_scene::domEvaluate_scene::domRender::domInstance_material::domTechnique_override , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -411,7 +411,7 @@ domVisual_scene::domEvaluate_scene::domRender::domInstance_material::domTechniqu
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domVisual_scene::domEvaluate_scene::domRender::domInstance_material::domTechnique_override , attrPass ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -450,7 +450,7 @@ domVisual_scene::domEvaluate_scene::domRender::domInstance_material::domBind::re
 		ma->setOffset( daeOffsetOf( domVisual_scene::domEvaluate_scene::domRender::domInstance_material::domBind , attrSemantic ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -462,7 +462,7 @@ domVisual_scene::domEvaluate_scene::domRender::domInstance_material::domBind::re
 		ma->setOffset( daeOffsetOf( domVisual_scene::domEvaluate_scene::domRender::domInstance_material::domBind , attrTarget ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

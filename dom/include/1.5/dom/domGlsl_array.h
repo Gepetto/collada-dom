@@ -22,7 +22,7 @@ public:
 	virtual daeInt typeID() const { return ID(); }
 protected:  // Attribute
 /**
- *  The length attribute specifies the length of the array. 
+ *  The length attribute specifies the length of the array.
  */
 	xsPositiveInteger attrLength;
 
@@ -73,7 +73,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

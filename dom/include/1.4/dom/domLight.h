@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __dom141Light_h__
 #define __dom141Light_h__
@@ -102,7 +102,7 @@ public:
 			static DLLSPEC daeElementRef create(DAE& dae);
 			/**
 			 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-			 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+			 * If a daeMetaElement already exists it will return that instead of creating a new one.
 			 * @return A daeMetaElement describing this COLLADA element.
 			 */
 			static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -163,7 +163,7 @@ public:
 			static DLLSPEC daeElementRef create(DAE& dae);
 			/**
 			 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-			 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+			 * If a daeMetaElement already exists it will return that instead of creating a new one.
 			 * @return A daeMetaElement describing this COLLADA element.
 			 */
 			static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -256,7 +256,7 @@ public:
 			static DLLSPEC daeElementRef create(DAE& dae);
 			/**
 			 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-			 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+			 * If a daeMetaElement already exists it will return that instead of creating a new one.
 			 * @return A daeMetaElement describing this COLLADA element.
 			 */
 			static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -271,7 +271,7 @@ public:
  * The spot element declares the parameters required to describe a spot light
  * source.  A spot light  source radiates light in one direction from a known
  * location in space. The light radiates from  the spot light source in a
- * cone shape. The intensity of the light is attenuated as the radiation 
+ * cone shape. The intensity of the light is attenuated as the radiation
  * angle increases away from the direction of the light source. The intensity
  * of a spot light source  is also attenuated as the distance to the light
  * source increases. The position of the light is  defined by the transform
@@ -375,7 +375,7 @@ public:
 			static DLLSPEC daeElementRef create(DAE& dae);
 			/**
 			 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-			 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+			 * If a daeMetaElement already exists it will return that instead of creating a new one.
 			 * @return A daeMetaElement describing this COLLADA element.
 			 */
 			static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -412,7 +412,7 @@ public:
  * The spot element declares the parameters required to describe a spot light
  * source.  A spot light  source radiates light in one direction from a known
  * location in space. The light radiates from  the spot light source in a
- * cone shape. The intensity of the light is attenuated as the radiation 
+ * cone shape. The intensity of the light is attenuated as the radiation
  * angle increases away from the direction of the light source. The intensity
  * of a spot light source  is also attenuated as the distance to the light
  * source increases. The position of the light is  defined by the transform
@@ -491,7 +491,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -502,7 +502,7 @@ protected:  // Attributes
 /**
  *  The id attribute is a text string containing the unique identifier of
  * this element.  This value must be unique within the instance document.
- * Optional attribute. 
+ * Optional attribute.
  */
 	xsID attrId;
 /**
@@ -540,7 +540,7 @@ public:	//Accessors and Mutators
 	 * Sets the id attribute.
 	 * @param atId The new value for the id attribute.
 	 */
-	void setId( xsID atId ) { *(daeStringRef*)&attrId = atId; _validAttributeArray[0] = true; 
+	void setId( xsID atId ) { *(daeStringRef*)&attrId = atId; _validAttributeArray[0] = true;
 		if( _document != NULL ) _document->changeElementID( this, attrId );
 	}
 
@@ -607,7 +607,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

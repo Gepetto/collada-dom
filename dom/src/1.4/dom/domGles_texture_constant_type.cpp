@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -46,7 +46,7 @@ domGles_texture_constant_type::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles_texture_constant_type , attrValue ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -58,7 +58,7 @@ domGles_texture_constant_type::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles_texture_constant_type , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

@@ -76,7 +76,7 @@ domProfile_cg::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3004 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_cg,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_cg,_contentsOrder));
@@ -90,7 +90,7 @@ domProfile_cg::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_cg , attrId ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -103,7 +103,7 @@ domProfile_cg::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "PC");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -162,7 +162,7 @@ domProfile_cg::domTechnique::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -171,7 +171,7 @@ domProfile_cg::domTechnique::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domProfile_cg::domTechnique , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -183,7 +183,7 @@ domProfile_cg::domTechnique::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_cg::domTechnique , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

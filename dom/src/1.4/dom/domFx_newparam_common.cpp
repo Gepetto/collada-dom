@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -66,7 +66,7 @@ domFx_newparam_common::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 3, 1, 1 ) );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: sid
 	{
@@ -76,7 +76,7 @@ domFx_newparam_common::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_newparam_common , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

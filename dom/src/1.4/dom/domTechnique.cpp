@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -47,7 +47,7 @@ domTechnique::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	meta->setAllowsAny( true );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domTechnique,_contents));
@@ -63,7 +63,7 @@ domTechnique::registerElement(DAE& dae)
 		//ma->setIsRequired( true );
 		meta->appendAttribute(ma);
 	}
-    
+
 	//	Add attribute: profile
 	{
 		daeMetaAttribute *ma = new daeMetaAttribute;
@@ -72,7 +72,7 @@ domTechnique::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domTechnique , attrProfile ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

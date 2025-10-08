@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 if ( $_globals['copyright'] ) {
 print $_globals['copyright_text'];
@@ -25,13 +25,13 @@ print $_globals['copyright_text'];
 		print "extern DLLSPEC daeString ". $name .";\n";
 	}
 	print "\n";
-	
+
 	foreach ($_globals['elementTypes'] as $num => $val )
 	{
 		print "extern DLLSPEC daeString COLLADA_TYPE_". getUniqueName($val, $_globals['elementTypes']) .";\n";
 	}
 	print "\n";
-	
+
 	foreach ($_globals['elementNames'] as $num => $val )
 	{
 		print "extern DLLSPEC daeString COLLADA_ELEMENT_". getUniqueName($val, $_globals['elementNames']) .";\n";

@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 $_globals = array();
 // FLAG: Full Code - set true to output verbose mode, minimal otherwise (does not include//                   inline elements in minimal)
@@ -83,7 +83,7 @@ function getTypeNameAndPrefix(&$typeName, &$prefix) {
 function applyTemplate( $template, & $bag )
 {
   global $_globals;
-  
+
   $_result = '';
   if ( array_key_exists( $template, $_globals['templates'] ) )
   {
@@ -161,7 +161,7 @@ function printAllSubChildren( & $elem, $prefix, $suffix ) {
 	for ( $i = 0; $i < count( $elem['elements'] ); $i++ ) {
 		if ( isset( $meta[$elem['elements'][$i]] ) ) {
 			if ( $meta[$elem['elements'][$i]]['isAGroup'] ) {
-				
+
 				printAllSubChildren( $meta[$elem['elements'][$i]], $prefix, $suffix );
 			}
 			else if ( !$meta[$elem['elements'][$i]]['abstract'] ) {
@@ -218,7 +218,7 @@ function printConstructors( $elemName, & $bag, $baseClass, $indent ) {
 		beginConstructorInitializer($initializerListStarted);
 		print "attrXmlns(dae, " . $eltVar . ")";
 	}
-	
+
 	// Constructor initialization of attributes
 	if (count($bag['attributes']) > 0) {
 		foreach( $bag['attributes'] as $attr_name => & $a_list ) {
@@ -236,7 +236,7 @@ function printConstructors( $elemName, & $bag, $baseClass, $indent ) {
 			print ")";
 		}
 	}
-	
+
 	// Constructor initialization of elements
 	for( $i=0; $i<count( $bag['elements'] ); $i++ ) {
 		$maxOccurs = $bag['element_attrs'][ $bag['elements'][$i] ]['maxOccurs'];
@@ -256,10 +256,10 @@ function printConstructors( $elemName, & $bag, $baseClass, $indent ) {
 				print "_value(new xsIDREF(" . $eltVar . "))";
 			else
 				print "_value()";
-		}	
+		}
 	}
 	print " {}\n";
-	
+
 	print $indent ."\t/**\n". $indent ."\t * Destructor\n". $indent ."\t */\n";
 	print $indent ."\tvirtual ~". $elemName ."() {";
 	if ( $bag['hasChoice'] ) {
@@ -276,7 +276,7 @@ function printElements(&$bag, &$needsContents, &$indent) {
 	global $meta;
 	if ( (count( $bag['elements'] ) > 0 && !$bag['isRestriction']) || $bag['has_any'] )
 	{
-		
+
 		print $indent ."protected:  // Element". (count( $bag['elements'] ) > 1 ? 's' : '') ."\n";
 		$needsContents = false;
 		for( $i=0; $i<count( $bag['elements'] ); $i++ )
@@ -297,7 +297,7 @@ function printElements(&$bag, &$needsContents, &$indent) {
 				print $indent ."\t" . $_globals['prefix'] . ucfirst( $bag['elements'][$i] ) . ($maxOccurs ? "_Array" : "Ref") . " elem" . ucfirst($bag['elements'][$i]) . ($maxOccurs ? "_array" : "") . ";\n";
 			}
 			if ( isset( $meta[$bag['elements'][$i]] ) ) {
-				if( count( $meta[$bag['elements'][$i]]['substitutableWith']) > 0 ) {			
+				if( count( $meta[$bag['elements'][$i]]['substitutableWith']) > 0 ) {
 					$needsContents = true;
 				}
 			}
@@ -339,17 +339,17 @@ function printAttributes( & $bag, & $typemeta, & $indent, $vaa ) {
 		//comment
 		print $indent ."\t/**\n". $indent ."\t * Sets the xmlns attribute.\n";
 		print $indent ."\t * @param xmlns The new value for the xmlns attribute.\n";
-		print $indent ."\t */\n";	
+		print $indent ."\t */\n";
 		//code
 		print $indent ."\tvoid setXmlns( const xsAnyURI &xmlns ) { attrXmlns = xmlns;";
 		if ( $vaa ) {
 			print $indent ."\n\t _validAttributeArray[". $attrCnt ."] = true;";
 		}
 		print " }\n\n";
-		
+
 		$attrCnt++;
 	}
-	
+
 	foreach( $bag['attributes'] as $attr_name => & $a_list ) {
 		$type = $a_list['type'];
 		$pre = '';
@@ -364,7 +364,7 @@ function printAttributes( & $bag, & $typemeta, & $indent, $vaa ) {
 			$typeInfo = $typemeta[$type];
 			while ( $typeInfo['base'] != '' && isset( $typemeta[$typeInfo['base']] ) ) {
 				$typeInfo = $typemeta[$typeInfo['base']];
-				if ( preg_match( "/xs\:/", $typeInfo['type'] ) ) { 
+				if ( preg_match( "/xs\:/", $typeInfo['type'] ) ) {
 					$baseType = "xs" . ucfirst( substr( $typeInfo['type'], 3 ) );
 				}
 				else {
@@ -372,7 +372,7 @@ function printAttributes( & $bag, & $typemeta, & $indent, $vaa ) {
 				}
 			}
 		}
-		
+
 		if ( (isset( $typemeta[$type] ) && $typemeta[$type]['isArray']) || $type == 'IDREFS' ) {
 			//comment
 			print $indent ."\t/**\n". $indent ."\t * Gets the ". $attr_name ." array attribute.\n";
@@ -488,7 +488,7 @@ function printAttributes( & $bag, & $typemeta, & $indent, $vaa ) {
 			{
 				print "\n". $indent ."\t\tif( _document != NULL ) _document->changeElementID( this, attrId );\n". $indent ."\t";
 			}
-			
+
 			print "}\n\n";
 		}
 		else {
@@ -522,10 +522,10 @@ function printAccessorsAndMutators(&$bag, &$needsContents, &$indent) {
 	$content_type = $bag['content_type'];
 	$pre = '';
 	getTypeNameAndPrefix($content_type, $pre);
-	
+
 	if ( $_globals['accessorsAndMutators'] && ( $bag['useXMLNS'] || count($bag['attributes'])>0 ||
 		count($bag['elements'])>0 ||( ($bag['content_type'] != '' || $bag['mixed']) && !$bag['abstract'] ) ) ) {
-		
+
 		//generate accessors and mutators for everything
 		print "\n". $indent ."public:\t//Accessors and Mutators\n";
 
@@ -534,14 +534,14 @@ function printAccessorsAndMutators(&$bag, &$needsContents, &$indent) {
 		}
 
 		printAttributes( $bag, $typemeta, $indent, !$bag['isAComplexType'] );
-		
+
 		for( $i=0; $i<count( $bag['elements'] ); $i++ )	{
 			$maxOccurs = $bag['element_attrs'][ $bag['elements'][$i] ]['maxOccurs'];
 			$maxOccurs = ($maxOccurs == 'unbounded' || $maxOccurs > 1);
 			$type = '';
 			if ( isset( $bag['element_attrs'][ $bag['elements'][$i] ]['type'] ) &&
 				isset( $meta[$bag['element_attrs'][ $bag['elements'][$i] ]['type']] ) ){
-				
+
 				$type = $_globals['prefix'] . ucfirst( $bag['element_attrs'][ $bag['elements'][$i] ]['type'] ) . ($maxOccurs ? "_Array" : "Ref");
 			}
 			else {
@@ -572,14 +572,14 @@ function printAccessorsAndMutators(&$bag, &$needsContents, &$indent) {
 				print $indent ."\tconst ". $type ." get". $name ."() const { return elem". $name ."; }\n";
 				//print $indent ."\tvoid set". $name ."( ". $type ." &e". $name ." ) { elem". $name ." = e". $name ."; }\n\n";
 			}
-			
+
 			if ( isset( $meta[$bag['elements'][$i]] ) ) {
-				if( count( $meta[$bag['elements'][$i]]['substitutableWith']) > 0 ) {			
+				if( count( $meta[$bag['elements'][$i]]['substitutableWith']) > 0 ) {
 					$needsContents = true;
 				}
 			}
 		}
-	    
+
 		if ( $bag['hasChoice'] || $needsContents || $bag['has_any'] )
 		{
 			//comment
@@ -595,19 +595,19 @@ function printAccessorsAndMutators(&$bag, &$needsContents, &$indent) {
 			//code
 			print $indent ."\tconst daeElementRefArray &getContents() const { return _contents; }\n\n";
 		}
-		
+
 		if ( ($bag['content_type'] != '' || $bag['mixed']) && !$bag['abstract'] )
 		{
 			$type = $content_type;
 			if($meta[$content_type]['isAComplexType'])
 				$type = $type . "Ref";
-			$baseStringTypes = "xsDateTime xsID xsNCName xsNMTOKEN xsName xsToken xsString domSidref domSid";	
+			$baseStringTypes = "xsDateTime xsID xsNCName xsNMTOKEN xsName xsToken xsString domSidref domSid";
 			$baseType = $pre . ucfirst( $type );
 			if ( isset( $typemeta[$type] ) ) {
 				$typeInfo = $typemeta[$type];
 				while ( $typeInfo['base'] != '' && isset( $typemeta[$typeInfo['base']] ) ) {
 					$typeInfo = $typemeta[$typeInfo['base']];
-					if ( preg_match( "/xs\:/", $typeInfo['type'] ) ) { 
+					if ( preg_match( "/xs\:/", $typeInfo['type'] ) ) {
 						$baseType = "xs" . ucfirst( substr( $typeInfo['type'], 3 ) );
 					}
 					else {
@@ -701,7 +701,7 @@ function printAccessorsAndMutators(&$bag, &$needsContents, &$indent) {
 					print $indent ."\t * @param val The new value for this element.\n";
 					print $indent ."\t */\n";
 					//code
-					print $indent ."\tvoid setValue( ". $pre . ucfirst( $type ) ." val ) { *(daeStringRef*)&_value = val; }\n\n";				
+					print $indent ."\tvoid setValue( ". $pre . ucfirst( $type ) ." val ) { *(daeStringRef*)&_value = val; }\n\n";
 				}
 				else {
 					//comment

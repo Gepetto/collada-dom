@@ -40,7 +40,7 @@ domGles_texenv_command::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: operator
 	{
@@ -49,7 +49,7 @@ domGles_texenv_command::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gles_texenv_mode"));
 		ma->setOffset( daeOffsetOf( domGles_texenv_command , attrOperator ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -60,7 +60,7 @@ domGles_texenv_command::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domGles_texenv_command , attrSampler ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

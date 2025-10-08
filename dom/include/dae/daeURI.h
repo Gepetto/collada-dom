@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_URI_H__
 #define __DAE_URI_H__
@@ -19,12 +19,12 @@ class DAE;
  * The @c daeURI is a simple class designed to aid in the parsing and resolution
  * of URI references inside COLLADA elements.
  * A @c daeURI is created for every @c anyURL and @c IDREF in the COLLADA schema.
- * For example, the <instance> element has the url= attribute of type @c anyURL, and the 
+ * For example, the <instance> element has the url= attribute of type @c anyURL, and the
  * <controller> element has the target= attribute of type @c IDREF.
  * The @c daeURI class contains a URI string; the @c set() method breaks the string into
  * its components including scheme, authority, path (directory), and fragment.
  * It also has the capability to attempt to resolve this reference
- * into a @c daeElement, through the method @c resolveElement().  
+ * into a @c daeElement, through the method @c resolveElement().
  * If a @c daeURI is stored within a @c daeElement, it fills
  * its container field to point to the containing element.
  *
@@ -33,14 +33,14 @@ class DAE;
  *
  * URIs are resolved hierarchically, where each URI is resolved based on
  * the following criteria via itself and its element's base URI, which represents the
- * URI of the document that contains the element, retrieved by 
+ * URI of the document that contains the element, retrieved by
  * <tt>daeElement::getBaseURI().</tt>
  * If no base URI is provided, then the application URI
  * is used as a base.
  *
  * The URI resolution order for the COLLADA DOM is as follows:
  * - Absolute URI is specified (see definition below):
- *   The URI ignores its parent/base URI when validating. 
+ *   The URI ignores its parent/base URI when validating.
  * - Relative URI is specified:
  *   The URI uses the base URI to provide the scheme, authority, and base path.
  *    This URI's path is appended to the path given the the base URI.
@@ -49,10 +49,10 @@ class DAE;
  *    containing file until the top level is reached.  Then the application URI
  *    is used as the default.
  *
- * <b>Definition of Absolute URI:</b>  
+ * <b>Definition of Absolute URI:</b>
  * For the purposes of the COLLADA DOM, a URI is considered absolute
  * if it starts by specifying a scheme.
- * For example, 
+ * For example,
  * - file:///c:/data/foo.dae#myScene is an absolute URI.
  * - foo.dae#myScene is relative.
  * - foo.dae is a top-level file reference and is relative.
@@ -62,7 +62,7 @@ class DLLSPEC daeURI
 {
 private:
 	daeElement* internalResolveElement() const;
-	
+
 public:
 	/**
 	 * An enum describing the status of the URI resolution process.
@@ -101,17 +101,17 @@ public:
 		/** Failure because automatic loading of a document is turned off */
 		uri_failed_external_document
 	};
-	
+
 private:
 	// All daeURIs have a pointer to a master DAE that they use to access global information.
 	mutable DAE* dae;
-	
+
 	/** Resolved version of the URI */
 	std::string uriString;
 
 	/** Original URI before resolution */
 	std::string originalURIString;
-	
+
 	/** scheme component */
 	std::string _scheme;
 	/** authority component */
@@ -124,7 +124,7 @@ private:
 	std::string _fragment;
 	/** Pointer to the element that owns this URI */
 	daeElement* container;
-	
+
 public:
 	/**
 	 * Constructs a daeURI object that contains no URI reference.
@@ -144,9 +144,9 @@ public:
 	 * @param nofrag If true, the fragment part of the URI is stripped off before construction.
 	 */
 	daeURI(DAE& dae, const std::string& URIString, daeBool nofrag = false);
-	
+
 	/**
-	 * Constructs a daeURI object using a <tt><i>baseURI</i></tt> and a <tt><i>uriString.</i></tt> 
+	 * Constructs a daeURI object using a <tt><i>baseURI</i></tt> and a <tt><i>uriString.</i></tt>
 	 * Calls set(URIString), and @c validate(baseURI).
 	 * @param baseURI Base URI to resolve against.
 	 * @param URIString String designating this URI.
@@ -154,7 +154,7 @@ public:
 	daeURI(const daeURI& baseURI, const std::string& URIString);
 
 	/**
-	 * Constructs a daeURI object based on a simple copy from an existing @c daeURI. 
+	 * Constructs a daeURI object based on a simple copy from an existing @c daeURI.
 	 * @param constructFromURI  URI to copy into this one.
 	 */
 	daeURI(const daeURI& constructFromURI);
@@ -216,7 +216,7 @@ public:
 	void query(const std::string& query);
 	void fragment(const std::string& fragment);
 	void id(const std::string& id); // Alias for uri.fragment(frag)
-	
+
 	// Retrieves the individual path components. For example, in a uri of the form
 	// file:/folder/file.dae, dir = /folder/, baseName = file, ext = .dae
 	void pathComponents(std::string& dir, std::string& baseName, std::string& ext) const;
@@ -237,7 +237,7 @@ public:
 	void pathFileBase(const std::string& baseName);
 	void pathExt(const std::string& ext);
 	void pathFile(const std::string& file);
-	
+
 	// The older C string accessors. Aliases for the std::string based component accessors.
 	daeString getScheme() const;
 	daeString getProtocol() const; // Alias for getScheme()
@@ -250,7 +250,7 @@ public:
 	// for backward compatibility. Use getPath() instead.
 	daeBool getPath(daeChar* dest, daeInt size) const;
 
-	/** 
+	/**
 	 * Gets the element that this URI resolves to in memory.
 	 * @return Returns a ref to the element.
 	 */
@@ -259,7 +259,7 @@ public:
 	// Returns the document that this URI references, or null if the document
 	// hasn't been loaded yet.
 	daeDocument* getReferencedDocument() const;
-	
+
 	/**
 	 * Gets a pointer to the @c daeElement that contains this URI.
 	 * @return Returns the pointer to the containing daeElmement.
@@ -277,7 +277,7 @@ public:
 	 * @return Returns true if the URI references an external element. False otherwise.
 	 */
 	daeBool isExternalReference() const;
-	 
+
 	/**
 	 * Copies the URI specified in <tt><i>from</i></tt> into @c this.
 	 * Performs a simple copy without validating the URI.
@@ -290,7 +290,7 @@ public:
 	 * Useful for debugging URIs, this outputs each part of the URI separately.
 	 */
 	void print();
-	
+
 	/**
 	 * Makes the "originalURI" in this URI relative to some other uri
 	 * @param uri the URI to make "this" relative to.
@@ -358,7 +358,7 @@ public:
 	 * Destructor
 	 */
 	virtual ~daeURIResolver();
-	
+
 	/**
 	 * Sets a flag that tells the URI resolver whether or not to load a separate document if a URI
 	 * being resolved points to one.
@@ -370,7 +370,7 @@ public:
 	/**
 	 * Gets a flag that tells if the URI resolver is set to load an external document if a URI
 	 * being resolved points to one.
-	 * @return Returns true if the resolver will automatically load documents to resolve a URI. 
+	 * @return Returns true if the resolver will automatically load documents to resolve a URI.
 	 * False otherwise.
 	 */
 	static daeBool getAutoLoadExternalDocuments();
@@ -450,7 +450,7 @@ namespace cdom {
 
 	// This function takes a file path in the OS's native format and converts it to
 	// a URI reference. If a relative path is given, a relative URI reference is
-	// returned. If an absolute path is given, a relative URI reference containing 
+	// returned. If an absolute path is given, a relative URI reference containing
 	// a fully specified path is returned. Spaces are encoded as %20. The 'type'
 	// parameter indicates the format of the nativePath.
 	//

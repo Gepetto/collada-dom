@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __dom141Accessor_h__
 #define __dom141Accessor_h__
@@ -33,23 +33,23 @@ public:
 protected:  // Attributes
 /**
  *  The count attribute indicates the number of times the array is accessed.
- * Required attribute. 
+ * Required attribute.
  */
 	domUint attrCount;
 /**
  *  The offset attribute indicates the index of the first value to be read
- * from the array.  The default value is 0. Optional attribute. 
+ * from the array.  The default value is 0. Optional attribute.
  */
 	domUint attrOffset;
 /**
  *  The source attribute indicates the location of the array to access using
- * a URL expression. Required attribute. 
+ * a URL expression. Required attribute.
  */
 	xsAnyURI attrSource;
 /**
  *  The stride attribute indicates number of values to be considered a unit
  * during each access to  the array. The default value is 1, indicating that
- * a single value is accessed. Optional attribute. 
+ * a single value is accessed. Optional attribute.
  */
 	domUint attrStride;
 
@@ -146,7 +146,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

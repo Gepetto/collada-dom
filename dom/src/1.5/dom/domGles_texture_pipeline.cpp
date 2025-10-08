@@ -52,7 +52,7 @@ domGles_texture_pipeline::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3000 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGles_texture_pipeline,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGles_texture_pipeline,_contentsOrder));
@@ -65,7 +65,7 @@ domGles_texture_pipeline::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domGles_texture_pipeline , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

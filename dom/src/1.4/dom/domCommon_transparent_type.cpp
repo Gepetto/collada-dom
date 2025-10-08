@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -66,7 +66,7 @@ domCommon_transparent_type::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCommon_transparent_type,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCommon_transparent_type,_contentsOrder));
@@ -80,7 +80,7 @@ domCommon_transparent_type::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCommon_transparent_type , attrOpaque ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "A_ONE");
-	
+
 		meta->appendAttribute(ma);
 	}
 

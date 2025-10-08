@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_IOPLUGIN__
 #define __DAE_IOPLUGIN__
@@ -24,15 +24,15 @@ class daeDocument;
 */
 class DLLSPEC daeIOPlugin
 {
-public:	
+public:
 	/**
 	* Destructor
 	*/
-	virtual ~daeIOPlugin() {}	
-	/** 
+	virtual ~daeIOPlugin() {}
+	/**
 	* Sets the top meta object.
 	* Called by @c dae::setIOPlugin() when the IO plugin changes. It passes to this function the
-	* top meta object, which is the root of a 
+	* top meta object, which is the root of a
     * hierarchy of @c daeMetaElement objects. This top meta object is capable of creating
 	* any of the root objects in the DOM tree.
 	* @param topMeta Top meta object to use to create objects to fill the database.
@@ -42,9 +42,9 @@ public:
 
 	/** @name Database setup	 */
 	//@{
-	/** 
+	/**
 	* Sets the database to use.
-	* All @c daeIOPlugins use the same interface to the @c daeDatabase, 
+	* All @c daeIOPlugins use the same interface to the @c daeDatabase,
 	* @c setDatabase() tells the @c daeIOPlugin which @c daeDatabase object it should use
 	* for storage and queries.
 	* @param database Database to set.
@@ -55,7 +55,7 @@ public:
 
 	/** @name Operations	 */
 	//@{
-	/** 
+	/**
 	* Imports content into the database from an input.
 	* The input can be a file, a database or another runtime.
 	* @param uri the URI of the COLLADA document to load, not all plugins accept all types of URIs,
@@ -89,7 +89,7 @@ public:
 	*/
     virtual daeInt writeToMemory(std::vector<char>& output, daeDocument *document) = 0;
 	//@}
-	
+
 	/**
 	 * Returns a list of the URI protocols that this plugin supports.
 	 * @return Returns a daeArray containing the supported protocols.

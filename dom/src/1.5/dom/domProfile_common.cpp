@@ -58,7 +58,7 @@ domProfile_common::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -68,7 +68,7 @@ domProfile_common::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_common , attrId ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -145,7 +145,7 @@ domProfile_common::domTechnique::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_common::domTechnique,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_common::domTechnique,_contentsOrder));
@@ -158,7 +158,7 @@ domProfile_common::domTechnique::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domProfile_common::domTechnique , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -170,7 +170,7 @@ domProfile_common::domTechnique::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_common::domTechnique , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -241,7 +241,7 @@ domProfile_common::domTechnique::domConstant::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 5 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domProfile_common::domTechnique::domConstant));
 	meta->validate();
@@ -322,7 +322,7 @@ domProfile_common::domTechnique::domLambert::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 7 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domProfile_common::domTechnique::domLambert));
 	meta->validate();
@@ -415,7 +415,7 @@ domProfile_common::domTechnique::domPhong::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 9 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domProfile_common::domTechnique::domPhong));
 	meta->validate();
@@ -508,7 +508,7 @@ domProfile_common::domTechnique::domBlinn::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 9 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domProfile_common::domTechnique::domBlinn));
 	meta->validate();

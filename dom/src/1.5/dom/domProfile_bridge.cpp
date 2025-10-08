@@ -47,7 +47,7 @@ domProfile_bridge::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -56,7 +56,7 @@ domProfile_bridge::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domProfile_bridge , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -68,7 +68,7 @@ domProfile_bridge::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_bridge , attrPlatform ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -80,7 +80,7 @@ domProfile_bridge::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_bridge , attrUrl ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

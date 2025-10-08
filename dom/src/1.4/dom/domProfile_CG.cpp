@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -96,7 +96,7 @@ domProfile_CG::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 6004 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_CG,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_CG,_contentsOrder));
@@ -110,7 +110,7 @@ domProfile_CG::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_CG , attrId ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -123,7 +123,7 @@ domProfile_CG::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "PC");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -224,7 +224,7 @@ domProfile_CG::domTechnique::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 6005 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_CG::domTechnique,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_CG::domTechnique,_contentsOrder));
@@ -237,7 +237,7 @@ domProfile_CG::domTechnique::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domProfile_CG::domTechnique , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -249,7 +249,7 @@ domProfile_CG::domTechnique::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_CG::domTechnique , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -356,7 +356,7 @@ domProfile_CG::domTechnique::domPass::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3009 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_CG::domTechnique::domPass,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_CG::domTechnique::domPass,_contentsOrder));
@@ -370,7 +370,7 @@ domProfile_CG::domTechnique::domPass::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_CG::domTechnique::domPass , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -477,7 +477,7 @@ domProfile_CG::domTechnique::domPass::domShader::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 4 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: stage
 	{
@@ -486,7 +486,7 @@ domProfile_CG::domTechnique::domPass::domShader::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Cg_pipeline_stage"));
 		ma->setOffset( daeOffsetOf( domProfile_CG::domTechnique::domPass::domShader , attrStage ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -606,7 +606,7 @@ domProfile_CG::domTechnique::domPass::domShader::domName::registerElement(DAE& d
 		ma->setOffset( daeOffsetOf( domProfile_CG::domTechnique::domPass::domShader::domName , attrSource ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -653,7 +653,7 @@ domProfile_CG::domTechnique::domPass::domShader::domBind::registerElement(DAE& d
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_CG::domTechnique::domPass::domShader::domBind,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_CG::domTechnique::domPass::domShader::domBind,_contentsOrder));
@@ -667,7 +667,7 @@ domProfile_CG::domTechnique::domPass::domShader::domBind::registerElement(DAE& d
 		ma->setOffset( daeOffsetOf( domProfile_CG::domTechnique::domPass::domShader::domBind , attrSymbol ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -706,7 +706,7 @@ domProfile_CG::domTechnique::domPass::domShader::domBind::domParam::registerElem
 		ma->setOffset( daeOffsetOf( domProfile_CG::domTechnique::domPass::domShader::domBind::domParam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

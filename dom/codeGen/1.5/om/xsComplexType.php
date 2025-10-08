@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 class xsComplexType extends _elementSet
 {
@@ -31,15 +31,15 @@ class xsComplexType extends _elementSet
   {
     $element_context[] = $this->getAttribute( "name" );
     print implode( ",", $element_context ) . "\n";
-    
+
     // Get new factory
     $generator = new ElementMeta( $global_elements );
     $generator->setIsAComplexType( true );
-    
+
     // Load the class name and a context pre-fix (in case we're inside another element)
     $generator->setName( $this->getAttribute( 'name' ) );
     $generator->setContext( $element_context );
-    
+
     // Extract any documentation for this node
     $a = $this->getElementsByType( 'xsAnnotation' );
     if ( count( $a ) > 0 )
@@ -54,21 +54,21 @@ class xsComplexType extends _elementSet
     {
 		$generator->setMixed( true );
     }
-    
+
     $content = $this; // Should only be one
-    $this->generateComplexType( $content, $generator, $element_context ); 
-	
+    $this->generateComplexType( $content, $generator, $element_context );
+
 	if ( count( $generator->bag['elements'] ) == 0 ) {
 		$generator->setIsEmptyContent( true );
 	}
-    
+
     $meta = & $generator->getMeta();
-    
+
     if ( count( $element_context ) == 1 )
     {
       $global_elements[ $element_context[0] ] = & $meta;
     }
-    
+
     return $meta;
   }
 
@@ -148,7 +148,7 @@ class xsComplexType extends _elementSet
     }
     $generator->addContentModel( 5, 0, 0 ); //END content model - There will be one extra on every element
   }
-  
+
   //function that reads complex types.  will recurse complex type derived heirarchies.
   function generateComplexType( $content, & $generator, & $context ) {
 	//print "in generatecomplextype\n";
@@ -197,7 +197,7 @@ class xsComplexType extends _elementSet
 				break;
 			}
 		}
-		
+
 		// Parse element context
 		$this->flatten( $content, $generator, $element_context, $content->getAttribute( 'maxOccurs' ) );
 
@@ -211,12 +211,12 @@ class xsComplexType extends _elementSet
 		}
 	}
   }
-  
+
   function & generateType() {
     $vars = array();
     $e = $this->getElements();
     $generator = new TypeMeta();
-    
+
     $generator->setType( $this->getAttribute( 'name' ) );
     $generator->setIsComplex( true );
 

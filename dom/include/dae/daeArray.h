@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_ARRAY_H__
 #define __DAE_ARRAY_H__
@@ -79,7 +79,7 @@ public:
 	 */
 	daeMemoryRef getRaw(size_t index) const {return _data + index*_elementSize;}
 	/**
-	 * Removes an item at a specific index in the @c daeArray. 
+	 * Removes an item at a specific index in the @c daeArray.
 	 * @param index  Index number of the item to delete.
 	 * @return Returns DAE_OK if success, a negative value defined in daeError.h otherwise.
 	 * @note The @c daeElement objects sometimes list
@@ -149,7 +149,7 @@ public:
 		_capacity = 0;
 		_data = NULL;
 	}
-	
+
 	/**
 	 * Increases the capacity of the @c daeArray.
 	 * @param minCapacity The minimum array capacity (the actual resulting capacity may be higher).
@@ -161,22 +161,22 @@ public:
 		size_t newCapacity = _capacity == 0 ? 1 : _capacity;
 		while(newCapacity < minCapacity)
 			newCapacity *= 2;
-	
+
 		T* newData = (T*)malloc(newCapacity*_elementSize);
 		for (size_t i = 0; i < _count; i++) {
 			new (&newData[i]) T(get(i));
 			((T*)_data + i)->~T();
 		}
-	
+
 		if (_data != NULL)
 			free(_data);
-	
+
 		_data = (daeMemoryRef)newData;
 		_capacity = newCapacity;
 	}
 
 	/**
-	 * Removes an item at a specific index in the @c daeArray. 
+	 * Removes an item at a specific index in the @c daeArray.
 	 * @param index  Index number of the item to delete.
 	 * @return Returns DAE_OK if success, a negative value defined in daeError.h otherwise.
 	 * @note The @c daeElement objects sometimes list
@@ -196,7 +196,7 @@ public:
 	}
 
 	/**
-	 * Resets the number of elements in the array. If the array increases in size, the new 
+	 * Resets the number of elements in the array. If the array increases in size, the new
 	 * elements will be initialized to the specified value.
 	 * @param nElements The new size of the array.
 	 * @param value The value new elements will be initialized to.
@@ -215,7 +215,7 @@ public:
 	}
 
 	/**
-	 * Resets the number of elements in the array. If the array increases in size, the new 
+	 * Resets the number of elements in the array. If the array increases in size, the new
 	 * elements will be initialized with a default constructor.
 	 * @param nElements The new size of the array.
 	 * @note Shrinking the array does NOT free up memory.
@@ -226,7 +226,7 @@ public:
 		else
 			setCount(nElements, T());
 	}
-	
+
 	/**
 	 * Sets a specific index in the @c daeArray, growing the array if necessary.
 	 * @param index Index of the object to set, asserts if the index is out of bounds.
@@ -237,7 +237,7 @@ public:
 			setCount(index+1);
 		((T*)_data)[index] = value;
 	}
-	
+
 	/**
 	 * Gets the object at a specific index in the @c daeArray.
 	 * @param index Index of the object to get, asserts if the index is out of bounds.
@@ -254,7 +254,7 @@ public:
 	const T& get(size_t index) const {
 		assert(index < _count);
 		return ((T*)_data)[index]; }
-	
+
 	/**
 	 * Appends a new object to the end of the @c daeArray.
 	 * @param value Value of the object to append.
@@ -269,14 +269,14 @@ public:
 	 * Appends a unique object to the end of the @c daeArray.
 	 * Functions the same as @c append(), but does nothing if the value is already in the @c daeArray.
 	 * @param value Value of the object to append.
-	 * @return Returns the index where this value was appended. If the value already exists in the array, 
+	 * @return Returns the index where this value was appended. If the value already exists in the array,
 	 * returns the index in this array where the value was found.
 	 */
 	size_t appendUnique(const T& value) {
 		size_t ret;
 		if (find(value,ret) != DAE_OK)
 			return append(value);
-		else 
+		else
 			return ret;
 	}
 
@@ -287,7 +287,7 @@ public:
 	void prepend(const T& value) {
 		insertAt(0, value);
 	}
-	
+
 	/**
 	 * Removes an item from the @c daeArray.
 	 * @param value A reference to the item to delete.
@@ -296,7 +296,7 @@ public:
 	 * objects in two places, the class member and the <i> @c _contents </i> array, when you remove something from the
 	 * do, you must remove it from both places.
 	 */
-	daeInt remove(const T& value, size_t *idx = NULL ) 
+	daeInt remove(const T& value, size_t *idx = NULL )
 	{
 		size_t index;
 		if(find(value,index) == DAE_OK)
@@ -317,7 +317,7 @@ public:
 	 * @param index If the function returns DAE_OK, this is set to the index where the value appears in the array.
 	 * @return Returns DAE_OK if no error or DAE_ERR_QUERY_NO_MATCH if the value was not found.
 	 */
-	daeInt find(const T& value, size_t &index) const 
+	daeInt find(const T& value, size_t &index) const
 	{
 		size_t i;
 		for(i=0;i<_count;i++)
@@ -358,7 +358,7 @@ public:
 	const T& operator[](size_t index) const {
 		assert(index < _count);
 		return ((T*)_data)[index]; }
-	
+
 	/**
 	 * Inserts the specified number of elements at a specific location in the array.
 	 * @param index Index into the array where the elements will be inserted
@@ -369,7 +369,7 @@ public:
 		if (index >= _count) {
 			// Append to the end of the array
 			size_t oldCount = _count;
-			setCount(index + n); 
+			setCount(index + n);
 			for (size_t i = oldCount; i < _count; i++)
 				get(i) = val;
 		}
@@ -466,7 +466,7 @@ public:
 	}
 
 	/**
-	 * Sets the values in the array at the specified location to the contain the two 
+	 * Sets the values in the array at the specified location to the contain the two
 	 * values specified. This function will grow the array if needed.
 	 * @param index The position in the array to start setting.
 	 * @param one The first value.
@@ -478,7 +478,7 @@ public:
 		set( index+1, two );
 	}
 	/**
-	 * Sets the values in the array at the specified location to the contain the three 
+	 * Sets the values in the array at the specified location to the contain the three
 	 * values specified. This function will grow the array if needed.
 	 * @param index The position in the array to start setting.
 	 * @param one The first value.
@@ -492,7 +492,7 @@ public:
 		set( index+2, three );
 	}
 	/**
-	 * Sets the values in the array at the specified location to the contain the four 
+	 * Sets the values in the array at the specified location to the contain the four
 	 * values specified. This function will grow the array if needed.
 	 * @param index The position in the array to start setting.
 	 * @param one The first value.
@@ -609,7 +609,7 @@ public:
 			retVal++;
 		}
 		return retVal;
-	} 
+	}
 	/**
 	 * Gets three values from the array at the specified location.
 	 * @param index The position in the array to start getting.

@@ -39,7 +39,7 @@ domInput_local_offset::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInput_local_offset , attrOffset ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -51,7 +51,7 @@ domInput_local_offset::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInput_local_offset , attrSemantic ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -63,7 +63,7 @@ domInput_local_offset::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInput_local_offset , attrSource ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -74,7 +74,7 @@ domInput_local_offset::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Uint"));
 		ma->setOffset( daeOffsetOf( domInput_local_offset , attrSet ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

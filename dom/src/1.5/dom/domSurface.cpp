@@ -94,7 +94,7 @@ domSurface::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domSurface,_contents));
 	meta->addContentsOrder(daeOffsetOf(domSurface,_contentsOrder));
@@ -108,7 +108,7 @@ domSurface::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domSurface , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -119,7 +119,7 @@ domSurface::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domSurface , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -166,7 +166,7 @@ domSurface::domCylinder::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domSurface::domCylinder));
 	meta->validate();

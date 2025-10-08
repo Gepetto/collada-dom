@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __dom141Fx_include_common_h__
 #define __dom141Fx_include_common_h__
@@ -21,20 +21,20 @@ namespace ColladaDOM141 {
  * The include element is used to import source code or precompiled binary
  * shaders into the FX Runtime by referencing an external resource.
  */
-class domFx_include_common_complexType 
+class domFx_include_common_complexType
 {
 protected:  // Attributes
 /**
  *  The sid attribute is a text string value containing the sub-identifier
  * of this element.  This value must be unique within the scope of the parent
- * element. Optional attribute. 
+ * element. Optional attribute.
  */
 	xsNCName attrSid;
 /**
  *  The url attribute refers to resource.  This may refer to a local resource
  * using a relative URL  fragment identifier that begins with the “#”
  * character. The url attribute may refer to an external  resource using an
- * absolute or relative URL. 
+ * absolute or relative URL.
  */
 	xsAnyURI attrUrl;
 
@@ -152,7 +152,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

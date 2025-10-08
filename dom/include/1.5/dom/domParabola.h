@@ -17,7 +17,7 @@ namespace ColladaDOM150 {
  * of the parabola, - the "X Axis"     defines the axis of symmetry; the parabola
  * is on the     positive side of this axis, - the origin, "X     Direction"
  * and "Y Direction" define the     plane of the parabola. This coordinate
- * system is the     local coordinate system of the parabola. The "main  
+ * system is the     local coordinate system of the parabola. The "main
  * Direction" of this coordinate system is a vector     normal to the plane
  * of the parabola. The axis, of which     the origin and unit vector are
  * respectively the origin     and "main Direction" of the local coordinate
@@ -67,7 +67,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domFloat value of the text data of this element. 
+		 * The domFloat value of the text data of this element.
 		 */
 		domFloat _value;
 	protected:
@@ -92,7 +92,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -142,7 +142,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

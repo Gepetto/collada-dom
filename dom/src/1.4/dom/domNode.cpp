@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -132,7 +132,7 @@ domNode::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3008 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domNode,_contents));
 	meta->addContentsOrder(daeOffsetOf(domNode,_contentsOrder));
@@ -145,7 +145,7 @@ domNode::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domNode , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -156,7 +156,7 @@ domNode::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domNode , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -167,7 +167,7 @@ domNode::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domNode , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -179,7 +179,7 @@ domNode::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domNode , attrType ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "NODE");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -190,7 +190,7 @@ domNode::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("ListOfNames"));
 		ma->setOffset( daeOffsetOf( domNode , attrLayer ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

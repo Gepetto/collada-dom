@@ -76,7 +76,7 @@ domLink::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 6001 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domLink,_contents));
 	meta->addContentsOrder(daeOffsetOf(domLink,_contentsOrder));
@@ -89,7 +89,7 @@ domLink::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domLink , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -100,7 +100,7 @@ domLink::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domLink , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -159,7 +159,7 @@ domLink::domAttachment_full::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3001 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domLink::domAttachment_full,_contents));
 	meta->addContentsOrder(daeOffsetOf(domLink::domAttachment_full,_contentsOrder));
@@ -173,7 +173,7 @@ domLink::domAttachment_full::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domLink::domAttachment_full , attrJoint ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -220,7 +220,7 @@ domLink::domAttachment_start::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3000 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domLink::domAttachment_start,_contents));
 	meta->addContentsOrder(daeOffsetOf(domLink::domAttachment_start,_contentsOrder));
@@ -234,7 +234,7 @@ domLink::domAttachment_start::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domLink::domAttachment_start , attrJoint ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -281,7 +281,7 @@ domLink::domAttachment_end::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3000 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domLink::domAttachment_end,_contents));
 	meta->addContentsOrder(daeOffsetOf(domLink::domAttachment_end,_contentsOrder));
@@ -295,7 +295,7 @@ domLink::domAttachment_end::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domLink::domAttachment_end , attrJoint ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

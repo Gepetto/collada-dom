@@ -2,9 +2,9 @@ COLLADA DOM software and samples for the PLAYSTATION(R)3 developer
            This file Copyright(C) 2008 Sony Computer Entertainment Inc.
                                                   All Rights Reserved.
 ======================================================================
-This file contains a description of trademarks and license notices 
-for the COLLADA DOM Open Source Software which may be used with Windows, 
-Apple Macintosh, Linux, the Sony PLAYSTATION(R)3 SDK and can also 
+This file contains a description of trademarks and license notices
+for the COLLADA DOM Open Source Software which may be used with Windows,
+Apple Macintosh, Linux, the Sony PLAYSTATION(R)3 SDK and can also
 be built for embedded systems.
 
    1. Obtaining the COLLADA DOM
@@ -20,59 +20,59 @@ be built for embedded systems.
 There are two locations where the COLLADA DOM can be downloaded.
 
 If you are a registered PLAYSTATION(R)3 developer you should always
-download and use the COLLADA DOM package from PS3(TM) DevNet 
-(https://ps3.scedev.net/) The COLLADA DOM packages released on 
-PS3(TM) DevNet have been tested by Sony for compatibility with 
-PLAYSTATION(R)3 SDK releases.  Licenses for all software included in 
-the PS3(TM) DevNet package are reviewed and cleared by Sony for 
+download and use the COLLADA DOM package from PS3(TM) DevNet
+(https://ps3.scedev.net/) The COLLADA DOM packages released on
+PS3(TM) DevNet have been tested by Sony for compatibility with
+PLAYSTATION(R)3 SDK releases.  Licenses for all software included in
+the PS3(TM) DevNet package are reviewed and cleared by Sony for
 use with the PLAYSTATION(R)3 SDK.
 
-The main Open Source development site for the COLLADA DOM is 
-http://sourceforge.net/projects/collada-dom this site will always 
-contain the most up-to-date version of the COLLADA DOM for all 
-platforms.  Packages of stable and beta versions of the COLLADA DOM 
+The main Open Source development site for the COLLADA DOM is
+http://sourceforge.net/projects/collada-dom this site will always
+contain the most up-to-date version of the COLLADA DOM for all
+platforms.  Packages of stable and beta versions of the COLLADA DOM
 will be available in the download section.  The absolute latest
-untested development code is available by Subversion checkout.  
+untested development code is available by Subversion checkout.
 Sony DOES NOT test or support the COLLADA DOM release from SourceForge.
-If you use a SourceForge release be sure to carefully review all licenses 
+If you use a SourceForge release be sure to carefully review all licenses
 to make sure they are compatible with your distribution and use of
 the software. You can obtain support from the COLLADA developer
-community on the SourceForge site or from the wiki and forums on 
-COLLADA.org. 
+community on the SourceForge site or from the wiki and forums on
+COLLADA.org.
 
 Because the PS3(TM) DevNet release of the COLLADA DOM is tested and
-reviewed by Sony it will usually be slightly older than the release 
-on SourceForge. Some files may be added or removed to insure 
+reviewed by Sony it will usually be slightly older than the release
+on SourceForge. Some files may be added or removed to insure
 compatibility for PLAYSTATION(R)3 use.  See (5) below for details.
 
 ----------------------------------------------------------------------
 2. Note on Trademarks
 ----------------------------------------------------------------------
 
-"PlayStation","PLAYSTATION","PS3","RSX","PSP","SIXAXIS" and 
+"PlayStation","PLAYSTATION","PS3","RSX","PSP","SIXAXIS" and
 "Cell Broadband Engine" are either registered trademarks or
 trademarks of Sony Computer Entertainment Inc.
 "XMB" is a trademark of Sony Corporation and Sony Computer Entertainment Inc.
 
 "COLLADA" is a trademark of Sony Computer Entertainment Inc.
 
-All other product and company names mentioned herein, with or without 
-the registered trademark symbol (R) or trademark symbol (TM), are 
-generally registered trademarks and/or trademarks of their respective 
-owners. 
+All other product and company names mentioned herein, with or without
+the registered trademark symbol (R) or trademark symbol (TM), are
+generally registered trademarks and/or trademarks of their respective
+owners.
 
 ----------------------------------------------------------------------
 3. Note on Licenses - COLLADA dependencies for PLAYSTATION(R)3 SDK
 ----------------------------------------------------------------------
 
 All COLLADA DOM releases contain binary libraries and .h files from
-other open source projects that are required to build and use the 
+other open source projects that are required to build and use the
 COLLADA DOM.  The license notices on this software are required
 to be present in any redistribution of this code.
 
 The PS3(TM) DevNet release of the COLLADA DOM contains these libraries
 which have been built and approved for use with PLAYSTATION(R)3 and
-Windows.  
+Windows.
 
 Boost C++ Libraries
   Numerous copyrights (many authors)
@@ -92,7 +92,7 @@ tinyxml
   Original code (2.0 and earlier )copyright (c) 2000-2006 Lee Thomason (www.grinninglizard.com)
   Zlib license, refer to tinyxml.txt in the "others" folder.
 
-The PS3(TM) DevNet release of the COLLADA DOM also contains these 
+The PS3(TM) DevNet release of the COLLADA DOM also contains these
 libraries which have been built and approved for use with windows only.
 
 libxml2
@@ -110,8 +110,8 @@ provided with the PS3(TM) DevNet release.
 4. Note on Licenses and Restrictions on Use - Title Application
 ----------------------------------------------------------------------
 
-PLAYSTATION(R)3 title applications should ONLY be linked with COLLADA DOM 
-release for the PLAYSTATION(R)3 SDK.  If this is done there should be no 
+PLAYSTATION(R)3 title applications should ONLY be linked with COLLADA DOM
+release for the PLAYSTATION(R)3 SDK.  If this is done there should be no
 further requirements or restrictions on use in a title application.
 
 
@@ -123,7 +123,7 @@ The PS3(TM) Devnet version of the COLLADA DOM contains additional
 documentataion describing installation and use of the COLLADA DOM
 with the PLAYSTATION(R)3 SDK.
 
-The SourceForge versions of the COLLADA DOM may include software 
+The SourceForge versions of the COLLADA DOM may include software
 with licenses that are not compatible with PLAYSTATION(R)3 development.
 PLAYSTATION(R)3 developers should only use the release from PS3(TM) DevNet
 

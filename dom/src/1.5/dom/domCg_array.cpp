@@ -40,7 +40,7 @@ domCg_array::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 0, 1, -1 ) );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: length
 	{
@@ -50,7 +50,7 @@ domCg_array::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCg_array , attrLength ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -63,7 +63,7 @@ domCg_array::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_STLDATABASE__
 #define __DAE_STLDATABASE__
@@ -56,9 +56,9 @@ public:
 	virtual daeString getDocumentName(daeUInt index);
 	virtual daeBool isDocumentLoaded(daeString name);
 
-	// Elements 
+	// Elements
 	virtual daeInt insertElement(daeDocument* document, daeElement* element);
-	virtual daeInt removeElement(daeDocument* document, daeElement* element); 
+	virtual daeInt removeElement(daeDocument* document, daeElement* element);
 	virtual daeInt changeElementID(daeElement* element, daeString newID);
 	virtual daeInt changeElementSID(daeElement* element, daeString newSID); // Not implemented
 	virtual daeInt clear();
@@ -79,7 +79,7 @@ public:
 	virtual daeUInt getElementCount(daeString name = NULL,
 	                                daeString type = NULL,
 	                                daeString file = NULL);
-	virtual daeInt getElement(daeElement** pElement, 
+	virtual daeInt getElement(daeElement** pElement,
 	                          daeInt index,
 	                          daeString name = NULL,
 	                          daeString type = NULL,

@@ -46,7 +46,7 @@ domImage_source::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domImage_source,_contents));
 	meta->addContentsOrder(daeOffsetOf(domImage_source,_contentsOrder));
@@ -133,7 +133,7 @@ domImage_source::domHex::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage_source::domHex , attrFormat ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

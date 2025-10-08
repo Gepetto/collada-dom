@@ -94,7 +94,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -105,11 +105,11 @@ protected:  // Attributes
 /**
  *  The method attribute specifies the which blending technique to use. The
  * accepted values are  NORMALIZED, and RELATIVE. The default value if not
- * specified is NORMALIZED.  Optional attribute. 
+ * specified is NORMALIZED.  Optional attribute.
  */
 	domMorph_method attrMethod;
 /**
- *  The source attribute indicates the base mesh. Required attribute. 
+ *  The source attribute indicates the base mesh. Required attribute.
  */
 	xsAnyURI attrSource;
 
@@ -208,7 +208,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

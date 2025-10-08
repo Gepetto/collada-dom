@@ -52,7 +52,7 @@ domTristrips::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: name
 	{
@@ -61,7 +61,7 @@ domTristrips::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domTristrips , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -73,7 +73,7 @@ domTristrips::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domTristrips , attrCount ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -84,7 +84,7 @@ domTristrips::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domTristrips , attrMaterial ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
