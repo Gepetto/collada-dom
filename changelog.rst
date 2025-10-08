@@ -1,6 +1,14 @@
 Collada DOM Change Log
 ----------------------
 
+2.5.2
+=====
+
+- update CMake minimum version to 3.10, to fix build with CMake v4
+- setup Nix flake & CI
+- setup pre-commit to remove end-of-line spaces
+- setup mergify
+
 2.5.1
 =====
 
