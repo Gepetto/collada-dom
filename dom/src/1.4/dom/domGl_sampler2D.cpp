@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -108,7 +108,7 @@ domGl_sampler2D::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 9 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGl_sampler2D));
 	meta->validate();

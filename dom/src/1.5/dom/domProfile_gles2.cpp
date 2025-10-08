@@ -76,7 +76,7 @@ domProfile_gles2::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3004 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_gles2,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_gles2,_contentsOrder));
@@ -89,7 +89,7 @@ domProfile_gles2::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domProfile_gles2 , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -101,7 +101,7 @@ domProfile_gles2::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_gles2 , attrLanguage ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -112,7 +112,7 @@ domProfile_gles2::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("List_of_names"));
 		ma->setOffset( daeOffsetOf( domProfile_gles2 , attrPlatforms ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -177,7 +177,7 @@ domProfile_gles2::domNewparam::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: sid
 	{
@@ -187,7 +187,7 @@ domProfile_gles2::domNewparam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_gles2::domNewparam , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -246,7 +246,7 @@ domProfile_gles2::domTechnique::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -255,7 +255,7 @@ domProfile_gles2::domTechnique::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domProfile_gles2::domTechnique , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -267,7 +267,7 @@ domProfile_gles2::domTechnique::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_gles2::domTechnique , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

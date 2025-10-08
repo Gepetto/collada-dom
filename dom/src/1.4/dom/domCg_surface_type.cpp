@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -114,7 +114,7 @@ domCg_surface_type::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 7 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCg_surface_type,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCg_surface_type,_contentsOrder));
@@ -128,7 +128,7 @@ domCg_surface_type::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCg_surface_type , attrType ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -199,7 +199,7 @@ domCg_surface_type::domGenerator::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3003 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCg_surface_type::domGenerator,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCg_surface_type::domGenerator,_contentsOrder));
@@ -249,7 +249,7 @@ domCg_surface_type::domGenerator::domName::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCg_surface_type::domGenerator::domName , attrSource ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

@@ -46,7 +46,7 @@ domVertices::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -56,7 +56,7 @@ domVertices::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domVertices , attrId ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -67,7 +67,7 @@ domVertices::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domVertices , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

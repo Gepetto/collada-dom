@@ -46,7 +46,7 @@ domFx_rendertarget::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFx_rendertarget,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFx_rendertarget,_contentsOrder));
@@ -61,7 +61,7 @@ domFx_rendertarget::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -74,7 +74,7 @@ domFx_rendertarget::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -87,7 +87,7 @@ domFx_rendertarget::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "POSITIVE_X");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -100,7 +100,7 @@ domFx_rendertarget::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -139,7 +139,7 @@ domFx_rendertarget::domParam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_rendertarget::domParam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

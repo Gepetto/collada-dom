@@ -58,7 +58,7 @@ domFormula_newparam::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFormula_newparam,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFormula_newparam,_contentsOrder));
@@ -71,7 +71,7 @@ domFormula_newparam::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domFormula_newparam , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

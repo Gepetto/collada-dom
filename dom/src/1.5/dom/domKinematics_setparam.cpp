@@ -64,7 +64,7 @@ domKinematics_setparam::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domKinematics_setparam,_contents));
 	meta->addContentsOrder(daeOffsetOf(domKinematics_setparam,_contentsOrder));
@@ -78,7 +78,7 @@ domKinematics_setparam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domKinematics_setparam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

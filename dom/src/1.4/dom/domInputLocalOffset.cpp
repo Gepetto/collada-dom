@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -46,7 +46,7 @@ domInputLocalOffset::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInputLocalOffset , attrOffset ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -58,7 +58,7 @@ domInputLocalOffset::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInputLocalOffset , attrSemantic ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -70,7 +70,7 @@ domInputLocalOffset::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInputLocalOffset , attrSource ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -81,7 +81,7 @@ domInputLocalOffset::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Uint"));
 		ma->setOffset( daeOffsetOf( domInputLocalOffset , attrSet ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

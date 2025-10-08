@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __dom141Instance_rigid_body_h__
 #define __dom141Instance_rigid_body_h__
@@ -77,7 +77,7 @@ public:
 
 		protected:  // Value
 			/**
-			 * The domFloat3 value of the text data of this element. 
+			 * The domFloat3 value of the text data of this element.
 			 */
 			domFloat3 _value;
 
@@ -120,7 +120,7 @@ public:
 			static DLLSPEC daeElementRef create(DAE& dae);
 			/**
 			 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-			 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+			 * If a daeMetaElement already exists it will return that instead of creating a new one.
 			 * @return A daeMetaElement describing this COLLADA element.
 			 */
 			static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -143,7 +143,7 @@ public:
 
 		protected:  // Value
 			/**
-			 * The domFloat3 value of the text data of this element. 
+			 * The domFloat3 value of the text data of this element.
 			 */
 			domFloat3 _value;
 
@@ -186,7 +186,7 @@ public:
 			static DLLSPEC daeElementRef create(DAE& dae);
 			/**
 			 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-			 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+			 * If a daeMetaElement already exists it will return that instead of creating a new one.
 			 * @return A daeMetaElement describing this COLLADA element.
 			 */
 			static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -207,13 +207,13 @@ public:
 /**
  *  The sid attribute is a text string value containing the sub-identifier
  * of this element.  This value must be unique within the scope of the parent
- * element. Optional attribute. 
+ * element. Optional attribute.
  */
 			xsNCName attrSid;
 
 		protected:  // Value
 			/**
-			 * The domBool value of the text data of this element. 
+			 * The domBool value of the text data of this element.
 			 */
 			domBool _value;
 
@@ -262,7 +262,7 @@ public:
 			static DLLSPEC daeElementRef create(DAE& dae);
 			/**
 			 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-			 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+			 * If a daeMetaElement already exists it will return that instead of creating a new one.
 			 * @return A daeMetaElement describing this COLLADA element.
 			 */
 			static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -352,7 +352,7 @@ public:
 			static DLLSPEC daeElementRef create(DAE& dae);
 			/**
 			 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-			 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+			 * If a daeMetaElement already exists it will return that instead of creating a new one.
 			 * @return A daeMetaElement describing this COLLADA element.
 			 */
 			static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -385,13 +385,13 @@ public:
 /**
  *  The sid attribute is a text string value containing the sub-identifier
  * of this element. This value must be unique within the scope of the parent
- * element. Optional attribute. 
+ * element. Optional attribute.
  */
 				xsNCName attrSid;
 
 			protected:  // Value
 				/**
-				 * The domBool value of the text data of this element. 
+				 * The domBool value of the text data of this element.
 				 */
 				domBool _value;
 
@@ -440,7 +440,7 @@ public:
 				static DLLSPEC daeElementRef create(DAE& dae);
 				/**
 				 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-				 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+				 * If a daeMetaElement already exists it will return that instead of creating a new one.
 				 * @return A daeMetaElement describing this COLLADA element.
 				 */
 				static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -612,7 +612,7 @@ public:
 			static DLLSPEC daeElementRef create(DAE& dae);
 			/**
 			 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-			 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+			 * If a daeMetaElement already exists it will return that instead of creating a new one.
 			 * @return A daeMetaElement describing this COLLADA element.
 			 */
 			static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -738,7 +738,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -748,13 +748,13 @@ public:
 protected:  // Attributes
 /**
  *  The body attribute indicates which rigid_body to instantiate. Required
- * attribute. 
+ * attribute.
  */
 	xsNCName attrBody;
 /**
  *  The sid attribute is a text string value containing the sub-identifier
  * of this element. This  value must be unique within the scope of the parent
- * element. Optional attribute. 
+ * element. Optional attribute.
  */
 	xsNCName attrSid;
 /**
@@ -763,7 +763,7 @@ protected:  // Attributes
 	xsNCName attrName;
 /**
  *  The target attribute indicates which node is influenced by this rigid_body
- * instance.  Required attribute 
+ * instance.  Required attribute
  */
 	xsAnyURI attrTarget;
 
@@ -886,7 +886,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

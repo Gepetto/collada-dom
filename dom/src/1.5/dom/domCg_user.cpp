@@ -40,7 +40,7 @@ domCg_user::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: typename
 	{
@@ -50,7 +50,7 @@ domCg_user::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCg_user , attrTypename ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -62,7 +62,7 @@ domCg_user::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCg_user , attrSource ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

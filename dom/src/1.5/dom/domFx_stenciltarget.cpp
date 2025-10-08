@@ -52,7 +52,7 @@ domFx_stenciltarget::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFx_stenciltarget,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFx_stenciltarget,_contentsOrder));
@@ -67,7 +67,7 @@ domFx_stenciltarget::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -80,7 +80,7 @@ domFx_stenciltarget::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -93,7 +93,7 @@ domFx_stenciltarget::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "POSITIVE_X");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -106,7 +106,7 @@ domFx_stenciltarget::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

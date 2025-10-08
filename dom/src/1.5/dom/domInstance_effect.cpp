@@ -53,7 +53,7 @@ domInstance_effect::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: url
 	{
@@ -63,7 +63,7 @@ domInstance_effect::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_effect , attrUrl ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -74,7 +74,7 @@ domInstance_effect::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domInstance_effect , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -85,7 +85,7 @@ domInstance_effect::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domInstance_effect , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -124,7 +124,7 @@ domInstance_effect::domTechnique_hint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_effect::domTechnique_hint , attrPlatform ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -136,7 +136,7 @@ domInstance_effect::domTechnique_hint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_effect::domTechnique_hint , attrProfile ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -148,7 +148,7 @@ domInstance_effect::domTechnique_hint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_effect::domTechnique_hint , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -189,7 +189,7 @@ domInstance_effect::domSetparam::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 0, 1, 1 ) );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: ref
 	{
@@ -199,7 +199,7 @@ domInstance_effect::domSetparam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_effect::domSetparam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

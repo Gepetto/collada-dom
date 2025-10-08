@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -54,7 +54,7 @@ domRotate::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domRotate , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

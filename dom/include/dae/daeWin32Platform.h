@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_WIN32_PLATFORM_H__
 #define __DAE_WIN32_PLATFORM_H__

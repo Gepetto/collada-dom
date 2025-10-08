@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 // A home for commonly used utility functions. These are mostly for internal DOM
 // use, but the automated tests use some of these functions, so we'll export
 // them.
@@ -26,10 +26,10 @@ namespace cdom {
 
 	// Get the system type at runtime.
 	DLLSPEC systemType getSystemType();
-	
+
 	// String replace function. Usage: replace("abcdef", "cd", "12") --> "ab12ef".
-	DLLSPEC std::string replace(const std::string& s, 
-	                            const std::string& replace, 
+	DLLSPEC std::string replace(const std::string& s,
+	                            const std::string& replace,
 	                            const std::string& replaceWith);
 
     // Removes whitespaces (" \t\f\v\n\r") at the beginning and the end of str.
@@ -54,7 +54,7 @@ namespace cdom {
 	                      bool separatorsInResult = false);
 
 	typedef std::list<std::string>::iterator tokenIter;
-	
+
 	DLLSPEC std::vector<std::string> makeStringArray(const char* s, ...);
 	DLLSPEC std::list<std::string> makeStringList(const char* s, ...);
 

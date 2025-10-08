@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __dom141Gles_sampler_state_h__
 #define __dom141Gles_sampler_state_h__
@@ -22,7 +22,7 @@ namespace ColladaDOM141 {
  * Two-dimensional texture sampler state for profile_GLES. This is a bundle
  * of sampler-specific states that will be referenced by one or more texture_units.
  */
-class domGles_sampler_state_complexType 
+class domGles_sampler_state_complexType
 {
 public:
 	class domWrap_s;
@@ -39,7 +39,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domGles_sampler_wrap value of the text data of this element. 
+		 * The domGles_sampler_wrap value of the text data of this element.
 		 */
 		domGles_sampler_wrap _value;
 
@@ -77,7 +77,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -97,7 +97,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domGles_sampler_wrap value of the text data of this element. 
+		 * The domGles_sampler_wrap value of the text data of this element.
 		 */
 		domGles_sampler_wrap _value;
 
@@ -135,7 +135,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -155,7 +155,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domFx_sampler_filter_common value of the text data of this element. 
+		 * The domFx_sampler_filter_common value of the text data of this element.
 		 */
 		domFx_sampler_filter_common _value;
 
@@ -193,7 +193,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -213,7 +213,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domFx_sampler_filter_common value of the text data of this element. 
+		 * The domFx_sampler_filter_common value of the text data of this element.
 		 */
 		domFx_sampler_filter_common _value;
 
@@ -251,7 +251,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -271,7 +271,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domFx_sampler_filter_common value of the text data of this element. 
+		 * The domFx_sampler_filter_common value of the text data of this element.
 		 */
 		domFx_sampler_filter_common _value;
 
@@ -309,7 +309,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -329,7 +329,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The xsUnsignedByte value of the text data of this element. 
+		 * The xsUnsignedByte value of the text data of this element.
 		 */
 		xsUnsignedByte _value;
 
@@ -367,7 +367,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -387,7 +387,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The xsFloat value of the text data of this element. 
+		 * The xsFloat value of the text data of this element.
 		 */
 		xsFloat _value;
 
@@ -425,7 +425,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -436,7 +436,7 @@ protected:  // Attribute
 /**
  *  The sid attribute is a text string value containing the sub-identifier
  * of this element.  This value must be unique within the scope of the parent
- * element. Optional attribute. 
+ * element. Optional attribute.
  */
 	xsNCName attrSid;
 
@@ -570,7 +570,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

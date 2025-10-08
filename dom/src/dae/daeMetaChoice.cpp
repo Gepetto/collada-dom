@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae/daeMetaChoice.h>
 #include <dae/daeMetaElement.h>
@@ -31,11 +31,11 @@ daeElement *daeMetaChoice::placeElement( daeElement *parent, daeElement *child, 
 	daeCharArray *myData = CMData->get( _choiceNum );
 	size_t count = myData->getCount();
 
-	for ( daeInt i = 0; ( i < _maxOccurs || _maxOccurs == -1 ); i++ ) 
+	for ( daeInt i = 0; ( i < _maxOccurs || _maxOccurs == -1 ); i++ )
 	{
 		if ( (daeInt) count > i && myData->get(i) != -1 ) //choice has already been made
 		{
-			if ( _children[ myData->get(i) ]->placeElement( parent, child, ordinal, i, before, after ) != NULL ) 
+			if ( _children[ myData->get(i) ]->placeElement( parent, child, ordinal, i, before, after ) != NULL )
 			{
 				retVal = child;
 				ordinal = ordinal  + _ordinalOffset;
@@ -50,11 +50,11 @@ daeElement *daeMetaChoice::placeElement( daeElement *parent, daeElement *child, 
 			//		daeElementRefArray childsInNext;
 			//		_children[ x ]->getChildren( parent, childsInNext ); //If you get children in another choice then
 			//		//both choices can have the same type of children.
-			//		if ( childsInNext.getCount() == childsInChoice.getCount() ) 
+			//		if ( childsInNext.getCount() == childsInChoice.getCount() )
 			//		{
 			//			//if there are the same ammount of children then all present children can belong to both
 			//			//choices. Try to place the new child in this next choice.
-			//			if ( _children[x]->placeElement( parent, child, ordinal, i, before, after ) != NULL ) 
+			//			if ( _children[x]->placeElement( parent, child, ordinal, i, before, after ) != NULL )
 			//			{
 			//				retVal = child;
 			//				ordinal = ordinal  + _ordinalOffset;
@@ -70,9 +70,9 @@ daeElement *daeMetaChoice::placeElement( daeElement *parent, daeElement *child, 
 		else //no choice has been made yet
 		{
 			size_t cnt = _children.getCount();
-			for ( size_t x = 0; x < cnt; x++ ) 
+			for ( size_t x = 0; x < cnt; x++ )
 			{
-				if ( _children[x]->placeElement( parent, child, ordinal, i, before, after ) != NULL ) 
+				if ( _children[x]->placeElement( parent, child, ordinal, i, before, after ) != NULL )
 				{
 					retVal = child;
 					ordinal = ordinal  + _ordinalOffset;
@@ -90,7 +90,7 @@ daeElement *daeMetaChoice::placeElement( daeElement *parent, daeElement *child, 
 		if ( findChild( child->getElementName() ) == NULL ) {
 			return NULL;
 		}
-		for ( daeInt i = 0; ( i < _maxOccurs || _maxOccurs == -1 ); i++ ) 
+		for ( daeInt i = 0; ( i < _maxOccurs || _maxOccurs == -1 ); i++ )
 		{
 			daeElementRefArray childsInChoice;
 			_children[ myData->get(i) ]->getChildren( parent, childsInChoice );
@@ -100,11 +100,11 @@ daeElement *daeMetaChoice::placeElement( daeElement *parent, daeElement *child, 
 				daeElementRefArray childsInNext;
 				_children[ x ]->getChildren( parent, childsInNext ); //If you get children in another choice then
 				//both choices can have the same type of children.
-				if ( childsInNext.getCount() == childsInChoice.getCount() ) 
+				if ( childsInNext.getCount() == childsInChoice.getCount() )
 				{
 					//if there are the same ammount of children then all present children can belong to both
 					//choices. Try to place the new child in this next choice.
-					if ( _children[x]->placeElement( parent, child, ordinal, i, before, after ) != NULL ) 
+					if ( _children[x]->placeElement( parent, child, ordinal, i, before, after ) != NULL )
 					{
 						retVal = child;
 						ordinal = ordinal  + _ordinalOffset;

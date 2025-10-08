@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -48,7 +48,7 @@ domGles_texcombiner_commandRGB_type::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: operator
 	{
@@ -57,7 +57,7 @@ domGles_texcombiner_commandRGB_type::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gles_texcombiner_operatorRGB_enums"));
 		ma->setOffset( daeOffsetOf( domGles_texcombiner_commandRGB_type , attrOperator ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -69,7 +69,7 @@ domGles_texcombiner_commandRGB_type::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles_texcombiner_commandRGB_type , attrScale ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

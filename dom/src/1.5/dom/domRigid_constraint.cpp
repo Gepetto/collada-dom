@@ -64,7 +64,7 @@ domRigid_constraint::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 4 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: sid
 	{
@@ -74,7 +74,7 @@ domRigid_constraint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domRigid_constraint , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -85,7 +85,7 @@ domRigid_constraint::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domRigid_constraint , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -145,7 +145,7 @@ domRigid_constraint::domRef_attachment::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3001 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domRigid_constraint::domRef_attachment,_contents));
 	meta->addContentsOrder(daeOffsetOf(domRigid_constraint::domRef_attachment,_contentsOrder));
@@ -158,7 +158,7 @@ domRigid_constraint::domRef_attachment::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsAnyURI"));
 		ma->setOffset( daeOffsetOf( domRigid_constraint::domRef_attachment , attrRigid_body ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -218,7 +218,7 @@ domRigid_constraint::domAttachment::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3001 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domRigid_constraint::domAttachment,_contents));
 	meta->addContentsOrder(daeOffsetOf(domRigid_constraint::domAttachment,_contentsOrder));
@@ -231,7 +231,7 @@ domRigid_constraint::domAttachment::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsAnyURI"));
 		ma->setOffset( daeOffsetOf( domRigid_constraint::domAttachment , attrRigid_body ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -290,7 +290,7 @@ domRigid_constraint::domTechnique_common::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domRigid_constraint::domTechnique_common));
 	meta->validate();
@@ -335,7 +335,7 @@ domRigid_constraint::domTechnique_common::domEnabled::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domRigid_constraint::domTechnique_common::domEnabled , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -382,7 +382,7 @@ domRigid_constraint::domTechnique_common::domInterpenetrate::registerElement(DAE
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domRigid_constraint::domTechnique_common::domInterpenetrate , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -429,7 +429,7 @@ domRigid_constraint::domTechnique_common::domLimits::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domRigid_constraint::domTechnique_common::domLimits));
 	meta->validate();
@@ -474,7 +474,7 @@ domRigid_constraint::domTechnique_common::domLimits::domSwing_cone_and_twist::re
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domRigid_constraint::domTechnique_common::domLimits::domSwing_cone_and_twist));
 	meta->validate();
@@ -519,7 +519,7 @@ domRigid_constraint::domTechnique_common::domLimits::domLinear::registerElement(
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domRigid_constraint::domTechnique_common::domLimits::domLinear));
 	meta->validate();
@@ -564,7 +564,7 @@ domRigid_constraint::domTechnique_common::domSpring::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domRigid_constraint::domTechnique_common::domSpring));
 	meta->validate();
@@ -615,7 +615,7 @@ domRigid_constraint::domTechnique_common::domSpring::domAngular::registerElement
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domRigid_constraint::domTechnique_common::domSpring::domAngular));
 	meta->validate();
@@ -666,7 +666,7 @@ domRigid_constraint::domTechnique_common::domSpring::domLinear::registerElement(
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domRigid_constraint::domTechnique_common::domSpring::domLinear));
 	meta->validate();

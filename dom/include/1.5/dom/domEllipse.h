@@ -23,13 +23,13 @@ namespace ColladaDOM150 {
  * origin and unit vector are respectively the origin     and "main Direction"
  * of the local coordinate     system, is termed the "Axis" or "main     Axis"
  * of the ellipse. The "main     Direction" of the local coordinate system
- * gives an     explicit orientation to the ellipse (definition of the   
+ * gives an     explicit orientation to the ellipse (definition of the
  * trigonometric sense), determining the direction in which     the parameter
  * increases along the ellipse. The     Geom_Ellipse ellipse is parameterized
  * by an angle: P(U)     = O + MajorRad*Cos(U)*XDir + MinorRad*Sin(U)*YDir
- * where:     - P is the point of parameter U, - O, XDir and YDir are    
+ * where:     - P is the point of parameter U, - O, XDir and YDir are
  * respectively the origin, "X <br>     Direction" and "Y Direction" of its
- * local     coordinate system, - MajorRad and MinorRad are the major    
+ * local     coordinate system, - MajorRad and MinorRad are the major
  * and minor radii of the ellipse. The "X Axis"     of the local coordinate
  * system therefore defines the     origin of the parameter of the ellipse.
  * An ellipse is a     closed and periodic curve. The period is 2.*Pi and
@@ -69,7 +69,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domFloat2 value of the text data of this element. 
+		 * The domFloat2 value of the text data of this element.
 		 */
 		domFloat2 _value;
 	protected:
@@ -94,7 +94,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -144,7 +144,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

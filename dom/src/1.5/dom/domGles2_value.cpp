@@ -167,7 +167,7 @@ domGles2_value::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGles2_value,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGles2_value,_contentsOrder));
@@ -786,7 +786,7 @@ domGles2_value::domUsertype::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: typename
 	{
@@ -796,7 +796,7 @@ domGles2_value::domUsertype::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles2_value::domUsertype , attrTypename ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -837,7 +837,7 @@ domGles2_value::domUsertype::domSetparam::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 0, 0, -1 ) );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: ref
 	{
@@ -847,7 +847,7 @@ domGles2_value::domUsertype::domSetparam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles2_value::domUsertype::domSetparam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -888,7 +888,7 @@ domGles2_value::domArray::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 0, 1, -1 ) );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: length
 	{
@@ -898,7 +898,7 @@ domGles2_value::domArray::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles2_value::domArray , attrLength ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

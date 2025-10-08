@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -60,7 +60,7 @@ domInstance_rigid_body::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: body
 	{
@@ -70,7 +70,7 @@ domInstance_rigid_body::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_rigid_body , attrBody ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -81,7 +81,7 @@ domInstance_rigid_body::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domInstance_rigid_body , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -92,7 +92,7 @@ domInstance_rigid_body::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domInstance_rigid_body , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -104,7 +104,7 @@ domInstance_rigid_body::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_rigid_body , attrTarget ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -199,7 +199,7 @@ domInstance_rigid_body::domTechnique_common::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 7 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domInstance_rigid_body::domTechnique_common,_contents));
 	meta->addContentsOrder(daeOffsetOf(domInstance_rigid_body::domTechnique_common,_contentsOrder));
@@ -320,7 +320,7 @@ domInstance_rigid_body::domTechnique_common::domDynamic::registerElement(DAE& da
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domInstance_rigid_body::domTechnique_common::domDynamic , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -367,7 +367,7 @@ domInstance_rigid_body::domTechnique_common::domMass_frame::registerElement(DAE&
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3000 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domInstance_rigid_body::domTechnique_common::domMass_frame,_contents));
 	meta->addContentsOrder(daeOffsetOf(domInstance_rigid_body::domTechnique_common::domMass_frame,_contentsOrder));
@@ -518,7 +518,7 @@ domInstance_rigid_body::domTechnique_common::domShape::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3006 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domInstance_rigid_body::domTechnique_common::domShape,_contents));
 	meta->addContentsOrder(daeOffsetOf(domInstance_rigid_body::domTechnique_common::domShape,_contentsOrder));
@@ -567,7 +567,7 @@ domInstance_rigid_body::domTechnique_common::domShape::domHollow::registerElemen
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domInstance_rigid_body::domTechnique_common::domShape::domHollow , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

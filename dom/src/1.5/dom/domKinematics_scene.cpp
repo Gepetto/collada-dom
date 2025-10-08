@@ -58,7 +58,7 @@ domKinematics_scene::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -67,7 +67,7 @@ domKinematics_scene::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domKinematics_scene , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -78,7 +78,7 @@ domKinematics_scene::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domKinematics_scene , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

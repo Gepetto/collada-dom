@@ -37,7 +37,7 @@ domGles_texcombiner_argument_alpha::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gles_texcombiner_source"));
 		ma->setOffset( daeOffsetOf( domGles_texcombiner_argument_alpha , attrSource ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -49,7 +49,7 @@ domGles_texcombiner_argument_alpha::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles_texcombiner_argument_alpha , attrOperand ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "SRC_ALPHA");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -61,7 +61,7 @@ domGles_texcombiner_argument_alpha::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles_texcombiner_argument_alpha , attrSampler ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

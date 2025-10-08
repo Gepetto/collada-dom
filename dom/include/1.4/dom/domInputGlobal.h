@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __dom141InputGlobal_h__
 #define __dom141InputGlobal_h__
@@ -21,17 +21,17 @@ namespace ColladaDOM141 {
  * The InputGlobal type is used to represent inputs that can reference external
  * resources.
  */
-class domInputGlobal_complexType 
+class domInputGlobal_complexType
 {
 protected:  // Attributes
 /**
  *  The semantic attribute is the user-defined meaning of the input connection.
- * Required attribute. 
+ * Required attribute.
  */
 	xsNMTOKEN attrSemantic;
 /**
  *  The source attribute indicates the location of the data source. Required
- * attribute. 
+ * attribute.
  */
 	xsAnyURI attrSource;
 
@@ -149,7 +149,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

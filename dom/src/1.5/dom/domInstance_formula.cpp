@@ -41,7 +41,7 @@ domInstance_formula::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: sid
 	{
@@ -50,7 +50,7 @@ domInstance_formula::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domInstance_formula , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -61,7 +61,7 @@ domInstance_formula::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domInstance_formula , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -72,7 +72,7 @@ domInstance_formula::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsAnyURI"));
 		ma->setOffset( daeOffsetOf( domInstance_formula , attrUrl ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

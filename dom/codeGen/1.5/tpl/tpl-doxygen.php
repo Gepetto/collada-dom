@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 global $indent;
 // Add doxygen formatted comments
@@ -21,14 +21,14 @@ while( strlen( $_local_doc ) > 0 )
   {
     // Print blocks of 70 chars thru the next word
     print $indent ." * " . $matches[1] . "\n";
-    
+
     // Account for any newlines
     /*$n_newlines = preg_match_all( "/\n/", $matches[2], $buf );
     if ( $n_newlines > 0 )
     {
       for( $i=0; $i<$n_newlines; $i++ ) { print " * \n"; }
     }*/
-        
+
     // Find more lines...
     $_local_doc = substr( $_local_doc, strlen( $matches[0] ) );
   }

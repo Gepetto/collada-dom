@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -96,7 +96,7 @@ domAsset::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 8 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domAsset));
 	meta->validate();
@@ -159,7 +159,7 @@ domAsset::domContributor::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 4 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domAsset::domContributor));
 	meta->validate();
@@ -592,7 +592,7 @@ domAsset::domUnit::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domAsset::domUnit , attrMeter ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "1.0");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -604,7 +604,7 @@ domAsset::domUnit::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domAsset::domUnit , attrName ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "meter");
-	
+
 		meta->appendAttribute(ma);
 	}
 

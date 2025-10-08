@@ -52,7 +52,7 @@ domNurbs_surface::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: degree_u
 	{
@@ -62,7 +62,7 @@ domNurbs_surface::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domNurbs_surface , attrDegree_u ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -74,7 +74,7 @@ domNurbs_surface::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domNurbs_surface , attrClosed_u ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -86,7 +86,7 @@ domNurbs_surface::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domNurbs_surface , attrDegree_v ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -98,7 +98,7 @@ domNurbs_surface::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domNurbs_surface , attrClosed_v ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -145,7 +145,7 @@ domNurbs_surface::domControl_vertices::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domNurbs_surface::domControl_vertices));
 	meta->validate();

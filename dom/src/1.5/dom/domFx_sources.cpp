@@ -52,7 +52,7 @@ domFx_sources::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 3000 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFx_sources,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFx_sources,_contentsOrder));
@@ -129,7 +129,7 @@ domFx_sources::domImport::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_sources::domImport , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

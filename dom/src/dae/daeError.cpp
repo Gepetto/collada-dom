@@ -4,11 +4,11 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae/daeError.h>
 
-typedef struct 
+typedef struct
 {
 	int errCode;
 	const char *errString;
@@ -25,7 +25,7 @@ static DAEERROR errorsArray[] =
 	{ DAE_ERR_QUERY_SYNTAX, "Query syntax" },
 	{ DAE_ERR_QUERY_NO_MATCH, "Query no match" },
 	{ DAE_ERR_COLLECTION_ALREADY_EXISTS, "A document with the same name exists already" },
-	{ DAE_ERR_COLLECTION_DOES_NOT_EXIST, "No document is loaded with that name or index" }, 
+	{ DAE_ERR_COLLECTION_DOES_NOT_EXIST, "No document is loaded with that name or index" },
 	{ DAE_ERR_NOT_IMPLEMENTED, "This function is not implemented in this reference implementation" },
 };
 

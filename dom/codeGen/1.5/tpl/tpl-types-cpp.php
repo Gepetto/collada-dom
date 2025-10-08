@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 if ( $_globals['copyright'] ) {
 print $_globals['copyright_text'];
@@ -68,7 +68,7 @@ foreach( $bag as $type => $meta )
   /*else if ( $meta['union_type'] ) { //union type
 	?>
 	// ENUM: <?= ucfirst( $type ) ?>
-	
+
 	type = new daeEnumType;
 	type->_nameBindings.append("<?= ucfirst( $type ) ?>");
 	((daeEnumType*)type)->_strings = new daeStringRefArray;
@@ -99,7 +99,7 @@ foreach( $bag as $type => $meta )
   ?>
 	// TYPEDEF: <?= ucfirst( $type ) ?>
 	//check if this type has an existing base
-<?php 
+<?php
 	//special casing urifragment to be a xsURI for automatic resolution
 	if ( $type == 'urifragment' ) {
 		print "\ttype = atomicTypes.get(\"xsAnyURI\");\n";
@@ -116,7 +116,7 @@ foreach( $bag as $type => $meta )
 	else { //add binding to existing type
 		type->_nameBindings.append("<?= ucfirst( $type ) ?>");
 	}
-	
+
 <?php
   }
 }
@@ -128,7 +128,7 @@ daeMetaElement* registerDomElements(DAE& dae)
 	daeMetaElement* meta = domCOLLADA::registerElement(dae);
 	// Enable tracking of top level object by default
 	meta->setIsTrackableForQueries(true);
-	return meta;	
+	return meta;
 }
 
 daeInt DLLSPEC colladaTypeCount() {

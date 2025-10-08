@@ -38,7 +38,7 @@ domKinematics_connect_param::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domKinematics_connect_param , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

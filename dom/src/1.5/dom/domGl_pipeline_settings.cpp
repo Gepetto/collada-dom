@@ -659,7 +659,7 @@ domGl_pipeline_settings::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGl_pipeline_settings,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGl_pipeline_settings,_contentsOrder));
@@ -708,7 +708,7 @@ domGl_pipeline_settings::domAlpha_func::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGl_pipeline_settings::domAlpha_func));
 	meta->validate();
@@ -746,7 +746,7 @@ domGl_pipeline_settings::domAlpha_func::domFunc::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "ALWAYS");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -758,7 +758,7 @@ domGl_pipeline_settings::domAlpha_func::domFunc::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domAlpha_func::domFunc , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -798,7 +798,7 @@ domGl_pipeline_settings::domAlpha_func::domValue::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0.0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -810,7 +810,7 @@ domGl_pipeline_settings::domAlpha_func::domValue::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domAlpha_func::domValue , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -857,7 +857,7 @@ domGl_pipeline_settings::domBlend_func::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGl_pipeline_settings::domBlend_func));
 	meta->validate();
@@ -895,7 +895,7 @@ domGl_pipeline_settings::domBlend_func::domSrc::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "ONE");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -907,7 +907,7 @@ domGl_pipeline_settings::domBlend_func::domSrc::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domBlend_func::domSrc , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -947,7 +947,7 @@ domGl_pipeline_settings::domBlend_func::domDest::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "ZERO");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -959,7 +959,7 @@ domGl_pipeline_settings::domBlend_func::domDest::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domBlend_func::domDest , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1018,7 +1018,7 @@ domGl_pipeline_settings::domBlend_func_separate::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGl_pipeline_settings::domBlend_func_separate));
 	meta->validate();
@@ -1056,7 +1056,7 @@ domGl_pipeline_settings::domBlend_func_separate::domSrc_rgb::registerElement(DAE
 		ma->setContainer( meta );
 		ma->setDefaultString( "ONE");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1068,7 +1068,7 @@ domGl_pipeline_settings::domBlend_func_separate::domSrc_rgb::registerElement(DAE
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domBlend_func_separate::domSrc_rgb , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1108,7 +1108,7 @@ domGl_pipeline_settings::domBlend_func_separate::domDest_rgb::registerElement(DA
 		ma->setContainer( meta );
 		ma->setDefaultString( "ZERO");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1120,7 +1120,7 @@ domGl_pipeline_settings::domBlend_func_separate::domDest_rgb::registerElement(DA
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domBlend_func_separate::domDest_rgb , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1160,7 +1160,7 @@ domGl_pipeline_settings::domBlend_func_separate::domSrc_alpha::registerElement(D
 		ma->setContainer( meta );
 		ma->setDefaultString( "ONE");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1172,7 +1172,7 @@ domGl_pipeline_settings::domBlend_func_separate::domSrc_alpha::registerElement(D
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domBlend_func_separate::domSrc_alpha , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1212,7 +1212,7 @@ domGl_pipeline_settings::domBlend_func_separate::domDest_alpha::registerElement(
 		ma->setContainer( meta );
 		ma->setDefaultString( "ZERO");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1224,7 +1224,7 @@ domGl_pipeline_settings::domBlend_func_separate::domDest_alpha::registerElement(
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domBlend_func_separate::domDest_alpha , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1264,7 +1264,7 @@ domGl_pipeline_settings::domBlend_equation::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "FUNC_ADD");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1276,7 +1276,7 @@ domGl_pipeline_settings::domBlend_equation::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domBlend_equation , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1323,7 +1323,7 @@ domGl_pipeline_settings::domBlend_equation_separate::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGl_pipeline_settings::domBlend_equation_separate));
 	meta->validate();
@@ -1361,7 +1361,7 @@ domGl_pipeline_settings::domBlend_equation_separate::domRgb::registerElement(DAE
 		ma->setContainer( meta );
 		ma->setDefaultString( "FUNC_ADD");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1373,7 +1373,7 @@ domGl_pipeline_settings::domBlend_equation_separate::domRgb::registerElement(DAE
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domBlend_equation_separate::domRgb , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1413,7 +1413,7 @@ domGl_pipeline_settings::domBlend_equation_separate::domAlpha::registerElement(D
 		ma->setContainer( meta );
 		ma->setDefaultString( "FUNC_ADD");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1425,7 +1425,7 @@ domGl_pipeline_settings::domBlend_equation_separate::domAlpha::registerElement(D
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domBlend_equation_separate::domAlpha , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1472,7 +1472,7 @@ domGl_pipeline_settings::domColor_material::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGl_pipeline_settings::domColor_material));
 	meta->validate();
@@ -1510,7 +1510,7 @@ domGl_pipeline_settings::domColor_material::domFace::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "FRONT_AND_BACK");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1522,7 +1522,7 @@ domGl_pipeline_settings::domColor_material::domFace::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domColor_material::domFace , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1562,7 +1562,7 @@ domGl_pipeline_settings::domColor_material::domMode::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "AMBIENT_AND_DIFFUSE");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1574,7 +1574,7 @@ domGl_pipeline_settings::domColor_material::domMode::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domColor_material::domMode , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1614,7 +1614,7 @@ domGl_pipeline_settings::domCull_face::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "BACK");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1626,7 +1626,7 @@ domGl_pipeline_settings::domCull_face::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domCull_face , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1666,7 +1666,7 @@ domGl_pipeline_settings::domDepth_func::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "ALWAYS");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1678,7 +1678,7 @@ domGl_pipeline_settings::domDepth_func::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domDepth_func , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1718,7 +1718,7 @@ domGl_pipeline_settings::domFog_mode::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "EXP");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1730,7 +1730,7 @@ domGl_pipeline_settings::domFog_mode::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domFog_mode , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1770,7 +1770,7 @@ domGl_pipeline_settings::domFog_coord_src::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "FOG_COORDINATE");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1782,7 +1782,7 @@ domGl_pipeline_settings::domFog_coord_src::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domFog_coord_src , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1822,7 +1822,7 @@ domGl_pipeline_settings::domFront_face::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "CCW");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1834,7 +1834,7 @@ domGl_pipeline_settings::domFront_face::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domFront_face , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1874,7 +1874,7 @@ domGl_pipeline_settings::domLight_model_color_control::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "SINGLE_COLOR");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1886,7 +1886,7 @@ domGl_pipeline_settings::domLight_model_color_control::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_model_color_control , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1926,7 +1926,7 @@ domGl_pipeline_settings::domLogic_op::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "COPY");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1938,7 +1938,7 @@ domGl_pipeline_settings::domLogic_op::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLogic_op , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -1985,7 +1985,7 @@ domGl_pipeline_settings::domPolygon_mode::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGl_pipeline_settings::domPolygon_mode));
 	meta->validate();
@@ -2023,7 +2023,7 @@ domGl_pipeline_settings::domPolygon_mode::domFace::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "FRONT_AND_BACK");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2035,7 +2035,7 @@ domGl_pipeline_settings::domPolygon_mode::domFace::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPolygon_mode::domFace , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2075,7 +2075,7 @@ domGl_pipeline_settings::domPolygon_mode::domMode::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "FILL");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2087,7 +2087,7 @@ domGl_pipeline_settings::domPolygon_mode::domMode::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPolygon_mode::domMode , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2127,7 +2127,7 @@ domGl_pipeline_settings::domShade_model::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "SMOOTH");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2139,7 +2139,7 @@ domGl_pipeline_settings::domShade_model::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domShade_model , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2192,7 +2192,7 @@ domGl_pipeline_settings::domStencil_func::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGl_pipeline_settings::domStencil_func));
 	meta->validate();
@@ -2230,7 +2230,7 @@ domGl_pipeline_settings::domStencil_func::domFunc::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "ALWAYS");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2242,7 +2242,7 @@ domGl_pipeline_settings::domStencil_func::domFunc::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_func::domFunc , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2282,7 +2282,7 @@ domGl_pipeline_settings::domStencil_func::domRef::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2294,7 +2294,7 @@ domGl_pipeline_settings::domStencil_func::domRef::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_func::domRef , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2334,7 +2334,7 @@ domGl_pipeline_settings::domStencil_func::domMask::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "255");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2346,7 +2346,7 @@ domGl_pipeline_settings::domStencil_func::domMask::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_func::domMask , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2399,7 +2399,7 @@ domGl_pipeline_settings::domStencil_op::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGl_pipeline_settings::domStencil_op));
 	meta->validate();
@@ -2437,7 +2437,7 @@ domGl_pipeline_settings::domStencil_op::domFail::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "KEEP");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2449,7 +2449,7 @@ domGl_pipeline_settings::domStencil_op::domFail::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_op::domFail , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2489,7 +2489,7 @@ domGl_pipeline_settings::domStencil_op::domZfail::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "KEEP");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2501,7 +2501,7 @@ domGl_pipeline_settings::domStencil_op::domZfail::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_op::domZfail , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2541,7 +2541,7 @@ domGl_pipeline_settings::domStencil_op::domZpass::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "KEEP");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2553,7 +2553,7 @@ domGl_pipeline_settings::domStencil_op::domZpass::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_op::domZpass , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2612,7 +2612,7 @@ domGl_pipeline_settings::domStencil_func_separate::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGl_pipeline_settings::domStencil_func_separate));
 	meta->validate();
@@ -2650,7 +2650,7 @@ domGl_pipeline_settings::domStencil_func_separate::domFront::registerElement(DAE
 		ma->setContainer( meta );
 		ma->setDefaultString( "ALWAYS");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2662,7 +2662,7 @@ domGl_pipeline_settings::domStencil_func_separate::domFront::registerElement(DAE
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_func_separate::domFront , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2702,7 +2702,7 @@ domGl_pipeline_settings::domStencil_func_separate::domBack::registerElement(DAE&
 		ma->setContainer( meta );
 		ma->setDefaultString( "ALWAYS");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2714,7 +2714,7 @@ domGl_pipeline_settings::domStencil_func_separate::domBack::registerElement(DAE&
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_func_separate::domBack , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2754,7 +2754,7 @@ domGl_pipeline_settings::domStencil_func_separate::domRef::registerElement(DAE& 
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2766,7 +2766,7 @@ domGl_pipeline_settings::domStencil_func_separate::domRef::registerElement(DAE& 
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_func_separate::domRef , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2806,7 +2806,7 @@ domGl_pipeline_settings::domStencil_func_separate::domMask::registerElement(DAE&
 		ma->setContainer( meta );
 		ma->setDefaultString( "255");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2818,7 +2818,7 @@ domGl_pipeline_settings::domStencil_func_separate::domMask::registerElement(DAE&
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_func_separate::domMask , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2877,7 +2877,7 @@ domGl_pipeline_settings::domStencil_op_separate::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGl_pipeline_settings::domStencil_op_separate));
 	meta->validate();
@@ -2915,7 +2915,7 @@ domGl_pipeline_settings::domStencil_op_separate::domFace::registerElement(DAE& d
 		ma->setContainer( meta );
 		ma->setDefaultString( "FRONT_AND_BACK");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2927,7 +2927,7 @@ domGl_pipeline_settings::domStencil_op_separate::domFace::registerElement(DAE& d
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_op_separate::domFace , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2967,7 +2967,7 @@ domGl_pipeline_settings::domStencil_op_separate::domFail::registerElement(DAE& d
 		ma->setContainer( meta );
 		ma->setDefaultString( "KEEP");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -2979,7 +2979,7 @@ domGl_pipeline_settings::domStencil_op_separate::domFail::registerElement(DAE& d
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_op_separate::domFail , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3019,7 +3019,7 @@ domGl_pipeline_settings::domStencil_op_separate::domZfail::registerElement(DAE& 
 		ma->setContainer( meta );
 		ma->setDefaultString( "KEEP");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3031,7 +3031,7 @@ domGl_pipeline_settings::domStencil_op_separate::domZfail::registerElement(DAE& 
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_op_separate::domZfail , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3071,7 +3071,7 @@ domGl_pipeline_settings::domStencil_op_separate::domZpass::registerElement(DAE& 
 		ma->setContainer( meta );
 		ma->setDefaultString( "KEEP");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3083,7 +3083,7 @@ domGl_pipeline_settings::domStencil_op_separate::domZpass::registerElement(DAE& 
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_op_separate::domZpass , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3130,7 +3130,7 @@ domGl_pipeline_settings::domStencil_mask_separate::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGl_pipeline_settings::domStencil_mask_separate));
 	meta->validate();
@@ -3168,7 +3168,7 @@ domGl_pipeline_settings::domStencil_mask_separate::domFace::registerElement(DAE&
 		ma->setContainer( meta );
 		ma->setDefaultString( "FRONT_AND_BACK");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3180,7 +3180,7 @@ domGl_pipeline_settings::domStencil_mask_separate::domFace::registerElement(DAE&
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_mask_separate::domFace , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3220,7 +3220,7 @@ domGl_pipeline_settings::domStencil_mask_separate::domMask::registerElement(DAE&
 		ma->setContainer( meta );
 		ma->setDefaultString( "255");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3232,7 +3232,7 @@ domGl_pipeline_settings::domStencil_mask_separate::domMask::registerElement(DAE&
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_mask_separate::domMask , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3272,7 +3272,7 @@ domGl_pipeline_settings::domLight_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3284,7 +3284,7 @@ domGl_pipeline_settings::domLight_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3296,7 +3296,7 @@ domGl_pipeline_settings::domLight_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_enable , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3336,7 +3336,7 @@ domGl_pipeline_settings::domLight_ambient::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0 0 0 1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3348,7 +3348,7 @@ domGl_pipeline_settings::domLight_ambient::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_ambient , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3360,7 +3360,7 @@ domGl_pipeline_settings::domLight_ambient::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_ambient , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3400,7 +3400,7 @@ domGl_pipeline_settings::domLight_diffuse::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0 0 0 0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3412,7 +3412,7 @@ domGl_pipeline_settings::domLight_diffuse::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_diffuse , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3424,7 +3424,7 @@ domGl_pipeline_settings::domLight_diffuse::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_diffuse , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3464,7 +3464,7 @@ domGl_pipeline_settings::domLight_specular::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0 0 0 0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3476,7 +3476,7 @@ domGl_pipeline_settings::domLight_specular::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_specular , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3488,7 +3488,7 @@ domGl_pipeline_settings::domLight_specular::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_specular , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3528,7 +3528,7 @@ domGl_pipeline_settings::domLight_position::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0 0 1 0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3540,7 +3540,7 @@ domGl_pipeline_settings::domLight_position::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_position , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3552,7 +3552,7 @@ domGl_pipeline_settings::domLight_position::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_position , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3592,7 +3592,7 @@ domGl_pipeline_settings::domLight_constant_attenuation::registerElement(DAE& dae
 		ma->setContainer( meta );
 		ma->setDefaultString( "1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3604,7 +3604,7 @@ domGl_pipeline_settings::domLight_constant_attenuation::registerElement(DAE& dae
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_constant_attenuation , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3616,7 +3616,7 @@ domGl_pipeline_settings::domLight_constant_attenuation::registerElement(DAE& dae
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_constant_attenuation , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3656,7 +3656,7 @@ domGl_pipeline_settings::domLight_linear_attenuation::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3668,7 +3668,7 @@ domGl_pipeline_settings::domLight_linear_attenuation::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_linear_attenuation , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3680,7 +3680,7 @@ domGl_pipeline_settings::domLight_linear_attenuation::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_linear_attenuation , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3720,7 +3720,7 @@ domGl_pipeline_settings::domLight_quadratic_attenuation::registerElement(DAE& da
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3732,7 +3732,7 @@ domGl_pipeline_settings::domLight_quadratic_attenuation::registerElement(DAE& da
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_quadratic_attenuation , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3744,7 +3744,7 @@ domGl_pipeline_settings::domLight_quadratic_attenuation::registerElement(DAE& da
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_quadratic_attenuation , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3784,7 +3784,7 @@ domGl_pipeline_settings::domLight_spot_cutoff::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "180");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3796,7 +3796,7 @@ domGl_pipeline_settings::domLight_spot_cutoff::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_spot_cutoff , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3808,7 +3808,7 @@ domGl_pipeline_settings::domLight_spot_cutoff::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_spot_cutoff , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3848,7 +3848,7 @@ domGl_pipeline_settings::domLight_spot_direction::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0 0 -1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3860,7 +3860,7 @@ domGl_pipeline_settings::domLight_spot_direction::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_spot_direction , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3872,7 +3872,7 @@ domGl_pipeline_settings::domLight_spot_direction::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_spot_direction , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3912,7 +3912,7 @@ domGl_pipeline_settings::domLight_spot_exponent::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3924,7 +3924,7 @@ domGl_pipeline_settings::domLight_spot_exponent::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_spot_exponent , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3936,7 +3936,7 @@ domGl_pipeline_settings::domLight_spot_exponent::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_spot_exponent , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -3983,7 +3983,7 @@ domGl_pipeline_settings::domTexture1D::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGl_pipeline_settings::domTexture1D,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGl_pipeline_settings::domTexture1D,_contentsOrder));
@@ -3997,7 +3997,7 @@ domGl_pipeline_settings::domTexture1D::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture1D , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4080,7 +4080,7 @@ domGl_pipeline_settings::domTexture2D::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGl_pipeline_settings::domTexture2D,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGl_pipeline_settings::domTexture2D,_contentsOrder));
@@ -4094,7 +4094,7 @@ domGl_pipeline_settings::domTexture2D::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture2D , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4177,7 +4177,7 @@ domGl_pipeline_settings::domTexture3D::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGl_pipeline_settings::domTexture3D,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGl_pipeline_settings::domTexture3D,_contentsOrder));
@@ -4191,7 +4191,7 @@ domGl_pipeline_settings::domTexture3D::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture3D , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4274,7 +4274,7 @@ domGl_pipeline_settings::domTextureCUBE::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGl_pipeline_settings::domTextureCUBE,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGl_pipeline_settings::domTextureCUBE,_contentsOrder));
@@ -4288,7 +4288,7 @@ domGl_pipeline_settings::domTextureCUBE::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTextureCUBE , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4371,7 +4371,7 @@ domGl_pipeline_settings::domTextureRECT::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGl_pipeline_settings::domTextureRECT,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGl_pipeline_settings::domTextureRECT,_contentsOrder));
@@ -4385,7 +4385,7 @@ domGl_pipeline_settings::domTextureRECT::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTextureRECT , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4468,7 +4468,7 @@ domGl_pipeline_settings::domTextureDEPTH::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGl_pipeline_settings::domTextureDEPTH,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGl_pipeline_settings::domTextureDEPTH,_contentsOrder));
@@ -4482,7 +4482,7 @@ domGl_pipeline_settings::domTextureDEPTH::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTextureDEPTH , attrIndex ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4558,7 +4558,7 @@ domGl_pipeline_settings::domTexture1D_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4570,7 +4570,7 @@ domGl_pipeline_settings::domTexture1D_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture1D_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4581,7 +4581,7 @@ domGl_pipeline_settings::domTexture1D_enable::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gl_max_texture_image_units_index"));
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture1D_enable , attrIndex ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4621,7 +4621,7 @@ domGl_pipeline_settings::domTexture2D_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4633,7 +4633,7 @@ domGl_pipeline_settings::domTexture2D_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture2D_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4644,7 +4644,7 @@ domGl_pipeline_settings::domTexture2D_enable::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gl_max_texture_image_units_index"));
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture2D_enable , attrIndex ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4684,7 +4684,7 @@ domGl_pipeline_settings::domTexture3D_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4696,7 +4696,7 @@ domGl_pipeline_settings::domTexture3D_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture3D_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4707,7 +4707,7 @@ domGl_pipeline_settings::domTexture3D_enable::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gl_max_texture_image_units_index"));
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture3D_enable , attrIndex ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4747,7 +4747,7 @@ domGl_pipeline_settings::domTextureCUBE_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4759,7 +4759,7 @@ domGl_pipeline_settings::domTextureCUBE_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTextureCUBE_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4770,7 +4770,7 @@ domGl_pipeline_settings::domTextureCUBE_enable::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gl_max_texture_image_units_index"));
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTextureCUBE_enable , attrIndex ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4810,7 +4810,7 @@ domGl_pipeline_settings::domTextureRECT_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4822,7 +4822,7 @@ domGl_pipeline_settings::domTextureRECT_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTextureRECT_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4833,7 +4833,7 @@ domGl_pipeline_settings::domTextureRECT_enable::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gl_max_texture_image_units_index"));
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTextureRECT_enable , attrIndex ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4873,7 +4873,7 @@ domGl_pipeline_settings::domTextureDEPTH_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4885,7 +4885,7 @@ domGl_pipeline_settings::domTextureDEPTH_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTextureDEPTH_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4896,7 +4896,7 @@ domGl_pipeline_settings::domTextureDEPTH_enable::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gl_max_texture_image_units_index"));
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTextureDEPTH_enable , attrIndex ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4935,7 +4935,7 @@ domGl_pipeline_settings::domTexture_env_color::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture_env_color , attrValue ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4947,7 +4947,7 @@ domGl_pipeline_settings::domTexture_env_color::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture_env_color , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4958,7 +4958,7 @@ domGl_pipeline_settings::domTexture_env_color::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gl_max_texture_image_units_index"));
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture_env_color , attrIndex ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -4997,7 +4997,7 @@ domGl_pipeline_settings::domTexture_env_mode::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture_env_mode , attrValue ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5009,7 +5009,7 @@ domGl_pipeline_settings::domTexture_env_mode::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture_env_mode , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5020,7 +5020,7 @@ domGl_pipeline_settings::domTexture_env_mode::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gl_max_texture_image_units_index"));
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domTexture_env_mode , attrIndex ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5060,7 +5060,7 @@ domGl_pipeline_settings::domClip_plane::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0 0 0 0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5072,7 +5072,7 @@ domGl_pipeline_settings::domClip_plane::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domClip_plane , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5083,7 +5083,7 @@ domGl_pipeline_settings::domClip_plane::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gl_max_clip_planes_index"));
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domClip_plane , attrIndex ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5123,7 +5123,7 @@ domGl_pipeline_settings::domClip_plane_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5135,7 +5135,7 @@ domGl_pipeline_settings::domClip_plane_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domClip_plane_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5146,7 +5146,7 @@ domGl_pipeline_settings::domClip_plane_enable::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gl_max_clip_planes_index"));
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domClip_plane_enable , attrIndex ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5186,7 +5186,7 @@ domGl_pipeline_settings::domBlend_color::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0 0 0 0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5198,7 +5198,7 @@ domGl_pipeline_settings::domBlend_color::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domBlend_color , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5238,7 +5238,7 @@ domGl_pipeline_settings::domColor_mask::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "true true true true");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5250,7 +5250,7 @@ domGl_pipeline_settings::domColor_mask::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domColor_mask , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5289,7 +5289,7 @@ domGl_pipeline_settings::domDepth_bounds::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domDepth_bounds , attrValue ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5301,7 +5301,7 @@ domGl_pipeline_settings::domDepth_bounds::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domDepth_bounds , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5341,7 +5341,7 @@ domGl_pipeline_settings::domDepth_mask::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "true");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5353,7 +5353,7 @@ domGl_pipeline_settings::domDepth_mask::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domDepth_mask , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5393,7 +5393,7 @@ domGl_pipeline_settings::domDepth_range::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0 1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5405,7 +5405,7 @@ domGl_pipeline_settings::domDepth_range::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domDepth_range , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5445,7 +5445,7 @@ domGl_pipeline_settings::domFog_density::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5457,7 +5457,7 @@ domGl_pipeline_settings::domFog_density::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domFog_density , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5497,7 +5497,7 @@ domGl_pipeline_settings::domFog_start::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5509,7 +5509,7 @@ domGl_pipeline_settings::domFog_start::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domFog_start , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5549,7 +5549,7 @@ domGl_pipeline_settings::domFog_end::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5561,7 +5561,7 @@ domGl_pipeline_settings::domFog_end::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domFog_end , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5601,7 +5601,7 @@ domGl_pipeline_settings::domFog_color::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0 0 0 0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5613,7 +5613,7 @@ domGl_pipeline_settings::domFog_color::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domFog_color , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5653,7 +5653,7 @@ domGl_pipeline_settings::domLight_model_ambient::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0.2 0.2 0.2 1.0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5665,7 +5665,7 @@ domGl_pipeline_settings::domLight_model_ambient::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_model_ambient , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5705,7 +5705,7 @@ domGl_pipeline_settings::domLighting_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5717,7 +5717,7 @@ domGl_pipeline_settings::domLighting_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLighting_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5757,7 +5757,7 @@ domGl_pipeline_settings::domLine_stipple::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "1 65536");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5769,7 +5769,7 @@ domGl_pipeline_settings::domLine_stipple::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLine_stipple , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5809,7 +5809,7 @@ domGl_pipeline_settings::domLine_width::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5821,7 +5821,7 @@ domGl_pipeline_settings::domLine_width::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLine_width , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5861,7 +5861,7 @@ domGl_pipeline_settings::domMaterial_ambient::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0.2 0.2 0.2 1.0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5873,7 +5873,7 @@ domGl_pipeline_settings::domMaterial_ambient::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domMaterial_ambient , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5913,7 +5913,7 @@ domGl_pipeline_settings::domMaterial_diffuse::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0.8 0.8 0.8 1.0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5925,7 +5925,7 @@ domGl_pipeline_settings::domMaterial_diffuse::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domMaterial_diffuse , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5965,7 +5965,7 @@ domGl_pipeline_settings::domMaterial_emission::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0 0 0 1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -5977,7 +5977,7 @@ domGl_pipeline_settings::domMaterial_emission::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domMaterial_emission , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6017,7 +6017,7 @@ domGl_pipeline_settings::domMaterial_shininess::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6029,7 +6029,7 @@ domGl_pipeline_settings::domMaterial_shininess::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domMaterial_shininess , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6069,7 +6069,7 @@ domGl_pipeline_settings::domMaterial_specular::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0 0 0 1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6081,7 +6081,7 @@ domGl_pipeline_settings::domMaterial_specular::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domMaterial_specular , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6121,7 +6121,7 @@ domGl_pipeline_settings::domModel_view_matrix::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6133,7 +6133,7 @@ domGl_pipeline_settings::domModel_view_matrix::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domModel_view_matrix , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6173,7 +6173,7 @@ domGl_pipeline_settings::domPoint_distance_attenuation::registerElement(DAE& dae
 		ma->setContainer( meta );
 		ma->setDefaultString( "1 0 0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6185,7 +6185,7 @@ domGl_pipeline_settings::domPoint_distance_attenuation::registerElement(DAE& dae
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPoint_distance_attenuation , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6225,7 +6225,7 @@ domGl_pipeline_settings::domPoint_fade_threshold_size::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6237,7 +6237,7 @@ domGl_pipeline_settings::domPoint_fade_threshold_size::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPoint_fade_threshold_size , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6277,7 +6277,7 @@ domGl_pipeline_settings::domPoint_size::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6289,7 +6289,7 @@ domGl_pipeline_settings::domPoint_size::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPoint_size , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6329,7 +6329,7 @@ domGl_pipeline_settings::domPoint_size_min::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6341,7 +6341,7 @@ domGl_pipeline_settings::domPoint_size_min::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPoint_size_min , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6381,7 +6381,7 @@ domGl_pipeline_settings::domPoint_size_max::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6393,7 +6393,7 @@ domGl_pipeline_settings::domPoint_size_max::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPoint_size_max , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6433,7 +6433,7 @@ domGl_pipeline_settings::domPolygon_offset::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0 0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6445,7 +6445,7 @@ domGl_pipeline_settings::domPolygon_offset::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPolygon_offset , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6485,7 +6485,7 @@ domGl_pipeline_settings::domProjection_matrix::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6497,7 +6497,7 @@ domGl_pipeline_settings::domProjection_matrix::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domProjection_matrix , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6536,7 +6536,7 @@ domGl_pipeline_settings::domScissor::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domScissor , attrValue ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6548,7 +6548,7 @@ domGl_pipeline_settings::domScissor::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domScissor , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6588,7 +6588,7 @@ domGl_pipeline_settings::domStencil_mask::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "4294967295");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6600,7 +6600,7 @@ domGl_pipeline_settings::domStencil_mask::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_mask , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6640,7 +6640,7 @@ domGl_pipeline_settings::domAlpha_test_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6652,7 +6652,7 @@ domGl_pipeline_settings::domAlpha_test_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domAlpha_test_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6692,7 +6692,7 @@ domGl_pipeline_settings::domBlend_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6704,7 +6704,7 @@ domGl_pipeline_settings::domBlend_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domBlend_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6744,7 +6744,7 @@ domGl_pipeline_settings::domColor_logic_op_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6756,7 +6756,7 @@ domGl_pipeline_settings::domColor_logic_op_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domColor_logic_op_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6796,7 +6796,7 @@ domGl_pipeline_settings::domColor_material_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "true");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6808,7 +6808,7 @@ domGl_pipeline_settings::domColor_material_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domColor_material_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6848,7 +6848,7 @@ domGl_pipeline_settings::domCull_face_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6860,7 +6860,7 @@ domGl_pipeline_settings::domCull_face_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domCull_face_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6900,7 +6900,7 @@ domGl_pipeline_settings::domDepth_bounds_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6912,7 +6912,7 @@ domGl_pipeline_settings::domDepth_bounds_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domDepth_bounds_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6952,7 +6952,7 @@ domGl_pipeline_settings::domDepth_clamp_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -6964,7 +6964,7 @@ domGl_pipeline_settings::domDepth_clamp_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domDepth_clamp_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7004,7 +7004,7 @@ domGl_pipeline_settings::domDepth_test_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7016,7 +7016,7 @@ domGl_pipeline_settings::domDepth_test_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domDepth_test_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7056,7 +7056,7 @@ domGl_pipeline_settings::domDither_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "true");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7068,7 +7068,7 @@ domGl_pipeline_settings::domDither_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domDither_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7108,7 +7108,7 @@ domGl_pipeline_settings::domFog_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7120,7 +7120,7 @@ domGl_pipeline_settings::domFog_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domFog_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7160,7 +7160,7 @@ domGl_pipeline_settings::domLight_model_local_viewer_enable::registerElement(DAE
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7172,7 +7172,7 @@ domGl_pipeline_settings::domLight_model_local_viewer_enable::registerElement(DAE
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_model_local_viewer_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7212,7 +7212,7 @@ domGl_pipeline_settings::domLight_model_two_side_enable::registerElement(DAE& da
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7224,7 +7224,7 @@ domGl_pipeline_settings::domLight_model_two_side_enable::registerElement(DAE& da
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLight_model_two_side_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7264,7 +7264,7 @@ domGl_pipeline_settings::domLine_smooth_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7276,7 +7276,7 @@ domGl_pipeline_settings::domLine_smooth_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLine_smooth_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7316,7 +7316,7 @@ domGl_pipeline_settings::domLine_stipple_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7328,7 +7328,7 @@ domGl_pipeline_settings::domLine_stipple_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLine_stipple_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7368,7 +7368,7 @@ domGl_pipeline_settings::domLogic_op_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7380,7 +7380,7 @@ domGl_pipeline_settings::domLogic_op_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domLogic_op_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7420,7 +7420,7 @@ domGl_pipeline_settings::domMultisample_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7432,7 +7432,7 @@ domGl_pipeline_settings::domMultisample_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domMultisample_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7472,7 +7472,7 @@ domGl_pipeline_settings::domNormalize_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7484,7 +7484,7 @@ domGl_pipeline_settings::domNormalize_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domNormalize_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7524,7 +7524,7 @@ domGl_pipeline_settings::domPoint_smooth_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7536,7 +7536,7 @@ domGl_pipeline_settings::domPoint_smooth_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPoint_smooth_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7576,7 +7576,7 @@ domGl_pipeline_settings::domPolygon_offset_fill_enable::registerElement(DAE& dae
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7588,7 +7588,7 @@ domGl_pipeline_settings::domPolygon_offset_fill_enable::registerElement(DAE& dae
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPolygon_offset_fill_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7628,7 +7628,7 @@ domGl_pipeline_settings::domPolygon_offset_line_enable::registerElement(DAE& dae
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7640,7 +7640,7 @@ domGl_pipeline_settings::domPolygon_offset_line_enable::registerElement(DAE& dae
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPolygon_offset_line_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7680,7 +7680,7 @@ domGl_pipeline_settings::domPolygon_offset_point_enable::registerElement(DAE& da
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7692,7 +7692,7 @@ domGl_pipeline_settings::domPolygon_offset_point_enable::registerElement(DAE& da
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPolygon_offset_point_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7732,7 +7732,7 @@ domGl_pipeline_settings::domPolygon_smooth_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7744,7 +7744,7 @@ domGl_pipeline_settings::domPolygon_smooth_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPolygon_smooth_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7784,7 +7784,7 @@ domGl_pipeline_settings::domPolygon_stipple_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7796,7 +7796,7 @@ domGl_pipeline_settings::domPolygon_stipple_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domPolygon_stipple_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7836,7 +7836,7 @@ domGl_pipeline_settings::domRescale_normal_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7848,7 +7848,7 @@ domGl_pipeline_settings::domRescale_normal_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domRescale_normal_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7888,7 +7888,7 @@ domGl_pipeline_settings::domSample_alpha_to_coverage_enable::registerElement(DAE
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7900,7 +7900,7 @@ domGl_pipeline_settings::domSample_alpha_to_coverage_enable::registerElement(DAE
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domSample_alpha_to_coverage_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7940,7 +7940,7 @@ domGl_pipeline_settings::domSample_alpha_to_one_enable::registerElement(DAE& dae
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7952,7 +7952,7 @@ domGl_pipeline_settings::domSample_alpha_to_one_enable::registerElement(DAE& dae
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domSample_alpha_to_one_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -7992,7 +7992,7 @@ domGl_pipeline_settings::domSample_coverage_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -8004,7 +8004,7 @@ domGl_pipeline_settings::domSample_coverage_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domSample_coverage_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -8044,7 +8044,7 @@ domGl_pipeline_settings::domScissor_test_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -8056,7 +8056,7 @@ domGl_pipeline_settings::domScissor_test_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domScissor_test_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -8096,7 +8096,7 @@ domGl_pipeline_settings::domStencil_test_enable::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -8108,7 +8108,7 @@ domGl_pipeline_settings::domStencil_test_enable::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGl_pipeline_settings::domStencil_test_enable , attrParam ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

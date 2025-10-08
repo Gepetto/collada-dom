@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_DOM_TYPES__
 #define __DAE_DOM_TYPES__
@@ -20,7 +20,7 @@
 typedef daeElement			domElement;
 
 typedef daeURI				xsAnyURI;
-typedef daeString			xsDateTime;		
+typedef daeString			xsDateTime;
 
 typedef daeString			xsID;
 typedef daeIDRef			xsIDREF;

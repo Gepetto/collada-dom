@@ -58,7 +58,7 @@ domProfile_gles::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -68,7 +68,7 @@ domProfile_gles::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_gles , attrId ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -81,7 +81,7 @@ domProfile_gles::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "PC");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -140,7 +140,7 @@ domProfile_gles::domTechnique::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -149,7 +149,7 @@ domProfile_gles::domTechnique::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domProfile_gles::domTechnique , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -161,7 +161,7 @@ domProfile_gles::domTechnique::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_gles::domTechnique , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -220,7 +220,7 @@ domProfile_gles::domTechnique::domPass::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: sid
 	{
@@ -230,7 +230,7 @@ domProfile_gles::domTechnique::domPass::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_gles::domTechnique::domPass , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -271,7 +271,7 @@ domProfile_gles::domTechnique::domPass::domStates::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 0, 0, -1 ) );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domProfile_gles::domTechnique::domPass::domStates));
 	meta->validate();
@@ -346,7 +346,7 @@ domProfile_gles::domTechnique::domPass::domEvaluate::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 6 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domProfile_gles::domTechnique::domPass::domEvaluate));
 	meta->validate();

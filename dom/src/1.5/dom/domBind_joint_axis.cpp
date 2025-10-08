@@ -46,7 +46,7 @@ domBind_joint_axis::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: target
 	{
@@ -55,7 +55,7 @@ domBind_joint_axis::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domBind_joint_axis , attrTarget ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

@@ -52,7 +52,7 @@ domKinematics_index::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domKinematics_index,_contents));
 	meta->addContentsOrder(daeOffsetOf(domKinematics_index,_contentsOrder));
@@ -65,7 +65,7 @@ domKinematics_index::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNMTOKEN"));
 		ma->setOffset( daeOffsetOf( domKinematics_index , attrSemantic ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

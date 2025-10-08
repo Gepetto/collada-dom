@@ -58,7 +58,7 @@ domFormula::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -67,7 +67,7 @@ domFormula::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domFormula , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -78,7 +78,7 @@ domFormula::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domFormula , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -89,7 +89,7 @@ domFormula::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domFormula , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

@@ -39,7 +39,7 @@ domFormula_technique::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	meta->setAllowsAny( true );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFormula_technique,_contents));

@@ -76,7 +76,7 @@ domMotion_axis_info::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 6 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: sid
 	{
@@ -85,7 +85,7 @@ domMotion_axis_info::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domMotion_axis_info , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -97,7 +97,7 @@ domMotion_axis_info::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domMotion_axis_info , attrAxis ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -108,7 +108,7 @@ domMotion_axis_info::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domMotion_axis_info , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

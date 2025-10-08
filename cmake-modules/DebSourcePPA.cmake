@@ -6,7 +6,7 @@
 # Creates source debian files and manages library dependencies
 #
 # Features:
-# 
+#
 # - Automatically generates symbols and run-time dependencies from the build dependencies
 # - Custom copy of source directory via CPACK_DEBIAN_PACKAGE_SOURCE_COPY
 # - Simultaneous output of multiple debian source packages for each distribution
@@ -115,7 +115,7 @@ foreach(RELEASE ${CPACK_DEBIAN_DISTRIBUTION_RELEASES})
     endif( CPACK_DEBIAN_BUILD_DEPENDS_${DISTRIBUTION_NAME_UPPER} )
   endif( CPACK_DEBIAN_BUILD_DEPENDS_${DISTRIBUTION_NAME_UPPER}_${RELEASE_UPPER} )
 
-    
+
   file(APPEND ${DEBIAN_CONTROL} "\n"
     "Standards-Version: 3.8.4\n"
     "Homepage: ${CPACK_PACKAGE_VENDOR}\n"
@@ -174,7 +174,7 @@ foreach(RELEASE ${CPACK_DEBIAN_DISTRIBUTION_RELEASES})
       endforeach(DEP ${CPACK_DEBIAN_PACKAGE_SUGGESTS})
     endif( CPACK_DEBIAN_PACKAGE_SUGGESTS_${DISTRIBUTION_NAME_UPPER} )
   endif( CPACK_DEBIAN_PACKAGE_SUGGESTS_${DISTRIBUTION_NAME_UPPER}_${RELEASE_UPPER} )
-  
+
   file(APPEND ${DEBIAN_CONTROL} "\nConflicts: ")
   if( CPACK_DEBIAN_PACKAGE_CONFLICTS_${DISTRIBUTION_NAME_UPPER}_${RELEASE_UPPER} )
     foreach(DEP ${CPACK_DEBIAN_PACKAGE_CONFLICTS_${DISTRIBUTION_NAME_UPPER}_${RELEASE_UPPER}})

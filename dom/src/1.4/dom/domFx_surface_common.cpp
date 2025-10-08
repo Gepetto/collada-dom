@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -96,7 +96,7 @@ domFx_surface_common::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 6 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFx_surface_common,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFx_surface_common,_contentsOrder));
@@ -110,7 +110,7 @@ domFx_surface_common::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_surface_common , attrType ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

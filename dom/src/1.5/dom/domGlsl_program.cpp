@@ -52,7 +52,7 @@ domGlsl_program::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGlsl_program));
 	meta->validate();
@@ -91,7 +91,7 @@ domGlsl_program::domBind_attribute::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGlsl_program::domBind_attribute,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGlsl_program::domBind_attribute,_contentsOrder));
@@ -105,7 +105,7 @@ domGlsl_program::domBind_attribute::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGlsl_program::domBind_attribute , attrSymbol ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -188,7 +188,7 @@ domGlsl_program::domBind_uniform::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 0, 1, 1 ) );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domGlsl_program::domBind_uniform,_contents));
 	meta->addContentsOrder(daeOffsetOf(domGlsl_program::domBind_uniform,_contentsOrder));
@@ -202,7 +202,7 @@ domGlsl_program::domBind_uniform::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGlsl_program::domBind_uniform , attrSymbol ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -241,7 +241,7 @@ domGlsl_program::domBind_uniform::domParam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGlsl_program::domBind_uniform::domParam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

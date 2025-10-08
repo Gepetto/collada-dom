@@ -39,7 +39,7 @@ domInput_local::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInput_local , attrSemantic ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -51,7 +51,7 @@ domInput_local::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInput_local , attrSource ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

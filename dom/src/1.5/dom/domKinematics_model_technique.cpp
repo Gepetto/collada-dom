@@ -82,7 +82,7 @@ domKinematics_model_technique::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 6003 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domKinematics_model_technique,_contents));
 	meta->addContentsOrder(daeOffsetOf(domKinematics_model_technique,_contentsOrder));

@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -90,7 +90,7 @@ domGles_sampler_state::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 7 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: sid
 	{
@@ -99,7 +99,7 @@ domGles_sampler_state::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domGles_sampler_state , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

@@ -37,13 +37,13 @@ public:
 		virtual daeInt typeID() const { return ID(); }
 	protected:  // Attributes
 /**
- *  The semantic attribute specifies which effect parameter to bind. 
+ *  The semantic attribute specifies which effect parameter to bind.
  */
 		xsNCName attrSemantic;
 /**
  *  The target attribute specifies the location of the value to bind to the
  * specified semantic.  This text string is a path-name following a simple
- * syntax described in the "Addressing Syntax"  section. 
+ * syntax described in the "Addressing Syntax"  section.
  */
 		xsToken attrTarget;
 
@@ -93,7 +93,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -116,15 +116,15 @@ public:
 		virtual daeInt typeID() const { return ID(); }
 	protected:  // Attributes
 /**
- *  The semantic attribute specifies which effect parameter to bind. 
+ *  The semantic attribute specifies which effect parameter to bind.
  */
 		xsNCName attrSemantic;
 /**
- *  The input_semantic attribute specifies which input semantic to bind. 
+ *  The input_semantic attribute specifies which input semantic to bind.
  */
 		xsNCName attrInput_semantic;
 /**
- *  The input_set attribute specifies which input set to bind.  
+ *  The input_set attribute specifies which input set to bind.
  */
 		domUint attrInput_set;
 
@@ -185,7 +185,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -195,18 +195,18 @@ public:
 protected:  // Attributes
 /**
  *  The symbol attribute specifies which symbol defined from within the geometry
- * this material binds to. 
+ * this material binds to.
  */
 	xsNCName attrSymbol;
 /**
  *  The target attribute specifies the URL of the location of the object to
- * instantiate. 
+ * instantiate.
  */
 	xsAnyURI attrTarget;
 /**
  *  The sid attribute is a text string value containing the sub-identifier
  * of this element. This  value must be unique within the scope of the parent
- * element. Optional attribute. 
+ * element. Optional attribute.
  */
 	domSid attrSid;
 /**
@@ -337,7 +337,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

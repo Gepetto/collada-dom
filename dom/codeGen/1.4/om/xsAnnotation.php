@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 class xsAnnotation extends _elementSet
 {
@@ -25,7 +25,7 @@ class xsAnnotation extends _elementSet
   function addAnnotationElement( & $e )
   {
     $this->addElement( $e );
-  }  
+  }
 }
 
 ?>

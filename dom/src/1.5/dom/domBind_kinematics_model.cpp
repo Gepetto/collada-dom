@@ -52,7 +52,7 @@ domBind_kinematics_model::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domBind_kinematics_model,_contents));
 	meta->addContentsOrder(daeOffsetOf(domBind_kinematics_model,_contentsOrder));
@@ -65,7 +65,7 @@ domBind_kinematics_model::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domBind_kinematics_model , attrNode ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

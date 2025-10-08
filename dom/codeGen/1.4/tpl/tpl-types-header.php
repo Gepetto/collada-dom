@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 if ( $_globals['copyright'] ) {
 print $_globals['copyright_text'];
@@ -79,11 +79,11 @@ foreach( $bag as $type => $meta )
 			}
 			//else if ($i==0) {
 			//	print " = 1";
-			//} 
+			//}
 			print ",";
 			if ( isset( $meta['enum_documentation'][$i] ) ) {
 				print "\t\t/**< ". $meta['enum_documentation'][$i] ." */";
-			}			
+			}
 			print "\n";
 		}
 		$cnt = count($meta['enum']);
@@ -116,7 +116,7 @@ foreach( $bag as $type => & $meta )
 		print applyTemplate( 'DOXYGEN', $meta['documentation']['en'] );
 	}
 	print "enum " . $_globals['prefix'] . ucfirst( $type ) . " {\n";
-    
+
     //tokenize memberTypes string
     $types = explode( ' ', $meta['union_members'] );
     //look up the members
@@ -137,15 +137,15 @@ foreach( $bag as $type => & $meta )
 				}
 				else if ($i==0) {
 					print " = 1";
-				} 
+				}
 				print ",";
 				if ( isset( $bag[$typeName]['enum_documentation'][$i] ) ) {
 					print "\t\t/**< ". $bag[$typeName]['enum_documentation'][$i] ." */";
-				}			
+				}
 				print "\n";
 				$cnt++;
 			}
-		}	
+		}
     }
     print "\t". strtoupper( $type ) . "_COUNT = ". $cnt;
 	print "\n};\n\n";

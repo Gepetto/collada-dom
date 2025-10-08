@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_SIDRESOLVER_H__
 #define __DAE_SIDRESOLVER_H__
@@ -30,13 +30,13 @@ struct DLLSPEC daeSidRef {
 		daeDoubleArray* array;
 		daeDouble* scalar;
 	};
-	
+
 	daeSidRef();
 	daeSidRef(const std::string& sidRef, daeElement* referenceElt, const std::string& profile = "");
 	bool operator<(const daeSidRef& other) const;
 
 	resolveData resolve();
-		
+
 	std::string sidRef;
 	daeElement* refElt;
 	std::string profile;
@@ -47,7 +47,7 @@ struct DLLSPEC daeSidRef {
  * The daeSIDResolver class is designed to resolve sid references within a COLLADA document.
  * The rules for sid resolution are set forth by the Addressing Syntax section in Chapter 3 of the
  * COLLADA specification which can be found at https://www.khronos.org/collada .
- * This resolver always attempts to resolve to the daeElement which is referenced. If the element contains 
+ * This resolver always attempts to resolve to the daeElement which is referenced. If the element contains
  * a daeDoubleArray (domFloatArray) value, the resolver will set the pointer to that array. The
  * resolver will also do this if the sid target points to a <source> element which has a <float_array> as
  * a child. If the sid target specifies a value, i.e. blah.X or blah(6), the resolver will attempt to
@@ -145,7 +145,7 @@ public:
 private:
 	// This data is provided by the user
 	std::string	target;
-	std::string	profile;	
+	std::string	profile;
 	daeElement* container;
 };
 
@@ -155,7 +155,7 @@ class DLLSPEC daeSidRefCache {
 public:
 	daeSidRefCache();
 	~daeSidRefCache();
-	
+
 	daeSidRef::resolveData lookup(const daeSidRef& sidRef);
 	void add(const daeSidRef& sidRef, const daeSidRef::resolveData& data);
 	void clear();

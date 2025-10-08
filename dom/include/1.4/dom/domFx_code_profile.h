@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __dom141Fx_code_profile_h__
 #define __dom141Fx_code_profile_h__
@@ -21,19 +21,19 @@ namespace ColladaDOM141 {
  * The fx_code_profile type allows you to specify an inline block of source
  * code.
  */
-class domFx_code_profile_complexType 
+class domFx_code_profile_complexType
 {
 protected:  // Attribute
 /**
  *  The sid attribute is a text string value containing the sub-identifier
  * of this element.  This value must be unique within the scope of the parent
- * element. Optional attribute. 
+ * element. Optional attribute.
  */
 	xsNCName attrSid;
 
 protected:  // Value
 	/**
-	 * The xsString value of the text data of this element. 
+	 * The xsString value of the text data of this element.
 	 */
 	xsString _value;
 
@@ -119,7 +119,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

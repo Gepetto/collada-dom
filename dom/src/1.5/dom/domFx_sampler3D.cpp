@@ -52,7 +52,7 @@ domFx_sampler3D::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domFx_sampler3D));
 	meta->validate();

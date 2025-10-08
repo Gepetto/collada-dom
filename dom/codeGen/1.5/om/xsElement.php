@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 require_once( 'src/ElementMeta.php' );
 require_once( 'src/TypeMeta.php' );
@@ -29,15 +29,15 @@ class xsElement extends _elementSet
     $this->type[] = 'xsElement';
     parent::_elementSet();
   }
-  
+
   function & generate( $element_context, & $global_elements )
   {
     $element_context[] = $this->getAttribute( "name" );
     print implode( ",", $element_context ) . "\n";
-    
+
     // Get new factory
     $generator = new ElementMeta( $global_elements );
-    
+
     // Load the class name and a context pre-fix (in case we're inside another element)
     $generator->setName( $this->getAttribute( 'name' ) );
     $generator->setContext( $element_context );
@@ -51,7 +51,7 @@ class xsElement extends _elementSet
     if ( $abstract != '' ) {
 		$generator->setAbstract( $abstract );
     }
-    
+
     // Extract any documentation for this node
     $a = $this->getElementsByType( 'xsAnnotation' );
     if ( count( $a ) > 0 )
@@ -67,12 +67,12 @@ class xsElement extends _elementSet
 	  	$generator->setAppInfo( $ap[0]->get() );
 	  }
     }
-    
+
     //******************************************************************************************/
     //$generator->setContentType( $this->getAttribute( 'type' ) );
     $type = $this->getAttribute( 'type' );
     $generator->bag['base_type'] = $type;
-    //check if this type equals a complex type    
+    //check if this type equals a complex type
 	//print "element ". $this->getAttribute( 'name' ) ." is of type ". $type ."!\n";
 	if ( $type != "" ) {
 		//print "complex types: " . count($GLOBALS['_globals']['complex_types']) . "\n";
@@ -90,10 +90,10 @@ class xsElement extends _elementSet
 		}
 	}
 	//*******************************************************************************************/
-		
+
     // Inspect the semantic structure of this node and extract the elements/attributes
     $temp = $this->getElementsByType( 'xsComplexType' );
-    
+
     if ( count( $temp ) > 0 )
     {
       if ( $temp[0]->getAttribute( 'mixed' ) == 'true' )
@@ -101,9 +101,9 @@ class xsElement extends _elementSet
         $generator->setMixed( true );
         $generator->setContentType( 'ListOfInts' );
       }
-      
+
       $content = $temp[0]; // Should only be one
-      $this->generateComplexType( $content, $generator, $element_context ); 
+      $this->generateComplexType( $content, $generator, $element_context );
 	  if ( count( $generator->bag['elements'] ) == 0 ) {
 		$generator->setIsEmptyContent( true );
 	  }
@@ -120,14 +120,14 @@ class xsElement extends _elementSet
 			$generator->setContentType( $generator->bag['simple_type']->bag['base'] );
 		}
 	}
-		
+
     $meta = & $generator->getMeta();
-    
+
     if ( count( $element_context ) == 1 )
     {
       $global_elements[ $element_context[0] ] = & $meta;
     }
-    
+
     return $meta;
   }
 
@@ -207,7 +207,7 @@ class xsElement extends _elementSet
     }
     $generator->addContentModel( 5, 0, 0 ); //END content model - There will be one extra on every element
   }
-  
+
   //function that reads complex types.  will recurse complex type derived heirarchies.
   function generateComplexType( $content, & $generator, & $context ) {
 	//print "in generatecomplextype\n";
@@ -249,7 +249,7 @@ class xsElement extends _elementSet
 				break;
 			}
 		}
-		
+
 		// Parse element context
 		$this->flatten( $content, $generator, $element_context, $content->getAttribute( 'maxOccurs' ) );
 
@@ -258,13 +258,13 @@ class xsElement extends _elementSet
 		// The alternative to xsSimpleContent is xsComplexContent - if it is not specified, it is implied
 		// Parse element context
 		$this->flatten( $content, $generator, $element_context, $content->getAttribute( 'maxOccurs' ) );
-		
+
 	}
   }
-  
+
   //function that generates the inline simpleType
   function generateSimpleType( $content, & $generator ) {
-	
+
 	$e = $content->getElements();
     $generator->setType( $this->getAttribute( 'name' ) );
     //print $this->getAttribute( 'name' ) ." has a simpletype\n";
@@ -283,7 +283,7 @@ class xsElement extends _elementSet
 	  	$generator->setAppInfo( $ap[0]->get() );
 	  }
     }
-    
+
     $idx = 0;
     if ( $e[$idx]->getType() == 'xsAnnotation' ) {
 		$idx = 1;
@@ -291,10 +291,10 @@ class xsElement extends _elementSet
     if ( $e[$idx]->getType() == 'xsRestriction' || $e[$idx]->getType() == 'xsExtension' )
     {
       $generator->setIsExtension( $e[$idx]->getType() == 'xsExtension' );
-    
+
       // Set base class
       $generator->setBase( $e[$idx]->getAttribute( 'base' ) );
-      
+
       // Look for enums
       $enums = $e[$idx]->getElementsByType( 'xsEnumeration' );
       for( $i=0; $i<count( $enums ); $i++ )
@@ -314,7 +314,7 @@ class xsElement extends _elementSet
 			}
         }
       }
-      
+
       // Look for max/mins
       $array_limits = array();
       $min = $e[$idx]->getElementsByType( 'xsMinLength' );
@@ -323,32 +323,32 @@ class xsElement extends _elementSet
       $maxIn = $e[$idx]->getElementsByType( 'xsMaxInclusive' );
       $minEx = $e[$idx]->getElementsByType( 'xsMinExclusive' );
       $maxEx = $e[$idx]->getElementsByType( 'xsMaxExclusive' );
-      
+
       if ( count( $min ) > 0 )
       {
         $generator->setRestriction( 'minLength', $min[0]->getAttribute( 'value' ) );
       }
-      
+
       if ( count( $max ) > 0 )
       {
         $generator->setRestriction( 'maxLength', $max[0]->getAttribute( 'value' ) );
       }
-      
+
       if ( count( $minIn ) > 0 )
       {
         $generator->setRestriction( 'minInclusive', $minIn[0]->getAttribute( 'value' ) );
       }
-      
+
       if ( count( $maxIn ) > 0 )
       {
         $generator->setRestriction( 'maxInclusive', $maxIn[0]->getAttribute( 'value' ) );
       }
-      
+
       if ( count( $minEx ) > 0 )
       {
         $generator->setRestriction( 'minExclusive', $minEx[0]->getAttribute( 'value' ) );
       }
-      
+
       if ( count( $maxEx ) > 0 )
       {
         $generator->setRestriction( 'maxExclusive', $maxEx[0]->getAttribute( 'value' ) );

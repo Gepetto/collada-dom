@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -48,7 +48,7 @@ domFx_annotate_common::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 0, 1, 1 ) );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: name
 	{
@@ -58,7 +58,7 @@ domFx_annotate_common::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_annotate_common , attrName ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

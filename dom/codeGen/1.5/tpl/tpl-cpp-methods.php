@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 	global $meta;
 	global $typemeta;
@@ -16,7 +16,7 @@
     $_context[$i] = $_globals['prefix'] . ucfirst( $_context[$i] );
   }
   $scoped_element = implode( '::', $_context );
-  
+
   /*if ( $bag['has_any'] ) {
 	foreach ( $meta as $nm => $lm ) {
 		if ( !$lm['isAGroup'] && !$lm['isAComplexType'] && !$lm['abstract'] ) {
@@ -25,7 +25,7 @@
 	}
 	print "\n";
   }*/
-  
+
   if ( $scoped_element == "domCOLLADA" ) {
 	print "extern daeString COLLADA_VERSION;\n";
 	print "extern daeString COLLADA_NAMESPACE;\n\n";
@@ -78,7 +78,7 @@
 		}
 		$bag['content_model'] = $tempArray;
 	}
-	
+
 	for( $i=0; $i<count( $bag['elements'] ); $i++ )	{
 		if ( isset( $meta[$bag['elements'][$i]] ) ) {
 			$cnt = count( $meta[$bag['elements'][$i]]['substitutableWith']);
@@ -111,14 +111,14 @@
 	if ( isset( $bag['parent_meta'] ) ) {
 		print "\tmeta->setIsInnerClass( true );\n";
 	}
-	  
+
 	if ( count( $bag['elements'] ) > 0 || $bag['has_any'] )
 	{
 		print "\tdaeMetaCMPolicy *cm = NULL;\n";
 		if ( !$bag['has_any'] ) {
 			print "\tdaeMetaElementAttribute *mea = NULL;\n";
 		}
-	
+
 	  $needsContents = false;
 	  $cmTree = array();
 	  $currentCM = NULL;
@@ -149,10 +149,10 @@
 
 	  for( $i=0; $i<count( $bag['content_model'] ) - 1; $i++ )
 	  {
-		$cm = $bag['content_model'][$i]; 
-		if ( $cm['maxOccurs'] == "unbounded" ) 
+		$cm = $bag['content_model'][$i];
+		if ( $cm['maxOccurs'] == "unbounded" )
 		{
-			$cm['maxOccurs'] = -1; 
+			$cm['maxOccurs'] = -1;
 		}
 		if ( is_int( $cm['name'] ) )
 		{
@@ -162,11 +162,11 @@
 				//	$needsContents = true;
 				//}
 
-				// !!!steveT Horrible hack here. For some reason the wrong value gets generated for 
+				// !!!steveT Horrible hack here. For some reason the wrong value gets generated for
 				// the third parameter
 				if (strcmp($scoped_element, "domCamera::domOptics::domTechnique_common::domPerspective") == 0)
 					print "\tcm = new daeMetaSequence( meta, cm, 0, ". $cm['minOccurs'] .", ". $cm['maxOccurs'] ." );\n\n";
-				else 
+				else
 					print "\tcm = new daeMetaSequence( meta, cm, ". $currentOrd .", ". $cm['minOccurs'] .", ". $cm['maxOccurs'] ." );\n\n";
 
 				$level++;
@@ -204,10 +204,10 @@
 	mea->setElementType( <?= $_globals['prefix'] . ucfirst( $groupName ) ?>::registerElement(dae) );
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, <?= $currentOrd ?>, <?= $cm['minOccurs'] ?>, <?= $cm['maxOccurs'] ?> ) );
 
-<?php		
+<?php
 				if ( $currentCM['cm']['name'] == 0 ) {
 					$currentOrd++;
-				}		
+				}
 			}
 			else if ( $cm['name'] == 3 ) //all
 			{
@@ -274,7 +274,7 @@
 			}
 			if ( isset( $bag['element_attrs'][ $cm['name'] ]['type'] ) &&
 				isset( $meta[$bag['element_attrs'][ $cm['name'] ]['type']] ) ){
-			
+
 				$typeClass = $_globals['prefix'] . ucfirst( $bag['element_attrs'][ $cm['name'] ]['type'] );
 			}
 ?>
@@ -289,7 +289,7 @@
 				$cnt = count( $meta[$cm['name']]['substitutableWith']);
 				for ( $c = 0; $c < $cnt; $c++ ) {
 					$subwith = $meta[$cm['name']]['substitutableWith'][$c];
-?>    
+?>
 	mea = new daeMetaElement<?= $arrayOrNot ? 'Array' : '' ?>Attribute( meta, cm, <?= $currentOrd ?>, <?= $cm['minOccurs'] ?>, <?= $cm['maxOccurs'] ?> );
 	mea->setName( "<?= $subwith ?>" );
 	mea->setOffset( daeOffsetOf(<?= $scoped_element ?>,elem<?= ucfirst( $cm['name'] ) ?><?= $arrayOrNot ? '_array' : '' ?>) );
@@ -307,14 +307,14 @@
 	  }
 ?>
 	cm->setMaxOrdinal( <?= ($currentOrd-1 >= 0)? $currentOrd-1 : 0 ?> );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 <?php
-	  
+
 	  if ( $bag['has_any'] ) {
 		$needsContents = true;
 		print "\tmeta->setAllowsAny( true );\n";
 	  }
-	  
+
       // For elements that allow more than one type of sub-element, _contents keeps an order for those sub-elements
 	  if ( $bag['hasChoice'] || $needsContents ) {
 ?>
@@ -334,7 +334,7 @@
 	// TAKE CARE OF THE ENUM IF IT HAS ONE!!
 	if ( $bag['simple_type'] != NULL ) {
 		$typeMeta = $bag['simple_type']->getMeta();
-		
+
 		if ( count( $typeMeta['enum'] ) > 0 && !$typeMeta['useConstStrings'] )
 		{
 ?>
@@ -349,13 +349,13 @@
 			{
 ?>
 	((daeEnumType*)type)->_strings->append("<?= $val ?>");
-	((daeEnumType*)type)->_values->append(<?= strtoupper($typeMeta['type']) . "_" . $val ?>);    
+	((daeEnumType*)type)->_values->append(<?= strtoupper($typeMeta['type']) . "_" . $val ?>);
 <?php
 			}
 			print "\tdaeAtomicType::append( type );\n\n";
 		}
 	}
-	
+
 	// NOTE: special casing any element with 'mixed' content model to ListOfInts type _value
 	$pre = '';
 	if (($bag['content_type'] != '' || $bag['mixed']) && !$bag['abstract'] ) {
@@ -392,7 +392,7 @@
 	}
 <?php
     }
-    
+
     if ( $bag['useXMLNS'] ) {
     ?>
 	//	Add attribute: xmlns
@@ -412,8 +412,8 @@
 	{
 		$_type = $attr_attrs['type'];
 		$printType;
-		if ( preg_match( "/xs\:/", $_type ) ) { 
-			$_type = 'xs' . ucfirst( substr( $_type, 3 ) ); 
+		if ( preg_match( "/xs\:/", $_type ) ) {
+			$_type = 'xs' . ucfirst( substr( $_type, 3 ) );
 			$printType = $_type;
 		}
 		else {
@@ -427,11 +427,11 @@
 		/*print "\t//". $_type ." is set ";
 		if ( isset( $typemeta[$_type] ) ) print "true\n";
 		else print "false\n";
-		
+
 		print "\t//is array ";
 		if ( $typemeta[$_type]['isArray'] ) print "true\n";
 		else print "false\n";*/
-		
+
 		if ( isset( $typemeta[$_type] ) && $typemeta[$_type]['isArray'] ) {
 		print "\t\tdaeMetaAttribute *ma = new daeMetaArrayAttribute;\n";
 	}
@@ -449,14 +449,14 @@
 ?>		ma->setDefaultString( "<?= $attr_attrs['default'] ?>");
 <?php
 		}
-		
+
 		if ( isset( $attr_attrs['use'] ) ) {
 			$required = $attr_attrs['use'] == 'required' ? 'true' : 'false';
 
 ?>		ma->setIsRequired( <?= $required ?> );
 <?php
 	    }
-?>	
+?>
 		meta->appendAttribute(ma);
 	}
 <?php

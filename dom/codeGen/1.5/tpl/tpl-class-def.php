@@ -5,18 +5,18 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 global $meta;
 global $typemeta;
 $needsContents = false;
 
 
-// XXX all occurences of 'baseTypeViaRestriction' are ugly hacks to get 
+// XXX all occurences of 'baseTypeViaRestriction' are ugly hacks to get
 // a working dom for 1.5
 if(isset($bag['baseTypeViaRestriction'])) {
-	print '#include <dom/' . 
-		$_globals['prefix'] . ucfirst( $bag['baseTypeViaRestriction'] ) . 
+	print '#include <dom/' .
+		$_globals['prefix'] . ucfirst( $bag['baseTypeViaRestriction'] ) .
 		'.h>'."\n";
 }
 
@@ -24,27 +24,27 @@ if(isset($bag['baseTypeViaRestriction'])) {
 // shorthand:
 $full_element_name = $_globals['prefix'] . ucfirst( $bag['element_name'] );
 //COLLADA TYPE list
-if ( array_search( $bag['element_name'], $_globals['elementTypes'] ) === FALSE ) 
+if ( array_search( $bag['element_name'], $_globals['elementTypes'] ) === FALSE )
 {
 	$_globals['elementTypes'][] = $bag['element_name'];
 }
 //COLLADA ELEMENT list
 for( $i=0; $i<count( $bag['elements'] ); $i++ )
 {
-	if ( array_search( $bag['elements'][$i], $_globals['elementNames'] ) === FALSE ) 
+	if ( array_search( $bag['elements'][$i], $_globals['elementNames'] ) === FALSE )
 	{
 		$_globals['elementNames'][] = $bag['elements'][$i];
 	}
 }
 if ( $bag['substitution_group'] != '' )
 {
-	//also add this element to the list of elements. 
-	if ( array_search( $bag['element_name'], $_globals['elementNames'] ) === FALSE ) 
+	//also add this element to the list of elements.
+	if ( array_search( $bag['element_name'], $_globals['elementNames'] ) === FALSE )
 	{
 		$_globals['elementNames'][] = $bag['element_name'];
 	}
 }
-  
+
 $indent = "";
 for ($i = 0; $i < $GLOBALS['indentNum']; $i++ ) {
 	$indent .= "\t";
@@ -72,7 +72,7 @@ if(isset($bag['baseTypeViaRestriction']))
 	$baseClass = $_globals['prefix'] . ucfirst($bag['baseTypeViaRestriction']);
 
 print $indent ."class ". $full_element_name . " : public " . $baseClass . "\n".$indent."{\n";
-print $indent ."public:\n";	
+print $indent ."public:\n";
 print $indent ."\tvirtual COLLADA_TYPE::TypeEnum getElementType() const { return COLLADA_TYPE::". strtoupper($bag['element_name']) ."; }\n";
 print $indent ."\tstatic daeInt ID() { return ". $_globals['typeID']++ ."; }\n";
 print $indent ."\tvirtual daeInt typeID() const { return ID(); }\n";
@@ -111,7 +111,7 @@ if ( $bag['simple_type'] != NULL ) {
 				print "\t" . strtoupper( $typeMeta['type'] ) . "_" . $typeMeta['enum'][$i] .",";
 				if ( isset( $typeMeta['enum_documentation'][$i] ) ) {
 					print "\t\t/**< ". $typeMeta['enum_documentation'][$i] ." */";
-				}			
+				}
 				//print "\n\t" . strtoupper( $typeMeta['type'] ) . "_" . $typeMeta['enum'][$i];
 				print "\n";
 			}
@@ -139,7 +139,7 @@ if ( $bag['simple_type'] != NULL ) {
 		}
 	}
 }
-	
+
 // ATTRIBUTES
 if ( ( count( $bag['attributes'] ) > 0 || $bag['useXMLNS'] ) /*&& !isset($bag['baseTypeViaRestriction'])*/ )
 {
@@ -164,7 +164,7 @@ if ( ( count( $bag['attributes'] ) > 0 || $bag['useXMLNS'] ) /*&& !isset($bag['b
 		print $indent ."\t" . $pre . ucfirst( $type ) . " attr" . ucfirst($attr_name) .";\n";
 	}
 }
-  
+
 // ELEMENTS
 if ( count( $bag['attributes'] > 0 ) ) { print "\n"; }
 printElements($bag, $needsContents, $indent);
@@ -176,7 +176,7 @@ printAccessorsAndMutators($bag, $needsContents, $indent);
 if ( ( ($bag['content_type'] != '' || $bag['mixed']) && !$bag['abstract'] ) && !isset($bag['baseTypeViaRestriction']) )
 {
 	print $indent ."protected:  // Value\n";
-	  
+
 	$content_type = $bag['content_type'];
 	$pre = '';
 	getTypeNameAndPrefix($content_type, $pre);
@@ -191,9 +191,9 @@ if ( ( ($bag['content_type'] != '' || $bag['mixed']) && !$bag['abstract'] ) && !
 	print $indent ."\t". $valueType ." _value;\n";
 }
 
-//CONSTRUCTORS  
+//CONSTRUCTORS
 printConstructors( $full_element_name, $bag, $baseClass, $indent );
-		
+
 print "\n".$indent ."public: // STATIC METHODS\n";
 print $indent ."\t/**\n". $indent ."\t * Creates an instance of this class and returns a daeElementRef referencing it.\n";
 print $indent ."\t * @return a daeElementRef referencing an instance of this object.\n". $indent ."\t */\n";

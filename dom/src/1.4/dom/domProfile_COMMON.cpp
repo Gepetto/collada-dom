@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -78,7 +78,7 @@ domProfile_COMMON::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3003 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_COMMON,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_COMMON,_contentsOrder));
@@ -92,7 +92,7 @@ domProfile_COMMON::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_COMMON , attrId ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -187,7 +187,7 @@ domProfile_COMMON::domTechnique::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3003 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_COMMON::domTechnique,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_COMMON::domTechnique,_contentsOrder));
@@ -200,7 +200,7 @@ domProfile_COMMON::domTechnique::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domProfile_COMMON::domTechnique , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -212,7 +212,7 @@ domProfile_COMMON::domTechnique::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_COMMON::domTechnique , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -283,7 +283,7 @@ domProfile_COMMON::domTechnique::domConstant::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 5 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domProfile_COMMON::domTechnique::domConstant));
 	meta->validate();
@@ -364,7 +364,7 @@ domProfile_COMMON::domTechnique::domLambert::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 7 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domProfile_COMMON::domTechnique::domLambert));
 	meta->validate();
@@ -457,7 +457,7 @@ domProfile_COMMON::domTechnique::domPhong::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 9 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domProfile_COMMON::domTechnique::domPhong));
 	meta->validate();
@@ -550,7 +550,7 @@ domProfile_COMMON::domTechnique::domBlinn::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 9 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domProfile_COMMON::domTechnique::domBlinn));
 	meta->validate();

@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __dom141InputLocalOffset_h__
 #define __dom141InputLocalOffset_h__
@@ -21,11 +21,11 @@ namespace ColladaDOM141 {
  * The InputLocalOffset type is used to represent indexed inputs that can
  * only reference resources declared in the same document.
  */
-class domInputLocalOffset_complexType 
+class domInputLocalOffset_complexType
 {
 protected:  // Attributes
 /**
- *  The offset attribute represents the offset into the list of indices. 
+ *  The offset attribute represents the offset into the list of indices.
  * If two input elements share  the same offset, they will be indexed the
  * same.  This works as a simple form of compression for the  list of indices
  * as well as defining the order the inputs should be used in.  Required attribute.
@@ -33,12 +33,12 @@ protected:  // Attributes
 	domUint attrOffset;
 /**
  *  The semantic attribute is the user-defined meaning of the input connection.
- * Required attribute. 
+ * Required attribute.
  */
 	xsNMTOKEN attrSemantic;
 /**
  *  The source attribute indicates the location of the data source. Required
- * attribute. 
+ * attribute.
  */
 	domURIFragmentType attrSource;
 /**
@@ -205,7 +205,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

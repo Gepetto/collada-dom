@@ -131,7 +131,7 @@ domFx_annotate::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFx_annotate,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFx_annotate,_contentsOrder));

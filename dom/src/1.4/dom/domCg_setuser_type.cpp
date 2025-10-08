@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -78,7 +78,7 @@ domCg_setuser_type::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCg_setuser_type,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCg_setuser_type,_contentsOrder));
@@ -92,7 +92,7 @@ domCg_setuser_type::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCg_setuser_type , attrName ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -104,7 +104,7 @@ domCg_setuser_type::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCg_setuser_type , attrSource ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

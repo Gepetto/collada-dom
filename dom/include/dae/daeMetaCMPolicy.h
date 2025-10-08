@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_META_CM_POLICY_H__
 #define __DAE_META_CM_POLICY_H__
@@ -31,7 +31,7 @@ public:
 	 * minOccurs and maxOccurs.
 	 * @param before The element that the child should appear before. Optional.
 	 * @param after The element that the child should appear after. Optional.
-	 * @return Returns The child element that was placed within this content model object or any of its 
+	 * @return Returns The child element that was placed within this content model object or any of its
 	 * children. NULL if placement failed.
 	 */
 	virtual daeElement *placeElement( daeElement *parent, daeElement *child, daeUInt &ordinal, daeInt offset = 0, daeElement* before = NULL, daeElement *after = NULL ) = 0;
@@ -46,7 +46,7 @@ public:
 	/**
 	 * Gets the daeMetaElement of an acceptable child of this content model object.
 	 * @param elementName The name of the element whos metaElement information you are interested in.
-	 * @return Returns a pointer to a daeMetaElement class that describes the element interested in. 
+	 * @return Returns a pointer to a daeMetaElement class that describes the element interested in.
 	 * Returns NULL if the element is not valid in this content model.
 	 */
 	virtual daeMetaElement *findChild( daeString elementName ) = 0;
@@ -81,13 +81,13 @@ protected:
 	 * Constructor.
 	 * @param container The daeMetaElement that this policy object belongs to.
 	 * @param parent The daeMetaCMPolicy parent of this policy object.
-	 * @param odinal The ordinal value offset of this specific policy object. Used for maintaining the 
+	 * @param odinal The ordinal value offset of this specific policy object. Used for maintaining the
 	 * correct order of child elements.
 	 * @param minO The minimum number of times this CMPolicy object must appear. This value comes from the COLLADA schema.
 	 * @param maxO The maximum number of times this CMPolicy object may appear. This value comes from the COLLADA schema.
 	 */
-	daeMetaCMPolicy( daeMetaElement *container ,daeMetaCMPolicy *parent, daeUInt ordinal, 
-					 daeInt minO, daeInt maxO ) : _container( container ), _parent( parent ), _minOccurs( minO ), 
+	daeMetaCMPolicy( daeMetaElement *container ,daeMetaCMPolicy *parent, daeUInt ordinal,
+					 daeInt minO, daeInt maxO ) : _container( container ), _parent( parent ), _minOccurs( minO ),
 					 _maxOccurs( maxO ), _maxOrdinal( 0 ), _ordinalOffset( ordinal ) {}
 
 public:

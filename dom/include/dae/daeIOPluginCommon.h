@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_IO_PLUGIN_COMMON__
 #define __DAE_IO_PLUGIN_COMMON__
@@ -35,7 +35,7 @@ public:
 
 	virtual daeInt setMeta(daeMetaElement *topMeta);
 
-	// Database setup	
+	// Database setup
 	virtual void setDatabase(daeDatabase* database);
 
 	// Operations
@@ -50,8 +50,8 @@ protected:
 
 	// Reading support for subclasses
 	typedef std::pair<daeString, daeString> attrPair;
-	daeElementRef beginReadElement(daeElement* parentElement, 
-	                               daeString elementName, 
+	daeElementRef beginReadElement(daeElement* parentElement,
+	                               daeString elementName,
 	                               const std::vector<attrPair>& attributes,
 	                               daeInt lineNumber);
 	bool readElementText(daeElement* element, daeString text, daeInt elementLineNumber);

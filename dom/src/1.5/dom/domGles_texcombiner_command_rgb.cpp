@@ -40,7 +40,7 @@ domGles_texcombiner_command_rgb::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: operator
 	{
@@ -49,7 +49,7 @@ domGles_texcombiner_command_rgb::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gles_texcombiner_operator_rgb"));
 		ma->setOffset( daeOffsetOf( domGles_texcombiner_command_rgb , attrOperator ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -61,7 +61,7 @@ domGles_texcombiner_command_rgb::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles_texcombiner_command_rgb , attrScale ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

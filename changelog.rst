@@ -5,7 +5,7 @@ Collada DOM Change Log
 =====
 
 - remove unsafe xmlCleanupParser call
-  
+
 2.5.0
 =====
 
@@ -17,7 +17,7 @@ Collada DOM Change Log
 - add using liburiparser library for parsing URIs
 
 - daeIDResolverType::compare now compares with getID
-  
+
 2.4.3
 =====
 
@@ -92,7 +92,7 @@ collada-dom 2.3
 
 - Added cmake support. cmake now produces *.pc files direclty usable in Linux's package config: collada14dom, collada15dom. Use the cmake-modules/FindCOLLADA.cmake when searching for the collada installation.
 
-- Added newer version of minizip v1.1. 
+- Added newer version of minizip v1.1.
 
 [Bug Fix]
 
@@ -115,4 +115,4 @@ collada-dom 2.3
 
 - Major memory leak fixes
 
-- Numerous minor bug fixes 
+- Numerous minor bug fixes

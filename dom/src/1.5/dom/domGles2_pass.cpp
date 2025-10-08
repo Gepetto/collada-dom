@@ -64,7 +64,7 @@ domGles2_pass::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 4 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: sid
 	{
@@ -74,7 +74,7 @@ domGles2_pass::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles2_pass , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -115,7 +115,7 @@ domGles2_pass::domStates::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 0, 1, 1 ) );
 
 	cm->setMaxOrdinal( 2999 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGles2_pass::domStates));
 	meta->validate();
@@ -190,7 +190,7 @@ domGles2_pass::domEvaluate::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 6 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGles2_pass::domEvaluate));
 	meta->validate();

@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -78,7 +78,7 @@ domProfile_GLES::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3003 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_GLES,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_GLES,_contentsOrder));
@@ -92,7 +92,7 @@ domProfile_GLES::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_GLES , attrId ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -105,7 +105,7 @@ domProfile_GLES::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "PC");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -188,7 +188,7 @@ domProfile_GLES::domTechnique::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3004 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_GLES::domTechnique,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_GLES::domTechnique,_contentsOrder));
@@ -201,7 +201,7 @@ domProfile_GLES::domTechnique::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domProfile_GLES::domTechnique , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -213,7 +213,7 @@ domProfile_GLES::domTechnique::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_GLES::domTechnique , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -260,7 +260,7 @@ domProfile_GLES::domTechnique::domSetparam::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 1, 1, 1 ) );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: ref
 	{
@@ -270,7 +270,7 @@ domProfile_GLES::domTechnique::domSetparam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_GLES::domTechnique::domSetparam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -371,7 +371,7 @@ domProfile_GLES::domTechnique::domPass::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3009 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domProfile_GLES::domTechnique::domPass,_contents));
 	meta->addContentsOrder(daeOffsetOf(domProfile_GLES::domTechnique::domPass,_contentsOrder));
@@ -385,7 +385,7 @@ domProfile_GLES::domTechnique::domPass::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domProfile_GLES::domTechnique::domPass , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

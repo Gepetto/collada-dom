@@ -52,7 +52,7 @@ domFx_samplerDEPTH::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domFx_samplerDEPTH));
 	meta->validate();

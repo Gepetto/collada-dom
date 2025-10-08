@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -45,7 +45,7 @@ domGles_texcombiner_argumentRGB_type::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Gles_texcombiner_source_enums"));
 		ma->setOffset( daeOffsetOf( domGles_texcombiner_argumentRGB_type , attrSource ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -57,7 +57,7 @@ domGles_texcombiner_argumentRGB_type::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles_texcombiner_argumentRGB_type , attrOperand ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "SRC_COLOR");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -69,7 +69,7 @@ domGles_texcombiner_argumentRGB_type::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles_texcombiner_argumentRGB_type , attrUnit ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

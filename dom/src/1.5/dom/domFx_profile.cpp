@@ -71,7 +71,7 @@ domFx_profile::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFx_profile,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFx_profile,_contentsOrder));

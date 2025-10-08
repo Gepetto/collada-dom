@@ -64,7 +64,7 @@ domFormula_setparam::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFormula_setparam,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFormula_setparam,_contentsOrder));
@@ -78,7 +78,7 @@ domFormula_setparam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFormula_setparam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

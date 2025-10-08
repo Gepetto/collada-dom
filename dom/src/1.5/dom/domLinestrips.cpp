@@ -52,7 +52,7 @@ domLinestrips::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: name
 	{
@@ -61,7 +61,7 @@ domLinestrips::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domLinestrips , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -73,7 +73,7 @@ domLinestrips::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domLinestrips , attrCount ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -84,7 +84,7 @@ domLinestrips::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domLinestrips , attrMaterial ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

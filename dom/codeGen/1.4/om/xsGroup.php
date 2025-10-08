@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 class xsGroup extends _elementSet
 {
@@ -17,10 +17,10 @@ class xsGroup extends _elementSet
     $this->_addElement( 'xsChoice', array( 'minOccurs' => '0', 'maxOccurs' => 'unbounded' ) );
     $this->_addElement( 'xsSequence', array( 'minOccurs' => '0', 'maxOccurs' => 'unbounded' ) );
     $this->_addElement( 'xsGroup', array( 'minOccurs' => '0', 'maxOccurs' => 'unbounded' ) );
-    
+
     $this->_addAttribute( 'ref', array( 'type' => 'xs:string' ) );
     $this->_addAttribute( 'name', array( 'type' => 'xs:string' ) );
-    
+
     $this->type[] = "xsGroup";
     parent::_elementSet();
   }
@@ -28,21 +28,21 @@ class xsGroup extends _elementSet
   function addChoiceElement( & $e )
   {
     $this->addElement( $e );
-  }  
+  }
 
   function & generate( $element_context, & $global_elements )
   {
     $element_context[] = $this->getAttribute( "name" );
     print implode( ",", $element_context ) . "\n";
-    
+
     // Get new factory
     $generator = new ElementMeta( $global_elements );
     $generator->setIsAGroup( true );
-    
+
     // Load the class name and a context pre-fix (in case we're inside another element)
     $generator->setName( $this->getAttribute( 'name' ) );
     $generator->setContext( $element_context );
-    
+
     // Extract any documentation for this node
     $a = $this->getElementsByType( 'xsAnnotation' );
     if ( count( $a ) > 0 )
@@ -53,21 +53,21 @@ class xsGroup extends _elementSet
         $generator->setDocumentation( $d[0]->get() );
       }
     }
-    
+
     // Inspect the semantic structure of this node and extract the elements/attributes
     $this->flatten( $this, $generator, $element_context, $this->getAttribute( 'maxOccurs' ) );
-    
+
     if ( count( $generator->bag['elements'] ) == 0 ) {
 		$generator->setIsEmptyContent( true );
 	}
-	
+
     $meta = & $generator->getMeta();
-    
+
     if ( count( $element_context ) == 1 )
     {
       $global_elements[ $element_context[0] ] = & $meta;
     }
-    
+
     return $meta;
   }
 

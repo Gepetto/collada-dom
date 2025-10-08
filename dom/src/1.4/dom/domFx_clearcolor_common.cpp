@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -56,7 +56,7 @@ domFx_clearcolor_common::registerElement(DAE& dae)
 		ma->setContainer( meta );
 		ma->setDefaultString( "0");
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

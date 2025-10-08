@@ -52,7 +52,7 @@ domGles_sampler::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 2, 1, 1 ) );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGles_sampler));
 	meta->validate();
@@ -88,7 +88,7 @@ domGles_sampler::domTexcoord::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domGles_sampler::domTexcoord , attrSemantic ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

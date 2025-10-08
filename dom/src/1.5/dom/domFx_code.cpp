@@ -47,7 +47,7 @@ domFx_code::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_code , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

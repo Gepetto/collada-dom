@@ -64,7 +64,7 @@ domPolygons::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3002 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domPolygons,_contents));
 	meta->addContentsOrder(daeOffsetOf(domPolygons,_contentsOrder));
@@ -77,7 +77,7 @@ domPolygons::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domPolygons , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -89,7 +89,7 @@ domPolygons::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domPolygons , attrCount ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -100,7 +100,7 @@ domPolygons::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domPolygons , attrMaterial ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -147,7 +147,7 @@ domPolygons::domPh::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domPolygons::domPh));
 	meta->validate();

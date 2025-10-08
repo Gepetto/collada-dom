@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae/daeMetaElementAttribute.h>
 #include <dae/daeMetaElement.h>
@@ -76,7 +76,7 @@ daeMetaElementAttribute::getCount(daeElement* e)
 daeMemoryRef
 daeMetaElementAttribute::get(daeElement *e, daeInt index)
 {
-	(void)index; 
+	(void)index;
 	return getWritableMemory(e);
 }
 
@@ -118,7 +118,7 @@ daeMetaElementAttribute::placeElement(daeElement* parent, daeElement* child, dae
 		return child;
 	}
 	daeElementRef* er = (daeElementRef*)getWritableMemory(parent);
-	
+
 	if ( *er != NULL )
 	{
 		return NULL;
@@ -145,7 +145,7 @@ daeMetaElementArrayAttribute::placeElement(daeElement* parent, daeElement* child
 	if ( _maxOccurs != -1 && (daeInt)era->getCount()-offset >= _maxOccurs ) {
 		return NULL;
 	}
-	
+
 	if (strcmp( child->getElementName(), _name ) != 0 )
 		return NULL;
 
@@ -196,7 +196,7 @@ daeMetaElementArrayAttribute::removeElement(daeElement* parent,
 {
 	if ((parent == NULL)||(child == NULL))
 		return false ;
-	
+
 	daeElementRefArray* era = (daeElementRefArray*)getWritableMemory(parent);
 /*	if ( (daeInt)era->getCount() <= _minOccurs ) {
 		return false;

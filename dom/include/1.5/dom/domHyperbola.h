@@ -24,10 +24,10 @@ namespace ColladaDOM150 {
  * hyperbola.     The axis, of which the origin and unit vector are     respectively
  * the origin and "main Direction" of the     local coordinate system, is
  * termed the "Axis" or "main     Axis" of the hyperbola. The "main Direction"
- * of the     local coordinate system gives an explicit orientation to   
+ * of the     local coordinate system gives an explicit orientation to
  * the hyperbola, determining the direction in which the     parameter increases
  * along the hyperbola. The     Geom_Hyperbola hyperbola is parameterized
- * as follows:     P(U) = O + MajRad*Cosh(U)*XDir + MinRad*Sinh(U)*YDir, 
+ * as follows:     P(U) = O + MajRad*Cosh(U)*XDir + MinRad*Sinh(U)*YDir,
  * where: - P is the point of parameter U, - O, XDir and     YDir are respectively
  * the origin, "X Direction" and "Y     Direction" of its local coordinate
  * system, - MajRad and     MinRad are the major and minor radii of the hyperbola.
@@ -69,7 +69,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domFloat2 value of the text data of this element. 
+		 * The domFloat2 value of the text data of this element.
 		 */
 		domFloat2 _value;
 	protected:
@@ -94,7 +94,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -144,7 +144,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

@@ -52,7 +52,7 @@ domSpline::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: closed
 	{
@@ -62,7 +62,7 @@ domSpline::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domSpline , attrClosed ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -109,7 +109,7 @@ domSpline::domControl_vertices::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domSpline::domControl_vertices));
 	meta->validate();

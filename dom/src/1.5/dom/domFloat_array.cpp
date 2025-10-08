@@ -46,7 +46,7 @@ domFloat_array::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsID"));
 		ma->setOffset( daeOffsetOf( domFloat_array , attrId ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -57,7 +57,7 @@ domFloat_array::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domFloat_array , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -69,7 +69,7 @@ domFloat_array::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFloat_array , attrCount ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -81,7 +81,7 @@ domFloat_array::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFloat_array , attrDigits ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "6");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -93,7 +93,7 @@ domFloat_array::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFloat_array , attrMagnitude ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "38");
-	
+
 		meta->appendAttribute(ma);
 	}
 

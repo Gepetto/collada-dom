@@ -88,7 +88,7 @@ domCurve::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCurve,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCurve,_contentsOrder));
@@ -102,7 +102,7 @@ domCurve::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCurve , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -114,7 +114,7 @@ domCurve::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCurve , attrName ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

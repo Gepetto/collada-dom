@@ -52,7 +52,7 @@ domNurbs::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: degree
 	{
@@ -62,7 +62,7 @@ domNurbs::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domNurbs , attrDegree ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -74,7 +74,7 @@ domNurbs::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domNurbs , attrClosed ));
 		ma->setContainer( meta );
 		ma->setDefaultString( "false");
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -121,7 +121,7 @@ domNurbs::domControl_vertices::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domNurbs::domControl_vertices));
 	meta->validate();

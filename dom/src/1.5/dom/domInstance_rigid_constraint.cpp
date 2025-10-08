@@ -40,7 +40,7 @@ domInstance_rigid_constraint::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: constraint
 	{
@@ -50,7 +50,7 @@ domInstance_rigid_constraint::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domInstance_rigid_constraint , attrConstraint ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -61,7 +61,7 @@ domInstance_rigid_constraint::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domInstance_rigid_constraint , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -72,7 +72,7 @@ domInstance_rigid_constraint::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domInstance_rigid_constraint , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

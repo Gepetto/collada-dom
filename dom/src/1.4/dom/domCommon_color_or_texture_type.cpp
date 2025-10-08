@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -60,7 +60,7 @@ domCommon_color_or_texture_type::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCommon_color_or_texture_type,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCommon_color_or_texture_type,_contentsOrder));
@@ -109,7 +109,7 @@ domCommon_color_or_texture_type::domColor::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domCommon_color_or_texture_type::domColor , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -148,7 +148,7 @@ domCommon_color_or_texture_type::domParam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCommon_color_or_texture_type::domParam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -189,7 +189,7 @@ domCommon_color_or_texture_type::domTexture::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: texture
 	{
@@ -199,7 +199,7 @@ domCommon_color_or_texture_type::domTexture::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCommon_color_or_texture_type::domTexture , attrTexture ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -211,7 +211,7 @@ domCommon_color_or_texture_type::domTexture::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCommon_color_or_texture_type::domTexture , attrTexcoord ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

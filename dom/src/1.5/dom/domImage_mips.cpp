@@ -38,7 +38,7 @@ domImage_mips::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage_mips , attrLevels ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -50,7 +50,7 @@ domImage_mips::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domImage_mips , attrAuto_generate ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

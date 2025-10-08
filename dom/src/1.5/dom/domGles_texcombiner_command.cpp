@@ -52,7 +52,7 @@ domGles_texcombiner_command::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGles_texcombiner_command));
 	meta->validate();

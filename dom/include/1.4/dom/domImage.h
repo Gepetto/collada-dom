@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __dom141Image_h__
 #define __dom141Image_h__
@@ -51,7 +51,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The domListOfHexBinary value of the text data of this element. 
+		 * The domListOfHexBinary value of the text data of this element.
 		 */
 		domListOfHexBinary _value;
 
@@ -94,7 +94,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -118,7 +118,7 @@ public:
 
 	protected:  // Value
 		/**
-		 * The xsAnyURI value of the text data of this element. 
+		 * The xsAnyURI value of the text data of this element.
 		 */
 		xsAnyURI _value;
 
@@ -166,7 +166,7 @@ public:
 		static DLLSPEC daeElementRef create(DAE& dae);
 		/**
 		 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-		 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+		 * If a daeMetaElement already exists it will return that instead of creating a new one.
 		 * @return A daeMetaElement describing this COLLADA element.
 		 */
 		static DLLSPEC daeMetaElement* registerElement(DAE& dae);
@@ -177,7 +177,7 @@ protected:  // Attributes
 /**
  *  The id attribute is a text string containing the unique identifier of
  * this element. This value  must be unique within the instance document.
- * Optional attribute. 
+ * Optional attribute.
  */
 	xsID attrId;
 /**
@@ -186,23 +186,23 @@ protected:  // Attributes
 	xsNCName attrName;
 /**
  *  The format attribute is a text string value that indicates the image format.
- * Optional attribute. 
+ * Optional attribute.
  */
 	xsToken attrFormat;
 /**
  *  The height attribute is an integer value that indicates the height of
- * the image in pixel  units. Optional attribute. 
+ * the image in pixel  units. Optional attribute.
  */
 	domUint attrHeight;
 /**
  *  The width attribute is an integer value that indicates the width of the
- * image in pixel units.  Optional attribute. 
+ * image in pixel units.  Optional attribute.
  */
 	domUint attrWidth;
 /**
  *  The depth attribute is an integer value that indicates the depth of the
  * image in pixel units.  A 2-D image has a depth of 1, which is also the
- * default value. Optional attribute. 
+ * default value. Optional attribute.
  */
 	domUint attrDepth;
 
@@ -250,7 +250,7 @@ public:	//Accessors and Mutators
 	 * Sets the id attribute.
 	 * @param atId The new value for the id attribute.
 	 */
-	void setId( xsID atId ) { *(daeStringRef*)&attrId = atId; _validAttributeArray[0] = true; 
+	void setId( xsID atId ) { *(daeStringRef*)&attrId = atId; _validAttributeArray[0] = true;
 		if( _document != NULL ) _document->changeElementID( this, attrId );
 	}
 
@@ -367,7 +367,7 @@ public: // STATIC METHODS
 	static DLLSPEC daeElementRef create(DAE& dae);
 	/**
 	 * Creates a daeMetaElement object that describes this element in the meta object reflection framework.
-	 * If a daeMetaElement already exists it will return that instead of creating a new one. 
+	 * If a daeMetaElement already exists it will return that instead of creating a new one.
 	 * @return A daeMetaElement describing this COLLADA element.
 	 */
 	static DLLSPEC daeMetaElement* registerElement(DAE& dae);

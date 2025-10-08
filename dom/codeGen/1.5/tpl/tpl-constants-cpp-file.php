@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 // Grab the file name and save the output
 $_file = $_globals['prefix'] . "Constants.cpp";

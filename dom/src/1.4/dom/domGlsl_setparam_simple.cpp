@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -54,7 +54,7 @@ domGlsl_setparam_simple::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 1, 1, 1 ) );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: ref
 	{
@@ -64,7 +64,7 @@ domGlsl_setparam_simple::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGlsl_setparam_simple , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

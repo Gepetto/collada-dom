@@ -5,35 +5,35 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 	global $meta;
 	global $typemeta;
-	
+
 	// shorthand:
 	$full_element_name = $_globals['prefix'] . ucfirst( $bag['element_name'] );
 	//COLLADA TYPE list
-	if ( array_search( $bag['element_name'], $_globals['elementTypes'] ) === FALSE ) 
+	if ( array_search( $bag['element_name'], $_globals['elementTypes'] ) === FALSE )
 	{
 		$_globals['elementTypes'][] = $bag['element_name'];
 	}
 	//COLLADA ELEMENT list
 	for( $i=0; $i<count( $bag['elements'] ); $i++ )
 	{
-		if ( array_search( $bag['elements'][$i], $_globals['elementNames'] ) === FALSE ) 
+		if ( array_search( $bag['elements'][$i], $_globals['elementNames'] ) === FALSE )
 		{
 			$_globals['elementNames'][] = $bag['elements'][$i];
 		}
 	}
 	if ( $bag['substitution_group'] != '' )
 	{
-		//also add this element to the list of elements. 
-		if ( array_search( $bag['element_name'], $_globals['elementNames'] ) === FALSE ) 
+		//also add this element to the list of elements.
+		if ( array_search( $bag['element_name'], $_globals['elementNames'] ) === FALSE )
 		{
 			$_globals['elementNames'][] = $bag['element_name'];
 		}
 	}
-  
+
 	$indent = "";
 	for ($i = 0; $i < $GLOBALS['indentNum']; $i++ ) {
 		$indent .= "\t";
@@ -104,7 +104,7 @@
 					print "\t" . strtoupper( $typeMeta['type'] ) . "_" . $typeMeta['enum'][$i] .",";
 					if ( isset( $typeMeta['enum_documentation'][$i] ) ) {
 						print "\t\t/**< ". $typeMeta['enum_documentation'][$i] ." */";
-					}			
+					}
 					//print "\n\t" . strtoupper( $typeMeta['type'] ) . "_" . $typeMeta['enum'][$i];
 					print "\n";
 				}
@@ -132,7 +132,7 @@
 			}
 		}
 	}
-	
+
   // ATTRIBUTES
   if ( count( $bag['attributes'] ) > 0 || $bag['useXMLNS'] )
   {
@@ -145,7 +145,7 @@
     foreach( $bag['attributes'] as $attr_name => & $a_list )
     {
       $type = $a_list['type'];
-      if ( preg_match( "/xs\:/", $type ) ) { 
+      if ( preg_match( "/xs\:/", $type ) ) {
 		$type = substr( $type, 3 );
 		$pre = "xs";
 	  }
@@ -162,13 +162,13 @@
       print $indent ."\t" . $pre . ucfirst( $type ) . " attr" . ucfirst($attr_name) .";\n";
     }
   }
-  
+
   // ELEMENTS
   if ( count( $bag['attributes'] > 0 ) ) { print "\n"; }
-  
+
   if ( (count( $bag['elements'] ) > 0 && !$bag['isRestriction']) || $bag['has_any'] )
   {
-		
+
 	print $indent ."protected:  // Element". (count( $bag['elements'] ) > 1 ? 's' : '') ."\n";
 	$needsContents = false;
     for( $i=0; $i<count( $bag['elements'] ); $i++ )
@@ -189,7 +189,7 @@
 		print $indent ."\t" . $_globals['prefix'] . ucfirst( $bag['elements'][$i] ) . ($maxOccurs ? "_Array" : "Ref") . " elem" . ucfirst($bag['elements'][$i]) . ($maxOccurs ? "_array" : "") . ";\n";
       }
       if ( isset( $meta[$bag['elements'][$i]] ) ) {
-			if( count( $meta[$bag['elements'][$i]]['substitutableWith']) > 0 ) {			
+			if( count( $meta[$bag['elements'][$i]]['substitutableWith']) > 0 ) {
 				$needsContents = true;
 			}
 		}
@@ -209,13 +209,13 @@
 		print $indent ."\t */\n". $indent ."\tdaeTArray< daeCharArray * > _CMData;\n\n";
 	}
   }
-  
+
   //VALUE
   // NOTE: special casing any element with 'mixed' content model to ListOfInts type _value
   if ( ($bag['content_type'] != '' || $bag['mixed']) && !$bag['abstract'] )
   {
 	  print $indent ."protected:  // Value\n";
-	  
+
 		$content_type = $bag['content_type'];
 		if ( preg_match( "/xs\:/", $content_type ) ) {
 			$content_type = substr( $content_type, 3 );
@@ -232,21 +232,21 @@
 		print "\n". $indent ."\t */\n";
 		print $indent ."\t".$pre . ucfirst( $content_type ) ." _value;\n";
   }
-  
-  if ( $bag['complex_type'] && !$bag['isAComplexType'] ) 
+
+  if ( $bag['complex_type'] && !$bag['isAComplexType'] )
   {
 	$bag2 = $bag;
 	$bag2['attributes'] = array_merge( $meta[$bag['base_type']]['attributes'], $bag['attributes'] );
 	printAttributes( $bag2, $typemeta, $indent, true );
   }
-  
+
   if ( $_globals['accessorsAndMutators'] && ( $bag['useXMLNS'] || count($bag['attributes'])>0 ||
 		count($bag['elements'])>0 ||( ($bag['content_type'] != '' || $bag['mixed']) && !$bag['abstract'] ) ) ) {
-		
+
 		//generate accessors and mutators for everything
 		print "\n". $indent ."public:\t//Accessors and Mutators\n";
 		printAttributes( $bag, $typemeta, $indent, !$bag['isAComplexType'] );
-		
+
 		$needsContents = false;
 		for( $i=0; $i<count( $bag['elements'] ); $i++ )	{
 			$maxOccurs = $bag['element_attrs'][ $bag['elements'][$i] ]['maxOccurs'];
@@ -254,7 +254,7 @@
 			$type = '';
 			if ( isset( $bag['element_attrs'][ $bag['elements'][$i] ]['type'] ) &&
 				isset( $meta[$bag['element_attrs'][ $bag['elements'][$i] ]['type']] ) ){
-				
+
 				$type = $_globals['prefix'] . ucfirst( $bag['element_attrs'][ $bag['elements'][$i] ]['type'] ) . ($maxOccurs ? "_Array" : "Ref");
 			}
 			else {
@@ -285,14 +285,14 @@
 				print $indent ."\tconst ". $type ." get". $name ."() const { return elem". $name ."; }\n";
 				//print $indent ."\tvoid set". $name ."( ". $type ." &e". $name ." ) { elem". $name ." = e". $name ."; }\n\n";
 			}
-			
+
 			if ( isset( $meta[$bag['elements'][$i]] ) ) {
-				if( count( $meta[$bag['elements'][$i]]['substitutableWith']) > 0 ) {			
+				if( count( $meta[$bag['elements'][$i]]['substitutableWith']) > 0 ) {
 					$needsContents = true;
 				}
 			}
 		}
-	    
+
 		if ( $bag['hasChoice'] || $needsContents || $bag['has_any'] )
 		{
 			//comment
@@ -308,7 +308,7 @@
 			//code
 			print $indent ."\tconst daeElementRefArray &getContents() const { return _contents; }\n\n";
 		}
-		
+
 		if ( ($bag['content_type'] != '' || $bag['mixed']) && !$bag['abstract'] )
 		{
 			$type = $bag['content_type'];
@@ -319,13 +319,13 @@
 			else {
 				$pre = $_globals['prefix'];
 			}
-			$baseStringTypes = "xsDateTime xsID xsNCName xsNMTOKEN xsName xsToken xsString";	
+			$baseStringTypes = "xsDateTime xsID xsNCName xsNMTOKEN xsName xsToken xsString";
 			$baseType = $pre . ucfirst( $type );
 			if ( isset( $typemeta[$type] ) ) {
 				$typeInfo = $typemeta[$type];
 				while ( $typeInfo['base'] != '' && isset( $typemeta[$typeInfo['base']] ) ) {
 					$typeInfo = $typemeta[$typeInfo['base']];
-					if ( preg_match( "/xs\:/", $typeInfo['type'] ) ) { 
+					if ( preg_match( "/xs\:/", $typeInfo['type'] ) ) {
 						$baseType = "xs" . ucfirst( substr( $typeInfo['type'], 3 ) );
 					}
 					else {
@@ -418,7 +418,7 @@
 				print $indent ."\t * @param val The new value for this element.\n";
 				print $indent ."\t */\n";
 				//code
-				print $indent ."\tvoid setValue( ". $pre . ucfirst( $type ) ." val ) { *(daeStringRef*)&_value = val; }\n\n";				
+				print $indent ."\tvoid setValue( ". $pre . ucfirst( $type ) ." val ) { *(daeStringRef*)&_value = val; }\n\n";
 			}
 			else {
 				//comment
@@ -438,13 +438,13 @@
 		}
 	}
 
-  //CONSTRUCTORS  
+  //CONSTRUCTORS
 	if ( !$bag['isAComplexType'] ) {
 		printConstructors( $full_element_name, $bag, $baseClasses, $indent );
 	}
 	else {
 		printConstructors( $full_element_name ."_complexType", $bag, $baseClasses, $indent );
-		
+
 		print $indent ."};\n\n";
 		print $indent ."/**\n". $indent ." * An element of type ". $full_element_name ."_complexType.\n". $indent ." */\n";
 		print $indent ."class ". $full_element_name ." : public daeElement, public ". $full_element_name ."_complexType\n";
@@ -459,11 +459,11 @@
 			print "\n". $indent ."public:\t//Accessors and Mutators\n";
 			printAttributes( $bag, $typemeta, $indent, true );
 		}
-		
+
 		$dummy = array();
 		printConstructors( $full_element_name, $dummy, array("daeElement", $full_element_name . "_complexType"), $indent );
 	}
-	
+
 	print "\n".$indent ."public: // STATIC METHODS\n";
 	print $indent ."\t/**\n". $indent ."\t * Creates an instance of this class and returns a daeElementRef referencing it.\n";
 	print $indent ."\t * @return a daeElementRef referencing an instance of this object.\n". $indent ."\t */\n";

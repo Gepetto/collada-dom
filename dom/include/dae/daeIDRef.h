@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_IDREF_H__
 #define __DAE_IDREF_H__
@@ -53,7 +53,7 @@ public:
 				This means you probably forgot to set a container element. */
 		id_failed_no_document
 	};
-	
+
 private:
 	/** ID used to refer to another element */
 	std::string id;
@@ -72,9 +72,9 @@ public:
 	 * @param id ID to construct a reference for, passed to @c setID() automatically.
 	 */
 	daeIDRef(daeString id);
-	
+
 	/**
-	 * Constructs a new id reference by copying an existing one. 
+	 * Constructs a new id reference by copying an existing one.
 	 * @param constructFromIDRef @c daeIDRef to copy into this one.
 	 */
 	daeIDRef(const daeIDRef& constructFromIDRef);
@@ -87,7 +87,7 @@ public:
 
 	/**
 	 * Gets the ID string
-	 * @return Returns the full ID string from <tt><i>id.</i></tt> 
+	 * @return Returns the full ID string from <tt><i>id.</i></tt>
 	 */
 	daeString getID() const;
 
@@ -98,7 +98,7 @@ public:
 	 */
 	void setID(daeString ID);
 
-	/** 
+	/**
 	 * Gets the element that this URI resolves to in memory.
 	 * @return Returns a ref to the element.
 	 */
@@ -172,7 +172,7 @@ public:
 	 * Destructor
 	 */
 	virtual ~daeIDRefResolver();
-	
+
 	/**
 	 * Provides an abstract interface to convert a @c daeIDRef into a @c daeElement.
 	 * @param id The ID of the element to find.
@@ -180,7 +180,7 @@ public:
 	 * @return Returns a daeElement with matching ID, if one is found.
 	 */
 	virtual daeElement* resolveElement(const std::string& id, daeDocument* doc) = 0;
-	                                   
+
 
 	/**
 	 * Gets the name of this resolver.

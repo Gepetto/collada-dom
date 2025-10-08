@@ -46,7 +46,7 @@ domCommon_float_or_param::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCommon_float_or_param,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCommon_float_or_param,_contentsOrder));

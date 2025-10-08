@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae/daeRawResolver.h>
 #include <dae.h>
@@ -35,7 +35,7 @@ daeElement* daeRawResolver::resolveElement(const daeURI& uri) {
 	daeRawRefCache& cache = dae->getRawRefCache();
 	if (daeElement* elt = cache.lookup(uri))
 		return elt;
-	
+
 	string fileName = cdom::uriToNativePath(uri.str());
 	if (fileName.empty())
 	{
@@ -50,7 +50,7 @@ daeElement* daeRawResolver::resolveElement(const daeURI& uri) {
 	daeElement *src;
 	daeElement *array;
 	daeElement *accessor;
-	
+
 	accessor = uri.getContainer();
 	if ( accessor == NULL )
 		return NULL;
@@ -67,7 +67,7 @@ daeElement* daeRawResolver::resolveElement(const daeURI& uri) {
 	{
 		array = src->createAndPlace( "float_array" );
 	}
-	
+
 	daeULong *countPtr = (daeULong*)accessor->getAttributeValue( "count" );
 	daeULong count = countPtr != NULL ? *countPtr : 0;
 

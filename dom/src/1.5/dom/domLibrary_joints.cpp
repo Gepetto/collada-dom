@@ -52,7 +52,7 @@ domLibrary_joints::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 2 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: id
 	{
@@ -62,7 +62,7 @@ domLibrary_joints::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domLibrary_joints , attrId ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -74,7 +74,7 @@ domLibrary_joints::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domLibrary_joints , attrName ));
 		ma->setContainer( meta );
 		ma->setIsRequired( false );
-	
+
 		meta->appendAttribute(ma);
 	}
 

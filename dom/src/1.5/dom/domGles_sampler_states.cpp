@@ -83,7 +83,7 @@ domGles_sampler_states::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 7 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domGles_sampler_states));
 	meta->validate();

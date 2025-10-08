@@ -58,7 +58,7 @@ domPolylist::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: name
 	{
@@ -67,7 +67,7 @@ domPolylist::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsToken"));
 		ma->setOffset( daeOffsetOf( domPolylist , attrName ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -79,7 +79,7 @@ domPolylist::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domPolylist , attrCount ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -90,7 +90,7 @@ domPolylist::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("xsNCName"));
 		ma->setOffset( daeOffsetOf( domPolylist , attrMaterial ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 

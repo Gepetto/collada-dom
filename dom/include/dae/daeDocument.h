@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_DOCUMENT__
 #define __DAE_DOCUMENT__
@@ -25,7 +25,7 @@ class DLLSPEC daeDocument
 public:
 	/**
 	 * Constructor
-	 * @param dae The dae that owns this document. 
+	 * @param dae The dae that owns this document.
      * @param zaeRootDocument Indicates if the new document is the root document of a ZAE archive.
      * @param extractedFileURI URI to extracted dae file.
 	 */
@@ -50,7 +50,7 @@ public:
 	*/
 	void setDomRoot(daeElement* domRoot) {dom = domRoot; domRoot->setDocument(this); }
 	/**
-	* Accessor to get the URI associated with the document in this document; 
+	* Accessor to get the URI associated with the document in this document;
 	* this is currently set to the URI from which the document was loaded, but
 	* is blank if the document was created with @c insertDocument().
 	* @return Returns a pointer to the URI for this document.
@@ -59,7 +59,7 @@ public:
 	daeURI* getDocumentURI() {return (&uri);}
 
 	/**
-	* Const accessor to get the URI associated with the document in this collection; 
+	* Const accessor to get the URI associated with the document in this collection;
 	* this is currently set to the URI from which the collection was loaded, but
 	* is blank if the collection was created with @c insertCollection().
 	* @return Returns a pointer to the URI for this collection.
@@ -138,8 +138,8 @@ private:
 	 * @remarks This member will eventually be taken private, use getDomRoot() to access it.
 	 */
 	daeElementRef dom;
-	
-	/** 
+
+	/**
 	 * The URI of the document, may be blank if the document wasn't loaded from a URI
 	 * @remarks This member will eventually be taken private, use getDocumentURI() to access it.
 	 */

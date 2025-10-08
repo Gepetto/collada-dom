@@ -1,7 +1,7 @@
 Technical Notes about PCRE
 --------------------------
 
-These are very rough technical notes that record potentially useful information 
+These are very rough technical notes that record potentially useful information
 about PCRE internals.
 
 Historical note 1
@@ -42,7 +42,7 @@ unrelated to those mentioned above), I tried at first to invent an algorithm
 that used an amount of store bounded by a multiple of the number of characters
 in the pattern, to save on compiling time. However, because of the greater
 complexity in Perl regular expressions, I couldn't do this. In any case, a
-first pass through the pattern is helpful for other reasons. 
+first pass through the pattern is helpful for other reasons.
 
 Computing the memory requirement: how it was
 --------------------------------------------
@@ -65,8 +65,8 @@ a "fake" mode that enables it to compute how much memory it would need, while
 actually only ever using a few hundred bytes of working memory, and without too
 many tests of the mode that might slow it down. So I re-factored the compiling
 functions to work this way. This got rid of about 600 lines of source. It
-should make future maintenance and development easier. As this was such a major 
-change, I never released 6.8, instead upping the number to 7.0 (other quite 
+should make future maintenance and development easier. As this was such a major
+change, I never released 6.8, instead upping the number to 7.0 (other quite
 major changes were also present in the 7.0 release).
 
 A side effect of this work was that the previous limit of 200 on the nesting
@@ -78,8 +78,8 @@ big issue, and in the event, nobody has commented on it.
 Traditional matching function
 -----------------------------
 
-The "traditional", and original, matching function is called pcre_exec(), and 
-it implements an NFA algorithm, similar to the original Henry Spencer algorithm 
+The "traditional", and original, matching function is called pcre_exec(), and
+it implements an NFA algorithm, similar to the original Henry Spencer algorithm
 and the way that Perl works. This is not surprising, since it is intended to be
 as compatible with Perl as possible. This is the function most users of PCRE
 will use most of the time.
@@ -87,17 +87,17 @@ will use most of the time.
 Supplementary matching function
 -------------------------------
 
-From PCRE 6.0, there is also a supplementary matching function called 
-pcre_dfa_exec(). This implements a DFA matching algorithm that searches 
-simultaneously for all possible matches that start at one point in the subject 
-string. (Going back to my roots: see Historical Note 1 above.) This function 
-intreprets the same compiled pattern data as pcre_exec(); however, not all the 
-facilities are available, and those that are do not always work in quite the 
+From PCRE 6.0, there is also a supplementary matching function called
+pcre_dfa_exec(). This implements a DFA matching algorithm that searches
+simultaneously for all possible matches that start at one point in the subject
+string. (Going back to my roots: see Historical Note 1 above.) This function
+intreprets the same compiled pattern data as pcre_exec(); however, not all the
+facilities are available, and those that are do not always work in quite the
 same way. See the user documentation for details.
 
-The algorithm that is used for pcre_dfa_exec() is not a traditional FSM, 
-because it may have a number of states active at one time. More work would be 
-needed at compile time to produce a traditional FSM where only one state is 
+The algorithm that is used for pcre_dfa_exec() is not a traditional FSM,
+because it may have a number of states active at one time. More work would be
+needed at compile time to produce a traditional FSM where only one state is
 ever active at once. I believe some other regex matchers work this way.
 
 
@@ -107,9 +107,9 @@ Format of compiled patterns
 The compiled form of a pattern is a vector of bytes, containing items of
 variable length. The first byte in an item is an opcode, and the length of the
 item is either implicit in the opcode or contained in the data bytes that
-follow it. 
+follow it.
 
-In many cases below LINK_SIZE data values are specified for offsets within the 
+In many cases below LINK_SIZE data values are specified for offsets within the
 compiled pattern. The default value for LINK_SIZE is 2, but PCRE can be
 compiled to use 3-byte or 4-byte values for these offsets (impairing the
 performance). This is necessary only when patterns whose compiled length is
@@ -131,33 +131,33 @@ These items are all just one byte long
   OP_ANYBYTE             match any single byte, even in UTF-8 mode
   OP_SOD                 match start of data: \A
   OP_SOM,                start of match (subject + offset): \G
-  OP_SET_SOM,            set start of match (\K) 
+  OP_SET_SOM,            set start of match (\K)
   OP_CIRC                ^ (start of data, or after \n in multiline)
   OP_NOT_WORD_BOUNDARY   \W
   OP_WORD_BOUNDARY       \w
   OP_NOT_DIGIT           \D
   OP_DIGIT               \d
   OP_NOT_HSPACE          \H
-  OP_HSPACE              \h  
+  OP_HSPACE              \h
   OP_NOT_WHITESPACE      \S
   OP_WHITESPACE          \s
   OP_NOT_VSPACE          \V
-  OP_VSPACE              \v  
+  OP_VSPACE              \v
   OP_NOT_WORDCHAR        \W
   OP_WORDCHAR            \w
   OP_EODN                match end of data or \n at end: \Z
   OP_EOD                 match end of data: \z
   OP_DOLL                $ (end of data, or before \n in multiline)
-  OP_EXTUNI              match an extended Unicode character 
-  OP_ANYNL               match any Unicode newline sequence 
-  
-  OP_ACCEPT              ) These are Perl 5.10's "backtracking    
+  OP_EXTUNI              match an extended Unicode character
+  OP_ANYNL               match any Unicode newline sequence
+
+  OP_ACCEPT              ) These are Perl 5.10's "backtracking
   OP_COMMIT              ) control verbs". If OP_ACCEPT is inside
-  OP_FAIL                ) capturing parentheses, it may be preceded 
-  OP_PRUNE               ) by one or more OP_CLOSE, followed by a 2-byte 
+  OP_FAIL                ) capturing parentheses, it may be preceded
+  OP_PRUNE               ) by one or more OP_CLOSE, followed by a 2-byte
   OP_SKIP                ) number, indicating which parentheses must be
   OP_THEN                ) closed.
-  
+
 
 Repeating single characters
 ---------------------------
@@ -167,22 +167,22 @@ following opcodes:
 
   OP_STAR
   OP_MINSTAR
-  OP_POSSTAR 
+  OP_POSSTAR
   OP_PLUS
   OP_MINPLUS
-  OP_POSPLUS 
+  OP_POSPLUS
   OP_QUERY
   OP_MINQUERY
-  OP_POSQUERY 
+  OP_POSQUERY
 
 In ASCII mode, these are two-byte items; in UTF-8 mode, the length is variable.
-Those with "MIN" in their name are the minimizing versions. Those with "POS" in 
+Those with "MIN" in their name are the minimizing versions. Those with "POS" in
 their names are possessive versions. Each is followed by the character that is
 to be repeated. Other repeats make use of
 
   OP_UPTO
   OP_MINUPTO
-  OP_POSUPTO 
+  OP_POSUPTO
   OP_EXACT
 
 which are followed by a two-byte count (most significant first) and the
@@ -200,39 +200,39 @@ byte. The opcodes are:
 
   OP_TYPESTAR
   OP_TYPEMINSTAR
-  OP_TYPEPOSSTAR 
+  OP_TYPEPOSSTAR
   OP_TYPEPLUS
   OP_TYPEMINPLUS
-  OP_TYPEPOSPLUS 
+  OP_TYPEPOSPLUS
   OP_TYPEQUERY
   OP_TYPEMINQUERY
-  OP_TYPEPOSQUERY 
+  OP_TYPEPOSQUERY
   OP_TYPEUPTO
   OP_TYPEMINUPTO
-  OP_TYPEPOSUPTO 
+  OP_TYPEPOSUPTO
   OP_TYPEEXACT
 
 
 Match by Unicode property
 -------------------------
 
-OP_PROP and OP_NOTPROP are used for positive and negative matches of a 
+OP_PROP and OP_NOTPROP are used for positive and negative matches of a
 character by testing its Unicode property (the \p and \P escape sequences).
-Each is followed by two bytes that encode the desired property as a type and a 
+Each is followed by two bytes that encode the desired property as a type and a
 value.
 
-Repeats of these items use the OP_TYPESTAR etc. set of opcodes, followed by 
-three bytes: OP_PROP or OP_NOTPROP and then the desired property type and 
+Repeats of these items use the OP_TYPESTAR etc. set of opcodes, followed by
+three bytes: OP_PROP or OP_NOTPROP and then the desired property type and
 value.
 
 
 Matching literal characters
 ---------------------------
 
-The OP_CHAR opcode is followed by a single character that is to be matched 
-casefully. For caseless matching, OP_CHARNC is used. In UTF-8 mode, the 
-character may be more than one byte long. (Earlier versions of PCRE used 
-multi-character strings, but this was changed to allow some new features to be 
+The OP_CHAR opcode is followed by a single character that is to be matched
+casefully. For caseless matching, OP_CHARNC is used. In UTF-8 mode, the
+character may be more than one byte long. (Earlier versions of PCRE used
+multi-character strings, but this was changed to allow some new features to be
 added.)
 
 
@@ -288,8 +288,8 @@ one of
   OP_CRMINRANGE
 
 All but the last two are just single-byte items. The others are followed by
-four bytes of data, comprising the minimum and maximum repeat counts. There are 
-no special possessive opcodes for these repeats; a possessive repeat is 
+four bytes of data, comprising the minimum and maximum repeat counts. There are
+no special possessive opcodes for these repeats; a possessive repeat is
 compiled into an atomic group.
 
 
@@ -311,7 +311,7 @@ this way, using the single opcode OP_CBRA.
 A bracket opcode is followed by LINK_SIZE bytes which give the offset to the
 next alternative OP_ALT or, if there aren't any branches, to the matching
 OP_KET opcode. Each OP_ALT is followed by LINK_SIZE bytes giving the offset to
-the next one, or to the OP_KET opcode. For capturing brackets, the bracket 
+the next one, or to the OP_KET opcode. For capturing brackets, the bracket
 number immediately follows the offset, always as a 2-byte item.
 
 OP_KET is used for subpatterns that do not repeat indefinitely, while
@@ -322,9 +322,9 @@ positive number) the offset back to the matching bracket opcode.
 If a subpattern is quantified such that it is permitted to match zero times, it
 is preceded by one of OP_BRAZERO, OP_BRAMINZERO, or OP_SKIPZERO. These are
 single-byte opcodes that tell the matcher that skipping the following
-subpattern entirely is a valid branch. In the case of the first two, not 
-skipping the pattern is also valid (greedy and non-greedy). The third is used 
-when a pattern has the quantifier {0,0}. It cannot be entirely discarded, 
+subpattern entirely is a valid branch. In the case of the first two, not
+skipping the pattern is also valid (greedy and non-greedy). The third is used
+when a pattern has the quantifier {0,0}. It cannot be entirely discarded,
 because it may be called as a subroutine from elsewhere in the regex.
 
 A subpattern with an indefinite maximum repetition is replicated in the
@@ -335,11 +335,11 @@ as appropriate.
 A subpattern with a bounded maximum repetition is replicated in a nested
 fashion up to the maximum number of times, with OP_BRAZERO or OP_BRAMINZERO
 before each replication after the minimum, so that, for example, (abc){2,5} is
-compiled as (abc)(abc)((abc)((abc)(abc)?)?)?, except that each bracketed group 
+compiled as (abc)(abc)((abc)((abc)(abc)?)?)?, except that each bracketed group
 has the same number.
 
-When a repeated subpattern has an unbounded upper limit, it is checked to see 
-whether it could match an empty string. If this is the case, the opcode in the 
+When a repeated subpattern has an unbounded upper limit, it is checked to see
+whether it could match an empty string. If this is the case, the opcode in the
 final replication is changed to OP_SBRA or OP_SCBRA. This tells the matcher
 that it needs to check for matching an empty string when it hits OP_KETRMIN or
 OP_KETRMAX, and if so, to break the loop.
@@ -362,7 +362,7 @@ Once-only (atomic) subpatterns
 ------------------------------
 
 These are also just like other subpatterns, but they start with the opcode
-OP_ONCE. The check for matching an empty string in an unbounded repeat is 
+OP_ONCE. The check for matching an empty string in an unbounded repeat is
 handled entirely at runtime, so there is just this one opcode.
 
 
@@ -373,7 +373,7 @@ These are like other subpatterns, but they start with the opcode OP_COND, or
 OP_SCOND for one that might match an empty string in an unbounded repeat. If
 the condition is a back reference, this is stored at the start of the
 subpattern using the opcode OP_CREF followed by two bytes containing the
-reference number. OP_NCREF is used instead if the reference was generated by 
+reference number. OP_NCREF is used instead if the reference was generated by
 name (so that the runtime code knows to check for duplicate names).
 
 If the condition is "in recursion" (coded as "(?(R)"), or "in recursion of
@@ -389,9 +389,9 @@ Recursion
 
 Recursion either matches the current regex, or some subexpression. The opcode
 OP_RECURSE is followed by an value which is the offset to the starting bracket
-from the start of the whole pattern. From release 6.5, OP_RECURSE is 
-automatically wrapped inside OP_ONCE brackets (because otherwise some patterns 
-broke it). OP_RECURSE is also used for "subroutine" calls, even though they 
+from the start of the whole pattern. From release 6.5, OP_RECURSE is
+automatically wrapped inside OP_ONCE brackets (because otherwise some patterns
+broke it). OP_RECURSE is also used for "subroutine" calls, even though they
 are not strictly a recursion.
 
 
@@ -399,7 +399,7 @@ Callout
 -------
 
 OP_CALLOUT is followed by one byte of data that holds a callout number in the
-range 0 to 254 for manual callouts, or 255 for an automatic callout. In both 
+range 0 to 254 for manual callouts, or 255 for an automatic callout. In both
 cases there follows a two-byte value giving the offset in the pattern to the
 start of the following item, and another two-byte item giving the length of the
 next item.

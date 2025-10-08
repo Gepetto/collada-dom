@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 class xsAttribute extends _elementSet
 {
@@ -16,7 +16,7 @@ class xsAttribute extends _elementSet
     $this->_addAttribute( 'use', array( 'type' => 'xs:string' ) );
     $this->_addAttribute( 'default', array( 'type' => 'xs:string' ) );
     $this->_addAttribute( 'ref', array( 'type' => 'xs:string' ) );
-    
+
     $this->_addElement( 'xsAnnotation', array( 'minOccurs' => '0', 'maxOccurs' => 'unbounded' ) );
 
     $this->type[] = 'xsAttribute';

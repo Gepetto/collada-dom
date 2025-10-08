@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #ifndef __DAE_META_ANY_H__
 #define __DAE_META_ANY_H__
@@ -21,7 +21,7 @@ public:
 	 * Constructor.
 	 * @param container The daeMetaElement that this policy object belongs to.
 	 * @param parent The daeMetaCMPolicy parent of this policy object.
-	 * @param odinal The ordinal value offset of this specific policy object. Used for maintaining the 
+	 * @param odinal The ordinal value offset of this specific policy object. Used for maintaining the
 	 * correct order of child elements.
 	 * @param minO The minimum number of times this CMPolicy object must appear. This value comes from the COLLADA schema.
 	 * @param maxO The maximum number of times this CMPolicy object may appear. This value comes from the COLLADA schema.

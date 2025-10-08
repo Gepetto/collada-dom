@@ -64,7 +64,7 @@ domKinematics_bind::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domKinematics_bind,_contents));
 	meta->addContentsOrder(daeOffsetOf(domKinematics_bind,_contentsOrder));
@@ -78,7 +78,7 @@ domKinematics_bind::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domKinematics_bind , attrSymbol ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

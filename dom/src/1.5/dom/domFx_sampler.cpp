@@ -46,7 +46,7 @@ domFx_sampler::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 1, 1, 1 ) );
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domFx_sampler));
 	meta->validate();

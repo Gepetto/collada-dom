@@ -46,7 +46,7 @@ domFx_common_float_or_param::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFx_common_float_or_param,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFx_common_float_or_param,_contentsOrder));
@@ -95,7 +95,7 @@ domFx_common_float_or_param::domFloat::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domFx_common_float_or_param::domFloat , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -134,7 +134,7 @@ domFx_common_float_or_param::domParam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_common_float_or_param::domParam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

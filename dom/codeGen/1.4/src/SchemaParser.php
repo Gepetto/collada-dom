@@ -5,7 +5,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 require_once( 'om/object-model.php' );
 
@@ -23,10 +23,10 @@ class SchemaParser
     xml_set_object( $this->parser, $this );
     xml_set_element_handler( $this->parser, "startElement", "endElement" );
     xml_set_character_data_handler( $this->parser, "characterData" );
-    
+
     //xml_parser_free( $this->parser );
   }
-  
+
   function startElement( $parser, $name, $attrs )
   {
     if ( preg_match( "/xs\:/", $name ) )
@@ -36,7 +36,7 @@ class SchemaParser
 
       eval( '$e = new ' . $class_name . '();' );
       foreach( $attrs as $k => $v ) { $e->setAttribute( $k, $v ); }
-    
+
       if ( count( $this->parse_stack ) > 0 )
       {
         $this->parse_stack[ count( $this->parse_stack ) - 1 ]->addElement( $e );
@@ -74,7 +74,7 @@ class SchemaParser
       // Bad file
     }
   }
-  
+
 }
 
-?> 
+?>

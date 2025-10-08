@@ -52,7 +52,7 @@ domFx_common_color_or_texture::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFx_common_color_or_texture,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFx_common_color_or_texture,_contentsOrder));
@@ -101,7 +101,7 @@ domFx_common_color_or_texture::domColor::registerElement(DAE& dae)
 		ma->setType( dae.getAtomicTypes().get("Sid"));
 		ma->setOffset( daeOffsetOf( domFx_common_color_or_texture::domColor , attrSid ));
 		ma->setContainer( meta );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -140,7 +140,7 @@ domFx_common_color_or_texture::domParam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_common_color_or_texture::domParam , attrRef ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -181,7 +181,7 @@ domFx_common_color_or_texture::domTexture::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 0 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: texture
 	{
@@ -191,7 +191,7 @@ domFx_common_color_or_texture::domTexture::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_common_color_or_texture::domTexture , attrTexture ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 
@@ -203,7 +203,7 @@ domFx_common_color_or_texture::domTexture::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_common_color_or_texture::domTexture , attrTexcoord ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -66,7 +66,7 @@ domCg_newarray_type::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 3000 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domCg_newarray_type,_contents));
 	meta->addContentsOrder(daeOffsetOf(domCg_newarray_type,_contentsOrder));
@@ -80,7 +80,7 @@ domCg_newarray_type::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domCg_newarray_type , attrLength ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

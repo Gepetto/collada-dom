@@ -4,7 +4,7 @@
 * Licensed under the MIT Open Source License, for details please see license.txt or the website
 * http://www.opensource.org/licenses/mit-license.php
 *
-*/ 
+*/
 
 #include <dae.h>
 #include <dae/daeDom.h>
@@ -66,7 +66,7 @@ domGles_newparam::registerElement(DAE& dae)
 	cm->appendChild( new daeMetaGroup( mea, meta, cm, 3, 1, 1 ) );
 
 	cm->setMaxOrdinal( 3 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	//	Add attribute: sid
 	{
@@ -76,7 +76,7 @@ domGles_newparam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domGles_newparam , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

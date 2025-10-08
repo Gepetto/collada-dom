@@ -76,7 +76,7 @@ domFx_common_newparam::registerElement(DAE& dae)
 	cm = cm->getParent();
 
 	cm->setMaxOrdinal( 1 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 	// Ordered list of sub-elements
 	meta->addContents(daeOffsetOf(domFx_common_newparam,_contents));
 	meta->addContentsOrder(daeOffsetOf(domFx_common_newparam,_contentsOrder));
@@ -90,7 +90,7 @@ domFx_common_newparam::registerElement(DAE& dae)
 		ma->setOffset( daeOffsetOf( domFx_common_newparam , attrSid ));
 		ma->setContainer( meta );
 		ma->setIsRequired( true );
-	
+
 		meta->appendAttribute(ma);
 	}
 

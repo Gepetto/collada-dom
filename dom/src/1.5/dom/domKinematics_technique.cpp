@@ -64,7 +64,7 @@ domKinematics_technique::registerElement(DAE& dae)
 	cm->appendChild( mea );
 
 	cm->setMaxOrdinal( 4 );
-	meta->setCMRoot( cm );	
+	meta->setCMRoot( cm );
 
 	meta->setElementSize(sizeof(domKinematics_technique));
 	meta->validate();
