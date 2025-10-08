@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.6.0)
+cmake_minimum_required (VERSION 3.10)
 project (collada-dom)
 set( CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS TRUE )
 
