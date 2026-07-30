@@ -8,7 +8,7 @@
     inputs.gepetto.lib.mkFlakoboros inputs (
       { lib, ... }:
       {
-        overrideAttrs.collada-dom = {
+        overrideAttrs.collada-dom = { drv-prev, pkgs-final, ... }: {
           src = lib.fileset.toSource {
             root = ./.;
             fileset = lib.fileset.unions [
@@ -25,6 +25,15 @@
               ./release
             ];
           };
+          nativeBuildInputs = drv-prev.nativeBuildInputs ++ [
+            pkgs-final.pkg-config
+          ];
+          buildInputs = drv-prev.buildInputs ++ [
+            pkgs-final.bzip2
+            pkgs-final.pcre-cpp
+            pkgs-final.uriparser
+            pkgs-final.zlib
+          ];
         };
       }
     );

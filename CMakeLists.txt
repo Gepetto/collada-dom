@@ -151,15 +151,7 @@ if( MSVC )
   set(Boost_CFLAGS "-DBOOST_ALL_DYN_LINK -DBOOST_ALL_NO_LIB")
 endif()
 
-set(Boost_ADDITIONAL_VERSIONS "1.46" "1.45" "1.44" "1.43" "1.42" "1.41" "1.40" "1.39" "1.38" "1.37.0" "1.37" "1.35.0" "1.34.1" "1.34.0" "1.34" "1.33.1" "1.33.0" "1.33")
-
-if( NOT $ENV{BOOST_INCLUDEDIR} STREQUAL "" )
-  set(Boost_INCLUDE_DIR $ENV{BOOST_INCLUDEDIR})
-endif()
-if( NOT $ENV{BOOST_LIBRARYDIR} STREQUAL "" )
-  set(Boost_LIBRARY_DIRS $ENV{BOOST_LIBRARYDIR})
-endif()
-find_package(Boost COMPONENTS filesystem REQUIRED)
+find_package(Boost COMPONENTS filesystem REQUIRED CONFIG)
 
 message(STATUS "found boost version: ${Boost_VERSION}")
 
