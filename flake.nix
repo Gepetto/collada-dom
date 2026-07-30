@@ -34,6 +34,10 @@
             pkgs-final.uriparser
             pkgs-final.zlib
           ];
+          cmakeFlags = [
+            (lib.cmakeBool "OPT_COMPILE_TESTS" true)
+          ];
+          doCheck = true;
         };
       }
     );
