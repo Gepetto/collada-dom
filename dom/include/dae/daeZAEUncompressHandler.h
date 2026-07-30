@@ -9,7 +9,7 @@
 #ifndef __DAE_ZAE_UNCOMPRESS_HANDLER_H__
 #define __DAE_ZAE_UNCOMPRESS_HANDLER_H__
 
-#include <unzip.h>
+#include <minizip/unzip.h>
 #include <libxml/xmlreader.h>
 #include <dae/daeURI.h>
 
