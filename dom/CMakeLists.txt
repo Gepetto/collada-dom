@@ -3,12 +3,8 @@ include_directories(${COLLADA_INTERNAL_INCLUDE})
 set(COLLADA_LIBS minizip ${liburiparser_LIBRARIES} ${libpcrecpp_LIBRARIES} ${ZLIB_LIBRARIES} ${Boost_FILESYSTEM_LIBRARY})
 
 file(GLOB dae_files ${CMAKE_CURRENT_SOURCE_DIR}/src/dae/*.cpp)
-if( LIBXML2_FOUND )
-  file(GLOB libxmlplugin_files ${CMAKE_CURRENT_SOURCE_DIR}/src/modules/LIBXMLPlugin/*.cpp)
-  set(COLLADA_LIBS ${COLLADA_LIBS} ${LIBXML2_LIBRARIES})
-else()
-  set(libxmlplugin_files)
-endif()
+file(GLOB libxmlplugin_files ${CMAKE_CURRENT_SOURCE_DIR}/src/modules/LIBXMLPlugin/*.cpp)
+set(COLLADA_LIBS ${COLLADA_LIBS} ${LIBXML2_LIBRARIES})
 file(GLOB stddatabase_files ${CMAKE_CURRENT_SOURCE_DIR}/src/modules/STLDatabase/*.cpp)
 file(GLOB stderrplugin_files ${CMAKE_CURRENT_SOURCE_DIR}/src/modules/stdErrPlugin/*.cpp)
 
@@ -29,7 +25,10 @@ if( OPT_COLLADA14 )
 endif()
 
 add_library(collada-dom SHARED ${COLLADA_BASE_SOURCES})
-target_include_directories(collada-dom PUBLIC ${COLLADA_INTERNAL_INCLUDE})
+target_include_directories(collada-dom PUBLIC
+  $<BUILD_INTERFACE:${COLLADA_INTERNAL_INCLUDE}>
+  $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
+
 target_link_libraries(collada-dom ${COLLADA_LIBS})
 set_target_properties(collada-dom PROPERTIES
   COMPILE_FLAGS "${COLLADA_COMPILE_FLAGS}"
