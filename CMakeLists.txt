@@ -261,6 +261,10 @@ include_directories(BEFORE ${libpcrecpp_INCLUDE_DIRS})
 set(COLLADA_DOM_LINK_DIRS ${COLLADA_DOM_LINK_DIRS} ${libpcrecpp_LIBRARY_DIRS})
 link_directories(${COLLADA_DOM_LINK_DIRS})
 
+if( OPT_COMPILE_TESTS )
+  enable_testing()
+endif()
+
 add_subdirectory(dom)
 
 if(UNIX)

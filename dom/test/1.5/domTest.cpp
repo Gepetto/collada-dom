@@ -284,7 +284,7 @@ DefineTest(writeCamera) {
 
 
 string getRoundTripFile(const string& name) {
-    return getTmpFile(fs::basename(fs::path(name)) + "_roundTrip.dae");
+    return getTmpFile(fs::path(name).stem().string() + "_roundTrip.dae");
 }
 
 bool roundTrip(const string& file) {
@@ -723,7 +723,7 @@ DefineTest(genericOps) {
         any->setAttribute(name.str().c_str(), value.str().c_str());
     }
 
-    CheckResult(dae.writeTo(file, getTmpFile(fs::basename(fs::path(file)) + "_genericOps.dae")));
+    CheckResult(dae.writeTo(file, getTmpFile(fs::path(file).stem().string() + "_genericOps.dae")));
 
     return testResult(true);
 }
@@ -1534,7 +1534,7 @@ bool printTestResults(const map<string, testResult>& failedTests) {
              iter++) {
             cout << "    " << iter->first;
             if (!iter->second.file.empty()) {
-                cout << " (file " << fs::path(iter->second.file).leaf();
+                cout << " (file " << fs::path(iter->second.file).filename();
                 if (iter->second.line != -1)
                     cout << ", line " << iter->second.line << ")";
                 else
@@ -1609,9 +1609,9 @@ int main(int argc, char* argv[]) {
     // Shut the DOM up
     daeErrorHandler::setErrorHandler(&quietErrorHandler::getInstance());
 
-    dataPath() = (fs::path(argv[0]).branch_path()/"domTestData/").normalize();
+    dataPath() = (fs::path(argv[0]).parent_path()/"domTestData/").lexically_normal();
     if (!fs::exists(dataPath()))
-        dataPath() = (fs::path(argv[0]).branch_path()/"../../test/1.5/data/").normalize();
+        dataPath() = (fs::path(argv[0]).parent_path()/"../../test/1.5/data/").lexically_normal();
     tmpPath() = dataPath() / "tmp";
     tmpDir tmp(tmpPath(), !leaveTmpFiles);
 
