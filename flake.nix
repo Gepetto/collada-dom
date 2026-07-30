@@ -8,6 +8,7 @@
     inputs.gepetto.lib.mkFlakoboros inputs (
       { lib, ... }:
       {
+        overrides.collada-dom = { pkgs-final, ... }: { stdenv = pkgs-final.gcc16Stdenv; };
         overrideAttrs.collada-dom = { drv-prev, pkgs-final, ... }: {
           src = lib.fileset.toSource {
             root = ./.;

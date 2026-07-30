@@ -175,7 +175,7 @@ daeMetaElement::appendAttribute(daeMetaAttribute* attr)
     else
         _metaAttributes.append(attr);
 
-    if ((attr->getName() != NULL) &&
+    if ((!attr->getName().empty()) &&
         (strcmp(attr->getName(),"id") == 0)) {
         _metaID = attr;
         _isTrackableForQueries = true;

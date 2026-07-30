@@ -94,6 +94,11 @@ public:
 	 * Release string table...
 	 */
 	static void releaseStringTable(void);
+
+	/**
+	 * Check if string is NULL
+	 */
+	bool empty() { _string == NULL; }
 //--------------------
 };
 
