@@ -5,3 +5,4 @@ target_link_libraries(domTest150 collada-dom)
 
 # have to create a symlink to the data or otherwise tests will not be able to find files
 execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink ${CMAKE_CURRENT_SOURCE_DIR}/data ${CMAKE_CURRENT_BINARY_DIR}/data)
+add_test(NAME "domTest150" COMMAND "domTest150")
