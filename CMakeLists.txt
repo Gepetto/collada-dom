@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 3.10)
-project (collada-dom)
+project (collada-dom HOMEPAGE_URL "https://github.com/Gepetto/collada-dom")
 set( CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS TRUE )
 
 # Define here the needed parameters
