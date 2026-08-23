@@ -14,7 +14,6 @@
 #include <dae/daeErrorHandler.h>
 #include <dae/daeUtils.h>
 
-#ifdef USE_URIPARSER
 #include <uriparser/Uri.h>
 std::string fromRange(const UriTextRangeA & rng)
 {
@@ -32,9 +31,6 @@ std::string fromList(UriPathSegmentA * xs, const std::string & delim)
 
     return accum;
 }
-#else
-#include <pcrecpp.h>
-#endif
 
 using namespace std;
 using namespace cdom;
@@ -162,7 +158,6 @@ void parsePath(const string& path,
     //dir = baseName = extension = "";
     //re.FullMatch(path, &dir, &baseName, &extension);
 
-#ifdef USE_URIPARSER
     if ( path.size() <= 1) {
         dir = path;
         baseName = "";
@@ -174,14 +169,6 @@ void parsePath(const string& path,
        extension = baseName.substr(baseName.find('.'));
        baseName = baseName.substr(0, baseName.find('.'));
     }
-#else
-    static pcrecpp::RE findDir("(.*/)?(.*)?");
-    static pcrecpp::RE findExt("([^.]*)?(\\..*)?");
-    string tmpFile;
-    dir = baseName = extension = tmpFile = "";
-    findDir.PartialMatch(path, &dir, &tmpFile);
-    findExt.PartialMatch(tmpFile, &baseName, &extension);
-#endif
 }
 }
 
@@ -782,7 +769,6 @@ bool cdom::parseUriRef(const string& uriRef,
                        string& query,
                        string& fragment) {
 
-#ifdef USE_URIPARSER
     UriParserStateA state;
     UriUriA uri;
     state.uri = &uri;
@@ -797,14 +783,6 @@ bool cdom::parseUriRef(const string& uriRef,
         uriFreeUriMembersA(&uri);
         return true;
     }
-#else
-    // This regular expression for parsing URI references comes from the URI spec:
-    //   http://tools.ietf.org/html/rfc3986#appendix-B
-    static pcrecpp::RE re("^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?");
-    string s1, s3, s6, s8;
-    if (re.FullMatch(uriRef, &s1, &scheme, &s3, &authority, &path, &s6, &query, &s8, &fragment))
-        return true;
-#endif
 
     return false;
 }

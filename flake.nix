@@ -31,7 +31,6 @@
           ];
           buildInputs = drv-prev.buildInputs ++ [
             pkgs-final.bzip2
-            pkgs-final.pcre-cpp
             pkgs-final.uriparser
             pkgs-final.zlib
           ];

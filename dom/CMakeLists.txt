@@ -1,6 +1,6 @@
 set(COLLADA_INTERNAL_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 include_directories(${COLLADA_INTERNAL_INCLUDE})
-set(COLLADA_LIBS minizip ${liburiparser_LIBRARIES} ${libpcrecpp_LIBRARIES} ${ZLIB_LIBRARIES} ${Boost_FILESYSTEM_LIBRARY})
+set(COLLADA_LIBS minizip ${liburiparser_LIBRARIES} ${ZLIB_LIBRARIES} ${Boost_FILESYSTEM_LIBRARY})
 
 file(GLOB dae_files ${CMAKE_CURRENT_SOURCE_DIR}/src/dae/*.cpp)
 file(GLOB libxmlplugin_files ${CMAKE_CURRENT_SOURCE_DIR}/src/modules/LIBXMLPlugin/*.cpp)
@@ -9,7 +9,7 @@ file(GLOB stddatabase_files ${CMAKE_CURRENT_SOURCE_DIR}/src/modules/STLDatabase/
 file(GLOB stderrplugin_files ${CMAKE_CURRENT_SOURCE_DIR}/src/modules/stdErrPlugin/*.cpp)
 
 set(COLLADA_BASE_SOURCES ${dae_files} ${libxmlplugin_files} ${stddatabase_files} ${stderrplugin_files})
-set(COLLADA_COMPILE_FLAGS "${liburiparser_CFLAGS_OTHERS} ${libpcrecpp_CFLAGS_OTHERS} ${EXTRA_COMPILE_FLAGS} ${Boost_CFLAGS}")
+set(COLLADA_COMPILE_FLAGS "${liburiparser_CFLAGS_OTHERS} ${EXTRA_COMPILE_FLAGS} ${Boost_CFLAGS}")
 # create dynamic libraries
 set(COLLADA_COMPILE_FLAGS "${COLLADA_COMPILE_FLAGS} -DDOM_DYNAMIC -DDOM_EXPORT")
 
@@ -32,7 +32,6 @@ target_include_directories(collada-dom PUBLIC
 target_link_libraries(collada-dom ${COLLADA_LIBS})
 set_target_properties(collada-dom PROPERTIES
   COMPILE_FLAGS "${COLLADA_COMPILE_FLAGS}"
-  LINK_FLAGS "${libpcrecpp_LDFLAGS_OTHERS}"
   OUTPUT_NAME collada-dom${COLLADA_DOM_LIBRARY_SUFFIX}
   CLEAN_DIRECT_OUTPUT 1
   SOVERSION 0 # always have it 0 since we're including the soversion as part of the library name
