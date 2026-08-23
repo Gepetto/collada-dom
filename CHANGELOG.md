@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [2.5.5] - 2026-08-24
+
 - parseruri required -> no need for pcre
 - ci: add check changelog
 
@@ -35,6 +37,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 At <https://github.com/rdiankov/collada-dom> and <https://sourceforge.net/projects/collada-dom/>
 
-[Unreleased]: https://github.com/Gepetto/collada-dom/compare/v2.5.3...HEAD
+[Unreleased]: https://github.com/Gepetto/collada-dom/compare/v2.5.5...HEAD
+[2.5.5]: https://github.com/Gepetto/collada-dom/compare/v2.5.3...v2.5.5
 [2.5.3]: https://github.com/Gepetto/collada-dom/compare/v2.5.2...v2.5.3
 [2.5.2]: https://github.com/Gepetto/collada-dom/releases/tag/v2.5.2
