@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+- parseruri required -> no need for pcre
+- ci: add check changelog
+
 ## [2.5.4] - 2026-07-30
 
 - nix: switch to flakoboros

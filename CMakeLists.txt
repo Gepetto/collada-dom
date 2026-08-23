@@ -41,7 +41,6 @@ option(OPT_COMPILE_TESTS "Compile collada tests" OFF)
 option(OPT_BUILD_PACKAGES "Set to ON to generate CPack configuration files and packaging targets" OFF)
 option(OPT_BUILD_PACKAGE_DEFAULT "Set to ON to generate a default openrave package that creates symlinks" ON)
 option(OPT_DOUBLE_PRECISION "Use double precision for everything (daeFloat included)" ON)
-#option(OPT_USE_PCRECPP "Use pcrecpp library to find basename and parse uri, otherwise use parseruri and basename function" OFF)
 
 set(COLLADA_DOM_EXTERNAL_FLAGS)
 if( OPT_COLLADA14 )
@@ -192,9 +191,8 @@ pkg_check_modules(liburiparser REQUIRED liburiparser)
 set(liburiparser_CFLAGS_OTHERS "-DUSE_URIPARSER")
 # declare minizip/zlib before libxml2! (for some reason the precompiled libxml2 libraries have zlib.h/zconf.h)
 include_directories(BEFORE SYSTEM ${MINIZIP_INCLUDE_DIR})
-include_directories(BEFORE SYSTEM ${libpcrecpp_INCLUDE_DIRS})
 
-set(COLLADA_DOM_LINK_DIRS ${COLLADA_DOM_LINK_DIRS} ${libpcrecpp_LIBRARY_DIRS})
+set(COLLADA_DOM_LINK_DIRS ${COLLADA_DOM_LINK_DIRS})
 link_directories(${COLLADA_DOM_LINK_DIRS})
 
 if( OPT_COMPILE_TESTS )
@@ -255,7 +253,7 @@ if(CMAKE_CPACK_COMMAND AND UNIX AND OPT_BUILD_PACKAGES)
   set(CPACK_COMPONENT_${COMPONENT_PREFIX_UPPER}-DEV_DISPLAY_NAME "C++ headers and build tools")
   set(CPACK_COMPONENT_${COMPONENT_PREFIX_UPPER}-DEV_DEPENDS ${COMPONENT_PREFIX}-base)
 
-  set(CPACK_DEBIAN_BUILD_DEPENDS debhelper cmake libxml2-dev libboost-dev zlib1g-dev libboost-filesystem-dev libboost-system-dev libpcre3-dev pkg-config libtinyxml-dev liburiparser-dev CACHE STRING "Build dependency packages")
+  set(CPACK_DEBIAN_BUILD_DEPENDS debhelper cmake libxml2-dev libboost-dev zlib1g-dev libboost-filesystem-dev libboost-system-dev pkg-config libtinyxml-dev liburiparser-dev CACHE STRING "Build dependency packages")
 
   # debian
   set(CPACK_DEBIAN_PACKAGE_PRIORITY optional)

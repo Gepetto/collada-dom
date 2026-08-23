@@ -8,8 +8,7 @@
     inputs.gepetto.lib.mkFlakoboros inputs (
       { lib, ... }:
       {
-        overrides.collada-dom = { pkgs-final, ... }: { stdenv = pkgs-final.gcc16Stdenv; };
-        overrideAttrs.collada-dom = { drv-prev, pkgs-final, ... }: {
+        overrideAttrs.collada-dom = {
           src = lib.fileset.toSource {
             root = ./.;
             fileset = lib.fileset.unions [
@@ -26,19 +25,6 @@
               ./release
             ];
           };
-          nativeBuildInputs = drv-prev.nativeBuildInputs ++ [
-            pkgs-final.pkg-config
-          ];
-          buildInputs = drv-prev.buildInputs ++ [
-            pkgs-final.bzip2
-            pkgs-final.pcre-cpp
-            pkgs-final.uriparser
-            pkgs-final.zlib
-          ];
-          cmakeFlags = [
-            (lib.cmakeBool "OPT_COMPILE_TESTS" true)
-          ];
-          doCheck = true;
         };
       }
     );
